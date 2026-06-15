@@ -54,3 +54,33 @@ Supervisa que se siga la metodología Scrum y apoya al equipo en la resolución 
 Equipo de Desarrollo: José Eddy Pérez Martínez, Daniel Méndez Luna. 
 
 Diseña, implementa y prueba las funcionalidades del sistema.
+
+## Visión Tecnológica
+
+SRIB (Sistema de Reporte de Incidencias de la BUAP) será desarrollado como una plataforma web accesible desde cualquier dispositivo con conexión a internet. El sistema estará basado en una arquitectura cliente-servidor que permita a los usuarios registrar y consultar incidencias de manera segura y eficiente.
+
+La solución utilizará tecnologías de desarrollo web modernas para garantizar escalabilidad, facilidad de mantenimiento y una experiencia de usuario intuitiva. 
+
+La plataforma estará diseñada para evolucionar de forma incremental mediante la metodología Scrum, permitiendo incorporar nuevas funcionalidades en futuras iteraciones según las necesidades de la comunidad universitaria. Entre las posibles mejoras futuras se contemplan estadísticas de incidencias, carga de evidencia fotográfica y generación de reportes administrativos.
+
+## Solución Propuesta
+
+Se propone el desarrollo de SRIB, una plataforma web que permita a estudiantes, docentes y personal administrativo reportar incidencias relacionadas con infraestructura, equipos y servicios dentro de la BUAP.
+
+Los usuarios podrán registrar problemas indicando una descripción, categoría y ubicación. Por su parte, los administradores podrán visualizar los reportes, asignar prioridades, actualizar su estado y dar seguimiento hasta su resolución.
+
+La implementación de esta solución permitirá mejorar la comunicación entre los usuarios y las áreas responsables, optimizar los procesos de atención y reducir los tiempos de respuesta ante los problemas reportados.
+
+## Producto Mínimo Viable (MVP)
+
+El Producto Mínimo Viable que se entregará durante las primeras iteraciones del proyecto incluirá las funcionalidades esenciales para validar el funcionamiento del sistema:
+
+* Registro e inicio de sesión de usuarios.
+* Formulario para registrar incidencias.
+* Captura de descripción, categoría y ubicación de la incidencia.
+* Consulta de incidencias registradas.
+* Panel básico para administradores.
+* Cambio de estado de las incidencias (Pendiente, En proceso y Resuelta).
+* Almacenamiento de la información en una base de datos.
+
+Este MVP permitirá demostrar el flujo completo del sistema, desde el registro de una incidencia hasta su seguimiento y resolución. Posteriormente, en nuevas iteraciones, podrán incorporarse funcionalidades adicionales como carga de imágenes, estadísticas y generación de reportes.
