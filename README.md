@@ -117,3 +117,64 @@ Podrían surgir gastos relacionados con mantenimiento, actualizaciones o soporte
 ### Conclusión
 
 Los riesgos identificados son bajos y pueden mitigarse mediante una adecuada planificación, pruebas periódicas del sistema y una comunicación efectiva entre los integrantes del equipo.
+
+
+# Cronograma de Hitos y Sprints Principales
+
+## Sprint 1: Planeación y Diseño (Semana 1)
+
+### Objetivo
+
+Definir los requisitos del sistema y diseñar la estructura inicial del proyecto.
+
+### Actividades
+
+* Levantamiento y análisis de requisitos.
+* Elaboración de historias de usuario.
+* Creación del Product Backlog.
+* Diseño de interfaces.
+* Diseño de la base de datos.
+
+### Hito 1
+
+Requisitos y diseño del sistema aprobados.
+
+---
+
+## Sprint 2: Desarrollo del MVP (Semana 2)
+
+### Objetivo
+
+Implementar las funcionalidades principales del sistema.
+
+### Actividades
+
+* Registro e inicio de sesión de usuarios.
+* Formulario para registrar incidencias.
+* Consulta de incidencias registradas.
+* Conexión con la base de datos.
+
+### Hito 2
+
+Producto Mínimo Viable (MVP) funcional.
+
+---
+
+## Sprint 3: Administración, Pruebas y Entrega (Semana 3)
+
+### Objetivo
+
+Completar la gestión de incidencias y preparar la entrega final.
+
+### Actividades
+
+* Desarrollo del panel de administración.
+* Actualización de estados de incidencias.
+* Pruebas funcionales.
+* Corrección de errores.
+* Elaboración de documentación.
+* Preparación de la presentación final.
+
+### Hito 3
+
+Sistema completamente funcional y listo para su entrega.
