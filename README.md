@@ -28,3 +28,23 @@ Ante esta situación, surge la necesidad de desarrollar **SRIB**, una plataforma
 Reducir los tiempos de respuesta en la atención de problemas.
 
 -Mejorar la comunicación entre la comunidad universitaria y las áreas responsables.
+
+# Justificación de la Integración del Marco de Trabajo SCRUM:
+
+Se decidió trabajar bajo la metodología Scrum debido a que los integrantes del equipo cuentan con habilidades y fortalezas diferentes que pueden aprovecharse mediante la asignación de roles y responsabilidades específicas.
+Algunos miembros poseen mayores habilidades en análisis y documentación, otros tienen experiencia en diseño de interfaces, programación o pruebas del sistema. Scrum permite organizar estas capacidades de manera eficiente, favoreciendo la colaboración y el trabajo coordinado para alcanzar los objetivos del proyecto.
+Scrum es adecuado para este proyecto porque:
+
+-Permite dividir el desarrollo en etapas pequeñas y controladas.
+-Facilita la colaboración entre los integrantes del equipo.
+-Ayuda a dar seguimiento al progreso mediante reuniones periódicas.
+-Permite adaptarse a cambios o nuevos requerimientos durante el desarrollo.
+-Favorece la entrega incremental de funcionalidades.
+
+# Roles del Equipo
+Product Owner
+Representa las necesidades de los usuarios y define las prioridades del proyecto.
+Scrum Master
+Supervisa que se siga la metodología Scrum y apoya al equipo en la resolución de obstáculos.
+Equipo de Desarrollo
+Diseña, implementa y prueba las funcionalidades del sistema.
