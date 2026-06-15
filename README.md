@@ -10,11 +10,9 @@ Con la implementación de SRIB se busca agilizar la atención de incidencias, re
 
 # Definición del Problema
 
-Dentro de las instalaciones de la BUAP es común que surjan incidencias que pueden afectar el desarrollo normal de las actividades académicas y administrativas. Entre ellas se encuentran fallas en equipos de cómputo, proyectores descompuestos, problemas de conexión a internet, mobiliario dañado, fugas de agua, fallas eléctricas y deterioro de la infraestructura en general.
+En la BUAP se presentan diversas incidencias relacionadas con infraestructura, equipos y servicios que pueden afectar las actividades académicas y administrativas. Actualmente, muchos de estos problemas se reportan mediante canales informales, lo que dificulta su seguimiento y puede generar retrasos en la atención, pérdida de información y duplicidad de reportes.
 
-Actualmente, muchos de estos problemas se reportan mediante canales informales o a través de diferentes medios de comunicación que no permiten llevar un control adecuado de cada incidencia. Como consecuencia, pueden presentarse retrasos en la atención, pérdida de información, duplicidad de reportes y poca visibilidad sobre el estado de resolución de los problemas.
-
-Ante esta situación, surge la necesidad de desarrollar **SRIB**, una plataforma que permita registrar, administrar y dar seguimiento a las incidencias de forma organizada y centralizada. Con ello, se pretende mejorar la comunicación entre los usuarios y las áreas responsables, optimizar la gestión de los reportes y garantizar una atención más rápida y eficiente de las problemáticas detectadas dentro de la universidad.
+Durante la observación del problema, se identificó que algunas incidencias pueden tardar aproximadamente tres días en ser atendidas. Por ello, surge la necesidad de desarrollar SRIB (Sistema de Reporte de Incidencias BUAP), una plataforma web que permita registrar, administrar y dar seguimiento a los reportes de manera centralizada, con el objetivo de mejorar la gestión de incidencias y reducir el tiempo de atención a aproximadamente dos días.
 
 # OBJETIVOS ESPECÍFICOS:
 
