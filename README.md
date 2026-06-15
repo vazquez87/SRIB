@@ -99,3 +99,21 @@ Beneficios
 Conclusión:
 
 La implementación de SRIB es viable, ya que los costos económicos son mínimos al utilizar herramientas gratuitas, mientras que los beneficios mejoran significativamente la gestión y atención de incidencias dentro de la BUAP.
+
+## Evaluación de Riesgos
+
+### Riesgo Tecnológico
+
+Pueden presentarse fallas en el software, problemas de conectividad, errores de programación o incompatibilidades entre las herramientas utilizadas durante el desarrollo del sistema.
+
+### Riesgo Operativo
+
+La falta de coordinación entre los integrantes o errores en los procesos de gestión de incidencias pueden afectar el funcionamiento adecuado del sistema.
+
+### Riesgo Financiero
+
+Podrían surgir gastos relacionados con mantenimiento, actualizaciones o soporte técnico en caso de que el sistema requiera mejoras futuras.
+
+### Conclusión
+
+Los riesgos identificados son bajos y pueden mitigarse mediante una adecuada planificación, pruebas periódicas del sistema y una comunicación efectiva entre los integrantes del equipo.
