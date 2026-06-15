@@ -36,10 +36,15 @@ Algunos miembros poseen mayores habilidades en análisis y documentación, otros
 Scrum es adecuado para este proyecto porque:
 
 -Permite dividir el desarrollo en etapas pequeñas y controladas.
+
 -Facilita la colaboración entre los integrantes del equipo.
+
 -Ayuda a dar seguimiento al progreso mediante reuniones periódicas.
+
 -Permite adaptarse a cambios o nuevos requerimientos durante el desarrollo.
+
 -Favorece la entrega incremental de funcionalidades.
+
 
 # Roles del Equipo
 Product Owner
