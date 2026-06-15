@@ -80,3 +80,22 @@ El MVP incluirá las siguientes funcionalidades:
 * Almacenamiento de la información en una base de datos.
 
 Este MVP permitirá validar el funcionamiento básico del sistema y servirá como base para futuras mejoras.
+
+# Análisis Costo-Beneficio
+
+Costos
+
+- Tiempo invertido por los integrantes en el desarrollo del sistema.
+- Uso de computadoras e internet.
+- Empleo de herramientas gratuitas como GitHub y Slack.
+
+Beneficios
+
+- Registro y seguimiento centralizado de incidencias.
+- Reducción de tiempos de respuesta.
+- Mejor comunicación entre usuarios y áreas responsables.
+- Mayor control y organización de los reportes.
+
+Conclusión:
+
+La implementación de SRIB es viable, ya que los costos económicos son mínimos al utilizar herramientas gratuitas, mientras que los beneficios mejoran significativamente la gestión y atención de incidencias dentro de la BUAP.
