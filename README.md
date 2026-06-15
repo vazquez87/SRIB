@@ -16,7 +16,7 @@ Actualmente, muchos de estos problemas se reportan mediante canales informales o
 
 Ante esta situación, surge la necesidad de desarrollar **SRIB**, una plataforma que permita registrar, administrar y dar seguimiento a las incidencias de forma organizada y centralizada. Con ello, se pretende mejorar la comunicación entre los usuarios y las áreas responsables, optimizar la gestión de los reportes y garantizar una atención más rápida y eficiente de las problemáticas detectadas dentro de la universidad.
 
-OBJETIVOS ESPECÍFICOS:
+#OBJETIVOS ESPECÍFICOS:
 
 -Permitir a los usuarios registrar incidencias de forma sencilla y rápida.
 
