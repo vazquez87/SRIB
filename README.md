@@ -12,18 +12,6 @@ En la BUAP se presentan diversas incidencias relacionadas con infraestructura, e
 
 Durante la observación del problema, se identificó que algunas incidencias pueden tardar aproximadamente tres días en ser atendidas. Por ello, surge la necesidad de desarrollar SRIB (Sistema de Reporte de Incidencias BUAP), una plataforma web que permita registrar, administrar y dar seguimiento a los reportes de manera centralizada, con el objetivo de mejorar la gestión de incidencias y reducir el tiempo de atención a aproximadamente dos días.
 
-# OBJETIVOS ESPECÍFICOS:
-
--Permitir a los usuarios registrar incidencias de forma sencilla y rápida.
-
--Centralizar la información de los reportes en una sola plataforma.
-
--Asignar prioridades y estados a cada incidencia.
-
--Facilitar el seguimiento del progreso de los reportes.
-Reducir los tiempos de respuesta en la atención de problemas.
-
--Mejorar la comunicación entre la comunidad universitaria y las áreas responsables.
 
 # Justificación de la Integración del Marco de Trabajo SCRUM:
 
