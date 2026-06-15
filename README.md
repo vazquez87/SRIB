@@ -1,4 +1,4 @@
-# SRIB
+# SRIB (Sistema de Reporte de Incidencias BUAP)
 
 # Resumen Ejecutivo
 
