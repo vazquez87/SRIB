@@ -56,7 +56,7 @@ Equipo de Desarrollo: José Eddy Pérez Martínez, Daniel Méndez Luna.
 Diseña, implementa y prueba las funcionalidades del sistema.
 
 
-## Visión Tecnológica
+# Visión Tecnológica
 
 SRIB será una plataforma web accesible desde cualquier dispositivo con conexión a internet. Utilizará una arquitectura cliente-servidor y una base de datos centralizada para gestionar incidencias de forma segura y eficiente.
 
