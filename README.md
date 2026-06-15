@@ -47,9 +47,14 @@ Scrum es adecuado para este proyecto porque:
 
 
 # Roles del Equipo
-Product Owner
+Product Owner:
+
 Representa las necesidades de los usuarios y define las prioridades del proyecto.
-Scrum Master
+
+Scrum Master:
+
 Supervisa que se siga la metodología Scrum y apoya al equipo en la resolución de obstáculos.
-Equipo de Desarrollo
+
+Equipo de Desarrollo:
+
 Diseña, implementa y prueba las funcionalidades del sistema.
