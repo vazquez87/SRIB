@@ -21,6 +21,7 @@ Objetivos Específicos
 -Permitir a los usuarios registrar incidencias de forma sencilla y rápida.
 
 -Centralizar la información de los reportes en una sola plataforma.
+
 -Asignar prioridades y estados a cada incidencia.
 
 -Facilitar el seguimiento del progreso de los reportes.
