@@ -2,11 +2,9 @@
 
 # Resumen Ejecutivo
 
-**SRIB (Sistema de Reporte de Incidencias BUAP)** es una plataforma web diseñada para facilitar el registro, la gestión y el seguimiento de incidencias dentro de las instalaciones de la Benemérita Universidad Autónoma de Puebla (BUAP).
+SRIB (Sistema de Reporte de Incidencias BUAP) es una plataforma web diseñada para registrar, gestionar y dar seguimiento a incidencias dentro de las instalaciones de la BUAP. El sistema permitirá a estudiantes, docentes y personal administrativo reportar problemas relacionados con infraestructura, equipos y servicios de manera rápida y organizada.
 
-A través de este sistema, estudiantes, docentes y personal administrativo podrán reportar de manera rápida y sencilla problemas relacionados con infraestructura, equipos, servicios o mantenimiento. La plataforma centralizará toda la información de los reportes en un solo lugar, permitiendo que los administradores los clasifiquen, asignen prioridades y supervisen su progreso hasta su resolución.
-
-Con la implementación de SRIB se busca agilizar la atención de incidencias, reducir los tiempos de respuesta y mejorar las condiciones de los espacios universitarios. Además, el sistema contribuirá a una administración más eficiente de los recursos institucionales y fortalecerá la comunicación entre la comunidad universitaria y las áreas responsables de atender estos problemas.
+Su implementación busca optimizar la gestión de reportes, mejorar la comunicación entre los usuarios y las áreas responsables, y reducir los tiempos de atención de incidencias. Además, se espera obtener un retorno de inversión (ROI) positivo desde una perspectiva operativa, reflejado en resultados cualitativos como una mejor organización de la información, mayor eficiencia en el seguimiento de reportes, reducción de incidencias sin atender y una mejora en la calidad de los servicios universitarios.
 
 # Definición del Problema
 
