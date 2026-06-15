@@ -109,7 +109,7 @@ Los riesgos identificados son bajos y pueden mitigarse mediante una adecuada pla
 
 # Cronograma de Hitos y Sprints Principales
 
-## Sprint 1: Planeación y Diseño (Semana 1)
+## Sprint 1: Planeación y Diseño (Semana 1. 15-19 Junio)
 
 ### Objetivo
 
@@ -129,7 +129,7 @@ Requisitos y diseño del sistema aprobados.
 
 ---
 
-## Sprint 2: Desarrollo del MVP (Semana 2)
+## Sprint 2: Desarrollo del MVP (Semana 2. 22-26 de Junio)
 
 ### Objetivo
 
@@ -148,7 +148,7 @@ Producto Mínimo Viable (MVP) funcional.
 
 ---
 
-## Sprint 3: Administración, Pruebas y Entrega (Semana 3)
+## Sprint 3: Administración, Pruebas y Entrega (Semana 3. 29 de Junio a 3 de Julio)
 
 ### Objetivo
 
