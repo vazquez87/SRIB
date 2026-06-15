@@ -88,7 +88,7 @@ Conclusión:
 
 La implementación de SRIB es viable, ya que los costos económicos son mínimos al utilizar herramientas gratuitas, mientras que los beneficios mejoran significativamente la gestión y atención de incidencias dentro de la BUAP.
 
-## Evaluación de Riesgos
+# Evaluación de Riesgos
 
 ### Riesgo Tecnológico
 
