@@ -178,3 +178,32 @@ Completar la gestión de incidencias y preparar la entrega final.
 ### Hito 3
 
 Sistema completamente funcional y listo para su entrega.
+
+# Analisis alternativo 
+
+Alternativa 1: Proceso actual
+Uso de mensajes, correos o comunicación verbal para reportar incidencias.
+
+Ventajas: Sin costo e implementación inmediata.
+
+Desventajas: Pérdida de información, duplicidad y poco seguimiento.
+
+Evaluación: Demora más las resoluciones de los problemas.
+
+Alternativa 2: Hojas de cálculo compartidas
+Registro de incidencias en documentos compartidos.
+
+Ventajas: Bajo costo y centralización básica.
+
+Desventajas: Seguimiento limitado y poca automatización.
+
+Evaluación: Mejora la organización, pero sigue siendo insuficiente.
+
+Alternativa 3: Sistema SRIB
+Plataforma web para registrar y gestionar incidencias.
+
+Ventajas: Centralización, seguimiento y estadísticas.
+
+Desventajas: Requiere desarrollo y mantenimiento.
+
+Evaluación: Es la alternativa más completa y eficiente.
