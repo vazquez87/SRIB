@@ -11,7 +11,7 @@
 * Identificación de quién realizó cada reporte.
 * Respaldo y almacenamiento seguro de los datos.
 
-## Pathos (Frustraciones) 🦆
+## Pathos (Frustraciones) 
 
 ¿Qué frustraciones va a aliviar mi solución?
 
