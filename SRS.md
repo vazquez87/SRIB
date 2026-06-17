@@ -55,7 +55,7 @@
 
 # DE MANERA GENERAL 
 
-## Ethos (Requerimientos No Funcionales)
+## Ethos (Requerimientos no funcionales)
 **¿Qué necesita el sistema para que las personas confíen en él?**
 1. Acceso seguro mediante usuario y contraseña.
 2. Almacenamiento confiable de la información sin pérdida de datos.
@@ -71,7 +71,7 @@
 4. Ayuda a reducir los tiempos de atención de los problemas reportados.
 5. Mantiene un historial organizado de las incidencias registradas.
 
-## Logos (Requerimientos Funcionales)
+## Logos (Requerimientos funcionales)
 **¿Qué acciones exactas debe realizar el sistema?**
 1. Registrar e iniciar sesión de usuarios.
 2. Registrar incidencias con descripción, categoría y ubicación.
