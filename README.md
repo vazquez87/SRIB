@@ -23,13 +23,16 @@ Scrum es adecuado para este proyecto porque:
 
 
 # ROLES DEL EQUIPO
-Product Owner: Jacqueline Vázquez de Ignacio.
+* Product Owner: Jacqueline Vázquez de Ignacio.
+
 Representa las necesidades de los usuarios y define las prioridades del proyecto.
 
-Scrum Master: Oscar Cortés Osorio.
+* Scrum Master: Oscar Cortés Osorio.
+
 Supervisa que se siga la metodología Scrum y apoya al equipo en la resolución de obstáculos.
 
-Equipo de Desarrollo: José Eddy Pérez Martínez, Daniel Méndez Luna. 
+* Equipo de Desarrollo: José Eddy Pérez Martínez, Daniel Méndez Luna. 
+
 Diseña, implementa y prueba las funcionalidades del sistema.
 
 
