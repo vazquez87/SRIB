@@ -1,6 +1,6 @@
 
 
-# Ethos (Requerimientos no funcionales)
+# Ethos 
 **¿Qué necesita el sistema para que las personas confíen en él?**
 1. Acceso seguro mediante usuario y contraseña.
 2. Almacenamiento confiable de la información sin pérdida de datos.
@@ -8,7 +8,7 @@
 4. Interfaz sencilla e intuitiva para cualquier usuario de la BUAP.
 5. Información actualizada sobre el estado de las incidencias en tiempo real.
 
-# Pathos (Necesidades que satisface la solución)
+# Pathos
 **¿Qué beneficios concretos aporta la solución?**
 1. Permite reportar incidencias de forma rápida y sencilla.
 2. Facilita el seguimiento del estado de cada incidencia.
@@ -16,7 +16,7 @@
 4. Ayuda a reducir los tiempos de atención de los problemas reportados.
 5. Mantiene un historial organizado de las incidencias registradas.
 
-# Logos (Requerimientos funcionales)
+# Logos 
 **¿Qué acciones exactas debe realizar el sistema?**
 1. Registrar e iniciar sesión de usuarios.
 2. Registrar incidencias con descripción, categoría y ubicación.
