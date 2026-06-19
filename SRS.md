@@ -5,7 +5,7 @@
 1. Acceso seguro mediante usuario y contraseña.
 2. Almacenamiento confiable de la información sin pérdida de datos.
 3. Disponibilidad del sistema desde cualquier dispositivo con conexión a internet.
-4. Interfaz sencilla e intuitiva para cualquier usuario de la BUAP.
+4. Interfaz sencilla e intuitiva para cualquier usuario de la FCC BUAP.
 5. Información actualizada sobre el estado de las incidencias en tiempo real.
 
 # Pathos
