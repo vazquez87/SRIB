@@ -1,0 +1,326 @@
+<!DOCTYPE html> <!-- Indica que el documento utiliza HTML5. -->
+
+<html lang="es"> <!-- Elemento raíz del documento y establece que el idioma es español. -->
+
+<head> <!-- Contiene la información de configuración de la página. -->
+
+    <meta charset="UTF-8">
+    <!-- Permite mostrar correctamente caracteres especiales como á, é, í, ó, ú y ñ. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace que la página sea adaptable a dispositivos móviles. -->
+
+    <title>SRIB - Sistema de Reporte de Incidencias BUAP</title>
+    <!-- Título que aparece en la pestaña del navegador. -->
+
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Vincula el archivo CSS principal con la página. -->
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Importa la biblioteca Font Awesome para utilizar iconos. -->
+
+</head>
+
+<body> <!-- Contiene todo el contenido visible de la página. -->
+
+    <!-- ======================
+            NAVBAR
+    ====================== -->
+
+    <header class="navbar">
+    <!-- Barra de navegación principal. -->
+
+        <h1>
+        <!-- Título principal del sistema. -->
+
+            SISTEMA DE REPORTE DE INCIDENCIAS
+
+            <span>BUAP</span>
+            <!-- Resalta la palabra BUAP con un estilo diferente. -->
+
+        </h1>
+
+        <div class="nav-buttons">
+        <!-- Contenedor de los botones de acceso. -->
+
+            <a href="./pages/login.html" class="btn-login">
+            <!-- Enlace para iniciar sesión. -->
+
+                <i class="fa-solid fa-user"></i>
+                <!-- Icono de usuario. -->
+
+                INICIAR SESIÓN
+
+            </a>
+
+            <a href="./pages/registro.html" class="btn-register">
+            <!-- Enlace para registrarse en el sistema. -->
+
+                <i class="fa-solid fa-user-plus"></i>
+                <!-- Icono para registrar un usuario. -->
+
+                REGISTRARSE
+
+            </a>
+
+        </div>
+
+    </header>
+
+    <!-- ======================
+            HERO
+    ====================== -->
+
+    <section class="hero">
+    <!-- Sección principal de presentación del sistema. -->
+
+        <div class="hero-left">
+        <!-- Contenedor del logotipo. -->
+
+            <img src="img/logo-srib.png"
+                 class="logo"
+                 alt="SRIB">
+            <!-- Logotipo del sistema SRIB. -->
+
+        </div>
+
+        <div class="hero-center">
+        <!-- Contenedor del mensaje principal. -->
+
+            <div class="vertical-line"></div>
+            <!-- Línea decorativa. -->
+
+            <div class="hero-content">
+
+                <h2>
+                    REPORTA.<br>
+                    <span class="blue-text">DA SEGUIMIENTO.</span><br>
+                    MEJORA TU FACULTAD.
+                </h2>
+                <!-- Mensaje principal del sistema. -->
+
+                <a href="pages/login.html" class="hero-btn">
+                <!-- Botón para acceder al sistema y realizar un reporte. -->
+
+                    Reportar incidencia
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-right">
+        <!-- Contenedor de la imagen representativa de la facultad. -->
+
+            <img src="img/fcc-difuminada.png" alt="FCC BUAP">
+            <!-- Imagen decorativa de la Facultad de Ciencias de la Computación. -->
+
+        </div>
+
+    </section>
+
+    <!-- ======================
+          TARJETAS
+    ====================== -->
+
+    <section class="cards">
+    <!-- Contenedor de las tarjetas informativas. -->
+
+        <!-- ¿QUÉ ES SRIB? -->
+
+        <div class="card">
+        <!-- Tarjeta que explica qué es el sistema. -->
+
+            <div class="card-header">
+
+                <div class="card-icon">
+
+                    <i class="fa-regular fa-file-lines"></i>
+                    <!-- Icono representativo de documentos. -->
+
+                </div>
+
+                <div>
+
+                    <h3>¿QUÉ ES SRIB?</h3>
+                    <!-- Título de la tarjeta. -->
+
+                    <div class="card-line"></div>
+                    <!-- Línea decorativa. -->
+
+                </div>
+
+            </div>
+
+            <p>
+                SRIB es una plataforma digital que le permite, a la comunidad
+                de la FCC BUAP, reportar incidencias relacionadas con
+                infraestructura, servicios o equipamiento, brindando
+                seguimiento hasta su resolución.
+            </p>
+            <!-- Descripción general del sistema. -->
+
+        </div>
+
+        <!-- ¿CÓMO FUNCIONA? -->
+
+        <div class="card">
+        <!-- Tarjeta que explica el funcionamiento del sistema. -->
+
+            <div class="card-header">
+
+                <div class="card-icon">
+
+                    <i class="fa-solid fa-gear"></i>
+                    <!-- Icono de configuración. -->
+
+                </div>
+
+                <div>
+
+                    <h3>¿CÓMO FUNCIONA?</h3>
+                    <!-- Título de la tarjeta. -->
+
+                    <div class="card-line"></div>
+                    <!-- Línea decorativa. -->
+
+                </div>
+
+            </div>
+
+            <div class="steps">
+            <!-- Lista de pasos para utilizar el sistema. -->
+
+                <div class="step">
+
+                    <div class="number">1</div>
+                    <!-- Número del paso. -->
+
+                    <p>
+                        Inicia sesión o crea tu cuenta con tu correo institucional.
+                    </p>
+
+                </div>
+
+                <div class="step">
+
+                    <div class="number">2</div>
+
+                    <p>
+                        Reporta una incidencia indicando ubicación y detalles.
+                    </p>
+
+                </div>
+
+                <div class="step">
+
+                    <div class="number">3</div>
+
+                    <p>
+                        Da seguimiento al estado de tu reporte.
+                    </p>
+
+                </div>
+
+                <div class="step">
+
+                    <div class="number">4</div>
+
+                    <p>
+                        La incidencia es atendida por el área responsable.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ¿QUIÉN PUEDE USARLO? -->
+
+        <div class="card">
+        <!-- Tarjeta que muestra quiénes pueden utilizar el sistema. -->
+
+            <div class="card-header">
+
+                <div class="card-icon">
+
+                    <i class="fa-solid fa-users"></i>
+                    <!-- Icono de usuarios. -->
+
+                </div>
+
+                <div>
+
+                    <h3>¿QUIÉN PUEDE USARLO?</h3>
+                    <!-- Título de la tarjeta. -->
+
+                    <div class="card-line"></div>
+                    <!-- Línea decorativa. -->
+
+                </div>
+
+            </div>
+
+            <div class="user-list">
+            <!-- Lista de tipos de usuarios. -->
+
+                <div class="user-item">
+
+                    <span class="emoji">🎓</span>
+                    <!-- Emoji que representa a los estudiantes. -->
+
+                    <span>Alumnos</span>
+
+                </div>
+
+                <div class="user-item">
+
+                    <span class="emoji">👨‍🏫</span>
+                    <!-- Emoji que representa a los docentes. -->
+
+                    <span>Docentes</span>
+
+                </div>
+
+                <div class="user-item">
+
+                    <span class="emoji">🏢</span>
+                    <!-- Emoji que representa al personal administrativo. -->
+
+                    <span>Personal administrativo</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ======================
+      SECCIÓN INFERIOR
+    ====================== -->
+
+    <section class="info-banner">
+    <!-- Banner informativo ubicado al final de la página. -->
+
+        <div class="banner-content">
+
+            <h3>Tu participación hace la diferencia.</h3>
+            <!-- Mensaje principal del banner. -->
+
+            <p>
+                Contribuye al mejoramiento de la facultad reportando incidencias de manera rápida y sencilla.
+            </p>
+            <!-- Mensaje que invita a participar en el sistema. -->
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
