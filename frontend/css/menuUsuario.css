@@ -1,0 +1,197 @@
+/* Selecciona todos los elementos de la página. */
+*{
+    margin:0; /* Elimina el margen predeterminado de todos los elementos. */
+    padding:0; /* Elimina el espacio interno (padding) predeterminado. */
+    box-sizing:border-box; /* Incluye el borde y el padding dentro del ancho y alto del elemento. */
+    font-family:'Segoe UI',sans-serif; /* Establece la fuente principal de la página. */
+}
+
+/* Configuración general del cuerpo de la página. */
+body{
+    min-height:100vh; /* Hace que la página ocupe al menos toda la altura de la ventana del navegador. */
+    background: /* Define el fondo de la página. */
+    radial-gradient( /* Crea un degradado circular. */
+        circle at center, /* El degradado comienza desde el centro. */
+        #eef2f9 0%, /* Color inicial del degradado. */
+        #dfe5ef 100% /* Color final del degradado. */
+    );
+}
+
+/* =========================
+        HEADER
+========================= */
+
+/* Contenedor del encabezado principal. */
+.header{
+    height:75px; /* Define la altura del encabezado. */
+    background:#00154f; /* Establece un fondo azul oscuro. */
+    display:flex; /* Activa Flexbox. */
+    justify-content:space-between; /* Coloca los elementos en los extremos del encabezado. */
+    align-items:center; /* Centra verticalmente el contenido. */
+    padding:0 50px; /* Agrega espacio interno a los lados. */
+    box-shadow:0 3px 12px rgba(0,0,0,.15); /* Agrega una sombra debajo del encabezado. */
+}
+
+/* Título del encabezado. */
+.header h1{
+    color:white; /* Cambia el color del texto a blanco. */
+    font-size:1.6rem; /* Define el tamaño del título. */
+}
+
+/* Texto resaltado dentro del título. */
+.header span{
+    color:#3b82f6; /* Cambia el color del texto a azul claro. */
+}
+
+/* =========================
+      BOTÓN CERRAR
+========================= */
+
+/* Botón para cerrar sesión. */
+.btn-logout{
+    text-decoration:none; /* Elimina el subrayado del enlace. */
+    background:white; /* Fondo blanco. */
+    color:#003B8E; /* Color azul del texto. */
+    padding:12px 20px; /* Espacio interno del botón. */
+    border-radius:10px; /* Bordes redondeados. */
+    font-weight:600; /* Texto seminegrita. */
+    transition:.3s; /* Suaviza las transiciones. */
+}
+
+/* Efecto cuando el cursor pasa sobre el botón. */
+.btn-logout:hover{
+    background:#0A5BD8; /* Cambia el fondo a azul. */
+    color:white; /* Cambia el texto a blanco. */
+}
+
+/* =========================
+     CONTENEDOR PRINCIPAL
+========================= */
+
+/* Contenedor principal del panel de usuario. */
+.dashboard{
+    max-width:1300px; /* Define el ancho máximo del contenido. */
+    margin:auto; /* Centra el contenedor horizontalmente. */
+    padding:60px 40px; /* Agrega espacio interno. */
+    display:flex; /* Activa Flexbox. */
+    align-items:center; /* Centra verticalmente los elementos. */
+    justify-content:center; /* Centra horizontalmente el contenido. */
+    gap:80px; /* Agrega espacio entre el perfil y el panel de opciones. */
+}
+
+/* =========================
+          PERFIL
+========================= */
+
+/* Contenedor de la información del usuario. */
+.profile{
+    width:400px; /* Define el ancho del panel de perfil. */
+    text-align:center; /* Centra el contenido. */
+}
+
+/* Imagen de perfil del usuario. */
+.profile-img{
+    width:250px; /* Ancho de la imagen. */
+    height:250px; /* Altura de la imagen. */
+    object-fit:cover; /* Ajusta la imagen sin deformarla. */
+    margin-bottom:-20px; /* Reduce el espacio inferior de la imagen. */
+}
+
+/* Nombre del usuario. */
+.profile h2{
+    color:#00154f; /* Color azul oscuro. */
+    font-size:1.8rem; /* Tamaño del texto. */
+    margin-bottom:8px; /* Espacio debajo del nombre. */
+}
+
+/* Información adicional del usuario. */
+.profile p{
+    color:#6b7280; /* Color gris del texto. */
+    font-size:1rem; /* Tamaño del texto. */
+    font-weight:500; /* Texto con grosor medio. */
+}
+
+/* =========================
+      PANEL OPCIONES
+========================= */
+
+/* Tarjeta que contiene las opciones del menú. */
+.menu-panel{
+    width:600px; /* Ancho del panel. */
+    margin-top:80px; /* Espacio superior. */
+    background:white; /* Fondo blanco. */
+    padding:50px; /* Espacio interno. */
+    border-radius:25px; /* Bordes redondeados. */
+    box-shadow:0 10px 30px rgba(0,0,0,.10); /* Agrega una sombra alrededor del panel. */
+    transform:translateX(-30px); /* Desplaza ligeramente el panel hacia la izquierda. */
+}
+
+/* Título del panel de opciones. */
+.menu-panel h2{
+    text-align:center; /* Centra el texto. */
+    color:#00154f; /* Color azul oscuro. */
+    font-size:2rem; /* Tamaño del título. */
+    margin-bottom:40px; /* Espacio debajo del título. */
+}
+
+/* =========================
+         BOTONES
+========================= */
+
+/* Contenedor de los botones del menú. */
+.menu-buttons{
+    display:flex; /* Coloca los botones en una fila. */
+    justify-content:center; /* Centra los botones horizontalmente. */
+    gap:30px; /* Espacio entre los botones. */
+}
+
+/* Botón de cada opción del menú. */
+.btn-option{
+    width:230px; /* Ancho del botón. */
+    height:120px; /* Altura del botón. */
+    display:flex; /* Activa Flexbox. */
+    flex-direction:column; /* Coloca el icono y el texto en columna. */
+    justify-content:center; /* Centra verticalmente el contenido. */
+    align-items:center; /* Centra horizontalmente el contenido. */
+    gap:12px; /* Espacio entre el icono y el texto. */
+    text-decoration:none; /* Elimina el subrayado del enlace. */
+    background:#0A5BD8; /* Fondo azul. */
+    color:white; /* Texto blanco. */
+    border-radius:18px; /* Bordes redondeados. */
+    font-weight:600; /* Texto seminegrita. */
+    transition:.3s; /* Suaviza las transiciones. */
+}
+
+/* Icono dentro del botón. */
+.btn-option i{
+    font-size:2rem; /* Tamaño del icono. */
+}
+
+/* Efecto cuando el cursor pasa sobre un botón. */
+.btn-option:hover{
+    transform:translateY(-5px); /* Eleva ligeramente el botón. */
+    background:#0047b8; /* Cambia el fondo a un azul más oscuro. */
+    box-shadow:0 10px 25px rgba(10,91,216,.35); /* Agrega una sombra más pronunciada. */
+}
+
+/* =========================
+        RESPONSIVE
+========================= */
+
+/* Aplica estos estilos cuando la pantalla mide 1000 px o menos. */
+@media(max-width:1000px){
+
+    .dashboard{
+        flex-direction:column; /* Coloca el perfil y el panel de opciones uno debajo del otro. */
+    }
+
+    .menu-buttons{
+        flex-direction:column; /* Coloca los botones en columna. */
+        align-items:center; /* Centra los botones horizontalmente. */
+    }
+
+    .menu-panel{
+        width:100%; /* Hace que el panel ocupe todo el ancho disponible. */
+    }
+
+}

@@ -1,0 +1,431 @@
+/* Selecciona todos los elementos de la página. */
+*{
+    margin:0; /* Elimina el margen predeterminado de todos los elementos. */
+    padding:0; /* Elimina el espacio interno (padding) predeterminado. */
+    box-sizing:border-box; /* Incluye el borde y el padding dentro del ancho y alto del elemento. */
+    font-family:'Segoe UI',sans-serif; /* Establece la fuente principal de toda la página. */
+}
+
+/* Configuración general del cuerpo de la página. */
+body{
+    background-image:url("../img/fondo-azul.png"); /* Establece una imagen como fondo de la página. */
+    background-size:cover; /* Hace que la imagen cubra toda la pantalla. */
+    background-position:center; /* Centra la imagen de fondo. */
+    background-attachment:fixed; /* Mantiene el fondo fijo mientras se desplaza la página. */
+}
+
+/* =========================
+        NAVBAR
+========================= */
+
+/* Barra de navegación principal. */
+.navbar{
+    background:
+        linear-gradient( /* Aplica un degradado horizontal. */
+            90deg,
+            #010521,
+            #03154d,
+            #010521
+        );
+    display:flex; /* Activa Flexbox. */
+    justify-content:space-between; /* Coloca los elementos en los extremos de la barra. */
+    align-items:center; /* Centra verticalmente los elementos. */
+    padding:15px 25px; /* Agrega espacio interno. */
+    box-shadow:
+        0 3px 12px rgba(0,0,0,.15); /* Agrega una sombra debajo de la barra. */
+}
+
+/* Título de la barra de navegación. */
+.navbar h1{
+    color:white; /* Color blanco del texto. */
+    font-size:1.55rem; /* Tamaño del título. */
+    font-weight:700; /* Texto en negrita. */
+}
+
+/* Texto resaltado dentro del título. */
+.navbar span{
+    color:#4da3ff; /* Color azul claro. */
+    font-weight:800; /* Texto con mayor grosor. */
+}
+
+/* Contenedor de los botones de navegación. */
+.nav-buttons{
+    display:flex; /* Coloca los botones en una fila. */
+    gap:12px; /* Espacio entre los botones. */
+}
+
+/* Estilos generales para los botones de iniciar sesión y registrarse. */
+.btn-login,
+.btn-register{
+    text-decoration:none; /* Elimina el subrayado del enlace. */
+    color:white; /* Texto blanco. */
+    padding:10px 20px; /* Espacio interno del botón. */
+    border-radius:8px; /* Bordes redondeados. */
+    font-weight:600; /* Texto seminegrita. */
+    letter-spacing:.3px; /* Agrega una ligera separación entre letras. */
+    transition:.3s ease; /* Suaviza las transiciones. */
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.20); /* Agrega una sombra. */
+}
+
+/* Botón de iniciar sesión. */
+.btn-login{
+    background:#0040a0; /* Fondo azul oscuro. */
+}
+
+/* Botón de registrarse. */
+.btn-register{
+    border:1px solid rgba(255,255,255,.5); /* Borde blanco semitransparente. */
+    background:rgba(255,255,255,.08); /* Fondo blanco con transparencia. */
+}
+
+/* Efecto general al pasar el cursor sobre los botones. */
+.btn-login:hover,
+.btn-register:hover{
+    transform:translateY(-2px); /* Eleva ligeramente el botón. */
+}
+
+/* Efecto específico del botón Iniciar sesión. */
+.btn-login:hover{
+    background:#1458e7; /* Cambia el fondo a un azul más claro. */
+}
+
+/* Efecto específico del botón Registrarse. */
+.btn-register:hover{
+    background:#1458e7; /* Cambia el fondo a azul. */
+    border-color:#1458e7; /* Cambia el color del borde. */
+}
+
+/* =========================
+          HERO
+========================= */
+
+/* Sección principal de presentación. */
+.hero{
+    height:280px; /* Altura de la sección. */
+    display:flex; /* Activa Flexbox. */
+    align-items:center; /* Centra verticalmente el contenido. */
+    position:relative; /* Permite posicionar elementos internos de forma absoluta. */
+    overflow:hidden; /* Oculta el contenido que sobresale. */
+}
+
+/* Panel izquierdo del Hero. */
+.hero-left{
+    width:22%; /* Ancho del panel. */
+    display:flex;
+    justify-content:center; /* Centra horizontalmente el contenido. */
+    align-items:center; /* Centra verticalmente el contenido. */
+    z-index:2; /* Coloca el contenido por encima de otros elementos. */
+}
+
+/* Logotipo del sistema. */
+.logo{
+    width:225px; /* Ancho de la imagen. */
+    height:auto; /* Mantiene la proporción de la imagen. */
+    display:block; /* Hace que la imagen sea un elemento de bloque. */
+    filter:
+        drop-shadow(
+            0 8px 15px rgba(0,0,0,.15)
+        ); /* Agrega una sombra al logotipo. */
+}
+
+/* Panel central del Hero. */
+.hero-center{
+    width:47%; /* Ancho del panel. */
+    margin-left:30px; /* Espacio izquierdo. */
+    display:flex;
+    align-items:center; /* Centra verticalmente el contenido. */
+    gap:60px; /* Espacio entre los elementos. */
+}
+
+/* Panel derecho del Hero. */
+.hero-right{
+    width:45%; /* Ancho del panel. */
+    height:100%; /* Ocupa toda la altura. */
+    position:absolute; /* Permite colocarlo en una posición específica. */
+    right:0; /* Lo ubica al lado derecho. */
+    top:0; /* Lo alinea con la parte superior. */
+    display:flex;
+    justify-content:flex-end; /* Alinea el contenido hacia la derecha. */
+    align-items:center; /* Centra verticalmente el contenido. */
+    overflow:hidden; /* Oculta el contenido sobrante. */
+}
+
+/* Imagen del panel derecho. */
+.hero-right img{
+    width:100%; /* Ocupa todo el ancho. */
+    height:100%; /* Ocupa toda la altura. */
+    object-fit:cover; /* Ajusta la imagen sin deformarla. */
+    object-position:center 40%; /* Cambia el punto de enfoque de la imagen. */
+    opacity:.9; /* Reduce ligeramente la opacidad. */
+    filter:
+        brightness(.95)
+        saturate(.9); /* Ajusta el brillo y la saturación. */
+    mask-image:linear-gradient(
+        to left,
+        black 65%,
+        rgba(0,0,0,.8) 75%,
+        rgba(0,0,0,.4) 90%,
+        transparent 100%
+    ); /* Crea un efecto de desvanecimiento hacia la izquierda. */
+    -webkit-mask-image:linear-gradient(
+        to left,
+        black 65%,
+        rgba(0,0,0,.8) 75%,
+        rgba(0,0,0,.4) 90%,
+        transparent 100%
+    ); /* Compatibilidad con navegadores basados en WebKit. */
+}
+
+/* Degradado blanco sobre la parte inferior de la imagen. */
+.hero-right::after{
+    content:""; /* Crea un pseudoelemento vacío. */
+    position:absolute;
+    inset:0; /* Hace que ocupe todo el contenedor. */
+    background:
+    linear-gradient(
+        to bottom,
+        transparent 0%,
+        transparent 65%,
+        rgba(255,255,255,.75) 90%,
+        white 100%
+    );
+    pointer-events:none; /* Evita que interfiera con el cursor. */
+}
+
+/* Línea decorativa. */
+.vertical-line{
+    width:4px; /* Grosor de la línea. */
+    height:130px; /* Altura de la línea. */
+    background:#082882; /* Color azul oscuro. */
+    border-radius:20px; /* Bordes redondeados. */
+}
+
+/* Título principal del Hero. */
+.hero-center h2{
+    color:#0f172a; /* Color del texto. */
+    font-size:2.05rem; /* Tamaño del título. */
+    line-height:1.15; /* Espaciado entre líneas. */
+    font-weight:900; /* Texto muy grueso. */
+}
+
+/* Botón del Hero. */
+.hero-btn{
+    display:inline-block; /* Permite aplicar dimensiones al enlace. */
+    margin-top:17px; /* Espacio superior. */
+    background:#043193; /* Fondo azul. */
+    color:white; /* Texto blanco. */
+    text-decoration:none; /* Elimina el subrayado. */
+    padding:8px 16px; /* Espacio interno. */
+    border-radius:10px; /* Bordes redondeados. */
+    font-weight:500; /* Texto con grosor medio. */
+    transition:.3s ease; /* Suaviza las transiciones. */
+    box-shadow:
+        0 6px 15px rgba(36,98,231,.25); /* Agrega una sombra. */
+}
+
+/* Efecto al pasar el cursor sobre el botón. */
+.hero-btn:hover{
+    transform:translateY(-2px); /* Eleva ligeramente el botón. */
+    background:rgb(14,73,202); /* Cambia el fondo a un azul más claro. */
+}
+
+/* Texto resaltado en azul. */
+.blue-text{
+    color:#1150d8; /* Cambia el color del texto. */
+}
+
+/* =========================
+        TARJETAS
+========================= */
+
+/* Contenedor de las tarjetas informativas. */
+.cards{
+    display:flex; /* Coloca las tarjetas en una fila. */
+    gap:15px; /* Espacio entre ellas. */
+    padding:10px; /* Espacio interno. */
+    margin-top:-15px; /* Desplaza las tarjetas hacia arriba. */
+}
+
+/* Tarjeta individual. */
+.card{
+    flex:1; /* Todas las tarjetas ocupan el mismo espacio. */
+    background:
+        linear-gradient(
+            135deg,
+            rgba(4,23,71,.95),
+            rgba(15,30,70,.95)
+        ); /* Fondo con degradado. */
+    backdrop-filter:blur(10px); /* Aplica efecto de desenfoque. */
+    -webkit-backdrop-filter:blur(10px); /* Compatibilidad con WebKit. */
+    border-top:4px solid #002259; /* Borde superior azul. */
+    border-radius:20px; /* Bordes redondeados. */
+    padding:25px; /* Espacio interno. */
+    transition:.25s; /* Suaviza las transiciones. */
+    box-shadow:
+        0 20px 35px rgba(0,0,0,.18); /* Agrega una sombra. */
+    border:1px solid rgba(255,255,255,.05); /* Borde semitransparente. */
+}
+
+/* Efecto al pasar el cursor sobre la tarjeta. */
+.card:hover{
+    transform:translateY(-3px); /* Eleva ligeramente la tarjeta. */
+    box-shadow:
+        0 12px 28px rgba(0,0,0,.18); /* Cambia la sombra. */
+}
+
+/* Encabezado de la tarjeta. */
+.card-header{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:12px;
+}
+
+/* Icono de la tarjeta. */
+.card-icon{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:#1153bd;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:1.3rem;
+    box-shadow:
+        0 4px 12px rgba(37,99,235,.25);
+}
+
+/* Título de la tarjeta. */
+.card-header h3{
+    color:white;
+    font-size:1.1rem;
+    font-weight:700;
+}
+
+/* Línea decorativa. */
+.card-line{
+    width:100px;
+    height:2px;
+    background:#60a5fa;
+    margin-top:8px;
+    border-radius:20px;
+}
+
+/* Texto de la tarjeta. */
+.card p{
+    color:rgba(255,255,255,.92);
+    font-size:1rem;
+    line-height:1.6;
+}
+
+/* =========================
+          PASOS
+========================= */
+
+/* Contenedor de la lista de pasos. */
+.steps{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+/* Paso individual. */
+.step{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+}
+
+/* Texto del paso. */
+.step p{
+    margin:0;
+}
+
+/* Número del paso. */
+.number{
+    width:26px;
+    height:26px;
+    border-radius:50%;
+    background:#1153bd;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+    flex-shrink:0; /* Evita que el círculo cambie de tamaño. */
+}
+
+/* =========================
+         USUARIOS
+========================= */
+
+/* Lista de tipos de usuarios. */
+.user-list{
+    margin-top:20px;
+}
+
+/* Elemento de la lista de usuarios. */
+.user-item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:18px;
+    color:white;
+    font-size:1.05rem;
+}
+
+/* Icono o emoji del usuario. */
+.emoji{
+    font-size:1.3rem;
+}
+
+/* =========================
+        RESPONSIVE
+========================= */
+
+/* Aplica estos estilos cuando la pantalla mide 900 px o menos. */
+@media(max-width:900px){
+    .navbar{
+        flex-direction:column; /* Coloca los elementos de la barra en columna. */
+        gap:15px; /* Espacio entre ellos. */
+    }
+
+    .hero{
+        flex-direction:column; /* Coloca los paneles del Hero uno debajo del otro. */
+        height:auto; /* Ajusta automáticamente la altura. */
+        padding:30px 20px; /* Reduce el espacio interno. */
+        gap:20px; /* Espacio entre los elementos. */
+    }
+
+    .hero-left,
+    .hero-center{
+        width:100%; /* Cada panel ocupa todo el ancho disponible. */
+    }
+
+    .cards{
+        flex-direction:column; /* Coloca las tarjetas en columna. */
+    }
+}
+
+/* Banner informativo. */
+.info-banner{
+    width:44%; /* Define el ancho del banner. */
+    margin:11px auto; /* Lo centra horizontalmente. */
+    background:rgba(255,255,255,.20); /* Fondo blanco semitransparente. */
+    backdrop-filter:blur(8px); /* Aplica un efecto de desenfoque. */
+    border-left:5px solid #2563eb; /* Agrega un borde azul en el lado izquierdo. */
+    border-radius:10px; /* Bordes redondeados. */
+    padding:15px 20px; /* Espacio interno. */
+}
+
+/* Título del banner. */
+.info-banner h3{
+    font-size:1.05rem; /* Tamaño del título. */
+}
+
+/* Texto del banner. */
+.info-banner p{
+    font-size:0.93rem; /* Tamaño del texto. */
+}

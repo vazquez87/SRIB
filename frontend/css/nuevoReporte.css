@@ -1,0 +1,269 @@
+/* Selecciona todos los elementos de la página. */
+*{
+    margin:0; /* Elimina el margen predeterminado de todos los elementos. */
+    padding:0; /* Elimina el espacio interno (padding) predeterminado. */
+    box-sizing:border-box; /* Incluye el borde y el padding dentro del ancho y alto del elemento. */
+    font-family:'Segoe UI', sans-serif; /* Establece la fuente principal de la página. */
+}
+
+/* Configuración general del cuerpo de la página. */
+body{
+    min-height:100vh; /* Hace que la página ocupe al menos toda la altura de la ventana del navegador. */
+    background: /* Define el fondo de la página. */
+    radial-gradient( /* Crea un degradado circular. */
+        circle at center, /* El degradado comienza desde el centro. */
+        #eef2f9 0%, /* Color inicial del degradado. */
+        #dfe5ef 100% /* Color final del degradado. */
+    );
+}
+
+/* =========================
+        HEADER
+========================= */
+
+/* Contenedor del encabezado principal. */
+.header{
+    height:65px; /* Define la altura del encabezado. */
+    background:#00154f; /* Establece un fondo azul oscuro. */
+    display:flex; /* Activa Flexbox. */
+    align-items:center; /* Centra verticalmente el contenido. */
+    padding:0 45px; /* Agrega espacio interno a los lados. */
+    box-shadow:0 3px 12px rgba(0,0,0,.15); /* Agrega una sombra debajo del encabezado. */
+}
+
+/* Título del encabezado. */
+.header h1{
+    color:white; /* Cambia el color del texto a blanco. */
+    font-size:1.5rem; /* Define el tamaño del título. */
+    font-weight:700; /* Aplica negrita al texto. */
+}
+
+/* Texto resaltado dentro del título. */
+.header span{
+    color:#3b82f6; /* Cambia el color del texto a azul claro. */
+}
+
+/* =========================
+     BOTÓN REGRESAR
+========================= */
+
+/* Botón para regresar al menú anterior. */
+.btn-back{
+    position:absolute; /* Permite colocar el botón en una posición específica. */
+    top:105px; /* Distancia desde la parte superior. */
+    left:40px; /* Distancia desde el lado izquierdo. */
+    background:white; /* Fondo blanco. */
+    color:#003B8E; /* Color azul del texto. */
+    text-decoration:none; /* Elimina el subrayado del enlace. */
+    padding:12px 22px; /* Espacio interno del botón. */
+    border-radius:10px; /* Bordes redondeados. */
+    font-weight:600; /* Texto seminegrita. */
+    box-shadow:0 3px 12px rgba(0,0,0,.12); /* Agrega una sombra alrededor del botón. */
+    transition:.3s; /* Suaviza las transiciones. */
+}
+
+/* Efecto cuando el cursor pasa sobre el botón. */
+.btn-back:hover{
+    background:#003B8E; /* Cambia el fondo a azul. */
+    color:white; /* Cambia el texto a blanco. */
+}
+
+/* =========================
+       CONTENEDOR
+========================= */
+
+/* Contenedor principal del formulario de reporte. */
+.reporte-container{
+    min-height:calc(100vh - 65px); /* Ocupa el espacio restante después del encabezado. */
+    display:flex; /* Activa Flexbox. */
+    justify-content:center; /* Centra el contenido horizontalmente. */
+    align-items:center; /* Centra el contenido verticalmente. */
+    padding:20px; /* Agrega espacio interno alrededor del formulario. */
+}
+
+/* =========================
+         TARJETA
+========================= */
+
+/* Tarjeta que contiene el formulario del reporte. */
+.form-card{
+    width:500px; /* Define el ancho de la tarjeta. */
+    background:white; /* Fondo blanco. */
+    border-radius:25px; /* Bordes redondeados. */
+    padding:25px; /* Espacio interno. */
+    box-shadow:
+    0 15px 35px
+    rgba(0,0,0,.12); /* Agrega una sombra para dar profundidad. */
+}
+
+/* Título del formulario. */
+.form-card h2{
+    text-align:center; /* Centra el texto. */
+    color:#00154f; /* Color azul oscuro. */
+    font-size:1.9rem; /* Tamaño del título. */
+    margin-bottom:30px; /* Espacio debajo del título. */
+}
+
+/* Texto resaltado dentro del título. */
+.form-card span{
+    color:#3b82f6; /* Cambia el color del texto a azul claro. */
+}
+
+/* =========================
+      MENSAJE ERROR
+========================= */
+
+/* Mensaje de error oculto inicialmente. */
+.mensaje-error{
+    display:none; /* Permanece oculto hasta que JavaScript lo muestre. */
+    background:#ef4444; /* Fondo rojo. */
+    color:white; /* Texto blanco. */
+    padding:12px; /* Espacio interno. */
+    border-radius:10px; /* Bordes redondeados. */
+    text-align:center; /* Centra el texto. */
+    margin-bottom:20px; /* Espacio inferior. */
+    font-weight:600; /* Texto seminegrita. */
+}
+
+/* =========================
+          CAMPOS
+========================= */
+
+/* Contenedor de cada campo del formulario. */
+.campo{
+    margin-bottom:16px; /* Espacio entre los campos. */
+}
+
+/* Etiquetas de los campos. */
+.campo label{
+    display:block; /* Hace que la etiqueta ocupe toda la línea. */
+    margin-bottom:8px; /* Espacio entre la etiqueta y el campo. */
+    color:#00154f; /* Color azul oscuro. */
+    font-weight:600; /* Texto seminegrita. */
+    font-size:.92rem; /* Tamaño del texto. */
+}
+
+/* Iconos dentro de las etiquetas. */
+.campo label i{
+    margin-right:8px; /* Agrega espacio entre el icono y el texto. */
+}
+
+/* Campos de entrada, listas desplegables y áreas de texto. */
+.campo input,
+.campo select,
+.campo textarea{
+    width:100%; /* Ocupan todo el ancho disponible. */
+    border:2px solid #dbe3f0; /* Borde gris claro. */
+    border-radius:12px; /* Bordes redondeados. */
+    padding:12px 14px; /* Espacio interno. */
+    font-size:13px; /* Tamaño del texto. */
+    transition:.3s; /* Suaviza las transiciones. */
+}
+
+/* Configuración específica del área de texto. */
+.campo textarea{
+    height:100px; /* Define la altura del área de texto. */
+    resize:none; /* Impide que el usuario cambie su tamaño. */
+}
+
+/* Efecto cuando un campo recibe el enfoque. */
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus{
+    outline:none; /* Elimina el borde predeterminado del navegador. */
+    border-color:#0A5BD8; /* Cambia el color del borde a azul. */
+    box-shadow:
+    0 0 0 3px
+    rgba(10,91,216,.15); /* Agrega un resplandor azul alrededor del campo. */
+}
+
+/* =========================
+        UBICACIÓN
+========================= */
+
+/* Contenedor del selector y el campo de ubicación. */
+.ubicacion-container{
+    display:flex; /* Coloca los elementos en una fila. */
+    gap:10px; /* Espacio entre los elementos. */
+}
+
+/* Lista desplegable de la ubicación. */
+.ubicacion-container select{
+    width:170px; /* Define el ancho del selector. */
+}
+
+/* Campo donde se escribe la ubicación específica. */
+.ubicacion-container input{
+    flex:1; /* Ocupa el espacio restante disponible. */
+}
+
+/* =========================
+       FECHA INFO
+========================= */
+
+/* Texto informativo relacionado con la fecha del reporte. */
+.fecha-info{
+    display:block; /* Hace que ocupe toda la línea. */
+    margin-top:6px; /* Espacio superior. */
+    color:#6b7280; /* Color gris del texto. */
+    font-size:.8rem; /* Tamaño pequeño del texto. */
+}
+
+/* =========================
+      BOTÓN ENVIAR
+========================= */
+
+/* Botón para enviar el reporte. */
+.btn-enviar{
+    width:100%; /* Ocupa todo el ancho disponible. */
+    height:48px; /* Altura del botón. */
+    border:none; /* Elimina el borde. */
+    border-radius:12px; /* Bordes redondeados. */
+    background:#0A5BD8; /* Fondo azul. */
+    color:white; /* Texto blanco. */
+    font-size:15px; /* Tamaño del texto. */
+    font-weight:700; /* Texto en negrita. */
+    cursor:pointer; /* Cambia el cursor a una mano. */
+    transition:.3s; /* Suaviza las transiciones. */
+}
+
+/* Efecto cuando el cursor pasa sobre el botón. */
+.btn-enviar:hover{
+    background:#2563eb; /* Cambia el fondo a un azul más claro. */
+    transform:translateY(-2px); /* Eleva ligeramente el botón. */
+    box-shadow:
+    0 8px 20px
+    rgba(10,91,216,.35); /* Agrega una sombra más intensa. */
+}
+
+/* =========================
+        RESPONSIVE
+========================= */
+
+/* Aplica estos estilos cuando la pantalla mide 768 px o menos. */
+@media(max-width:768px){
+
+    .reporte-container{
+        padding:20px; /* Mantiene un espacio interno adecuado en pantallas pequeñas. */
+    }
+
+    .form-card{
+        width:100%; /* Hace que la tarjeta ocupe todo el ancho disponible. */
+        max-width:550px; /* Limita el ancho máximo de la tarjeta. */
+    }
+
+    .ubicacion-container{
+        flex-direction:column; /* Coloca el selector y el campo de texto uno debajo del otro. */
+    }
+
+    .ubicacion-container select{
+        width:100%; /* Hace que el selector ocupe todo el ancho disponible. */
+    }
+
+    .btn-back{
+        position:static; /* Regresa el botón a la posición normal del documento. */
+        display:inline-block; /* Permite aplicar márgenes correctamente. */
+        margin:20px; /* Agrega espacio alrededor del botón. */
+    }
+
+}
