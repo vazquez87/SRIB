@@ -1,0 +1,205 @@
+<!DOCTYPE html> <!-- Indica que el documento utiliza HTML5. -->
+
+<html lang="es"> <!-- Elemento raíz del documento y establece que el idioma es español. -->
+
+<head> <!-- Contiene la información de configuración de la página. -->
+
+    <meta charset="UTF-8">
+    <!-- Permite mostrar correctamente caracteres especiales como á, é, í, ó, ú y ñ. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace que la página sea adaptable a dispositivos móviles. -->
+
+    <title>Administrador | SRIB</title>
+    <!-- Título que aparece en la pestaña del navegador. -->
+
+    <link rel="stylesheet" href="../css/menuAdministrador.css">
+    <!-- Vincula el archivo CSS con los estilos de la página. -->
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Importa la biblioteca Font Awesome para utilizar iconos. -->
+
+</head>
+
+<body> <!-- Contiene todo el contenido visible de la página. -->
+
+<!-- ======================
+        HEADER
+====================== -->
+
+<header class="header">
+<!-- Encabezado principal del sistema. -->
+
+    <h1>
+    <!-- Título principal del sistema. -->
+
+        SISTEMA DE REPORTE DE INCIDENCIAS
+
+        <span>BUAP</span>
+        <!-- Resalta la palabra BUAP con un estilo diferente. -->
+
+    </h1>
+
+</header>
+
+<!-- ======================
+    CONTENIDO PRINCIPAL
+====================== -->
+
+<main class="contenedor">
+<!-- Contenedor principal de la página. -->
+
+    <!-- ======================
+          PANEL IZQUIERDO
+    ====================== -->
+
+    <section class="panel-izquierdo">
+    <!-- Panel donde se encuentran la búsqueda y el historial de reportes. -->
+
+        <!-- CONSULTA -->
+
+        <div class="consulta">
+        <!-- Tarjeta para buscar un reporte por número de folio. -->
+
+            <label for="folio">
+            <!-- Etiqueta asociada al campo de búsqueda. -->
+
+                <i class="fa-solid fa-hashtag"></i>
+                <!-- Icono de numeral obtenido de Font Awesome. -->
+
+                No. de folio
+
+            </label>
+
+            <div class="busqueda">
+            <!-- Contenedor del campo de búsqueda y el botón. -->
+
+                <input
+                    type="text"
+                    id="folio"
+                    placeholder="Ingresa el número de folio">
+                <!-- Campo donde el administrador escribe el número de folio. -->
+
+                <button id="btnConsultar">
+                <!-- Botón para consultar el reporte. -->
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <!-- Icono de lupa. -->
+
+                    Consultar reporte
+
+                </button>
+
+            </div>
+
+            <div id="mensaje-busqueda" class="mensaje-busqueda"></div>
+            <!-- Contenedor donde se mostrarán mensajes mediante JavaScript. -->
+
+        </div>
+
+        <!-- HISTORIAL -->
+
+        <div class="historial">
+        <!-- Tarjeta donde aparecerá el historial de reportes. -->
+
+            <h2>
+                Historial de reportes
+            </h2>
+            <!-- Título de la sección. -->
+
+            <div class="tabla-reportes">
+            <!-- Contenedor destinado para mostrar la tabla de reportes. -->
+
+                <!-- Después aquí irá la tabla -->
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ======================
+         PANEL DERECHO
+    ====================== -->
+
+    <aside class="panel-derecho">
+    <!-- Panel con la información del administrador. -->
+
+        <img
+            src="../img/perfil-default.png"
+            class="foto-perfil"
+            alt="Perfil">
+        <!-- Imagen de perfil del administrador. -->
+
+        <h2>Administrador</h2>
+        <!-- Nombre o rol del usuario. -->
+
+        <a href="../index.html" class="btn-salir">
+        <!-- Enlace para cerrar sesión y regresar al inicio. -->
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <!-- Icono de cerrar sesión. -->
+
+            Cerrar sesión
+
+        </a>
+
+    </aside>
+
+</main>
+
+<!-- ======================
+      JAVASCRIPT
+====================== -->
+
+<script>
+
+    // Obtiene el botón "Consultar reporte".
+    const boton =
+    document.getElementById("btnConsultar");
+
+    // Obtiene el contenedor donde se mostrarán los mensajes.
+    const mensaje =
+    document.getElementById("mensaje-busqueda");
+
+    // Agrega un evento que se ejecuta cuando el usuario hace clic en el botón.
+    boton.addEventListener("click",function(){
+
+        // Obtiene el número de folio ingresado y elimina espacios al inicio y al final.
+        const folio =
+        document.getElementById("folio").value.trim();
+
+        // Verifica si el campo está vacío.
+        if(folio===""){
+
+            // Muestra el contenedor del mensaje.
+            mensaje.style.display="block";
+
+            // Cambia el fondo del mensaje a color rojo.
+            mensaje.style.background="#ef4444";
+
+            // Muestra un mensaje indicando que debe ingresar un folio.
+            mensaje.innerHTML="Debes ingresar un número de folio.";
+
+            // Finaliza la ejecución de la función.
+            return;
+
+        }
+
+        // Muestra el contenedor del mensaje.
+        mensaje.style.display="block";
+
+        // Cambia el fondo del mensaje a color amarillo.
+        mensaje.style.background="#f59e0b";
+
+        // Indica que no se encontró un reporte con el folio ingresado.
+        mensaje.innerHTML="No se encontró ningún reporte con ese folio.";
+
+    });
+
+</script>
+
+</body>
+
+</html>

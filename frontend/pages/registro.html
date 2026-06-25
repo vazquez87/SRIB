@@ -1,0 +1,307 @@
+<!DOCTYPE html> <!-- Indica que el documento utiliza HTML5. -->
+
+<html lang="es"> <!-- Elemento raíz del documento y establece que el idioma es español. -->
+
+<head> <!-- Contiene la información de configuración de la página. -->
+
+    <meta charset="UTF-8">
+    <!-- Permite mostrar correctamente caracteres especiales como á, é, í, ó, ú y ñ. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace que la página sea adaptable a dispositivos móviles. -->
+
+    <title>Registro - SRIB</title>
+    <!-- Título que aparece en la pestaña del navegador. -->
+
+    <link rel="stylesheet" href="../css/registro.css">
+    <!-- Vincula el archivo CSS con los estilos de la página. -->
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Importa la biblioteca Font Awesome para utilizar iconos. -->
+
+</head>
+
+<body> <!-- Contiene todo el contenido visible de la página. -->
+
+    <!-- ======================
+            HEADER
+    ====================== -->
+
+    <header class="header">
+    <!-- Encabezado principal del sistema. -->
+
+        <h1>
+        <!-- Título principal del sistema. -->
+
+            SISTEMA DE REPORTE DE INCIDENCIAS
+
+            <span>BUAP</span>
+            <!-- Resalta la palabra BUAP con un estilo diferente. -->
+
+        </h1>
+
+    </header>
+
+    <!-- ======================
+        BOTÓN REGRESAR
+    ====================== -->
+
+    <a href="../index.html" class="btn-back">
+    <!-- Enlace para regresar a la página principal. -->
+
+        <i class="fa-solid fa-arrow-left"></i>
+        <!-- Icono de flecha obtenido de Font Awesome. -->
+
+        Regresar al menú
+        <!-- Texto del botón. -->
+
+    </a>
+
+    <!-- ======================
+      CONTENIDO PRINCIPAL
+    ====================== -->
+
+    <main class="registro-container">
+    <!-- Contenedor principal de la página de registro. -->
+
+        <!-- PANEL IZQUIERDO -->
+
+        <section class="left-panel">
+        <!-- Panel con información del sistema. -->
+
+            <img src="../img/logo-srib.png"
+                 alt="Logo SRIB"
+                 class="logo-srib">
+            <!-- Logotipo del sistema SRIB. -->
+
+            <h2>Tu participación es muy importante</h2>
+            <!-- Mensaje principal para motivar al usuario a registrarse. -->
+
+            <p class="descripcion">
+                Regístrate para reportar incidencias y dar seguimiento
+                a tus reportes.
+            </p>
+            <!-- Descripción de la utilidad del sistema. -->
+
+        </section>
+
+        <!-- PANEL DERECHO -->
+
+        <section class="right-panel">
+        <!-- Panel que contiene el formulario de registro. -->
+
+            <div class="form-card">
+            <!-- Tarjeta del formulario. -->
+
+                <h2>
+                    Crear una <span>cuenta</span>
+                </h2>
+                <!-- Título del formulario. -->
+
+                <p class="subtitle">
+                    Completa los datos para registrarte en SRIB.
+                </p>
+                <!-- Texto informativo para el usuario. -->
+
+                <div id="mensaje-error" class="mensaje-error"></div>
+                <!-- Contenedor donde se mostrarán los mensajes de error mediante JavaScript. -->
+
+                <form id="formRegistro">
+                <!-- Formulario de registro. -->
+
+                    <div class="campo">
+                    <!-- Campo para ingresar el nombre completo. -->
+
+                        <label for="nombre">
+
+                            <i class="fa-solid fa-user"></i>
+                            <!-- Icono de usuario. -->
+
+                            Nombre completo
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            placeholder="Ingresa tu nombre completo">
+                        <!-- Campo donde el usuario escribe su nombre completo. -->
+
+                    </div>
+
+                    <div class="campo">
+                    <!-- Campo para ingresar el correo institucional. -->
+
+                        <label for="correo">
+
+                            <i class="fa-solid fa-envelope"></i>
+                            <!-- Icono de correo electrónico. -->
+
+                            Correo institucional
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="correo"
+                            placeholder="ejemplo@alumno.buap.mx">
+                        <!-- Campo donde el usuario escribe su correo institucional. -->
+
+                        <small class="correo-ayuda">
+                            Utiliza un correo institucional BUAP.
+                        </small>
+                        <!-- Texto de ayuda para el usuario. -->
+
+                    </div>
+
+                    <div class="campo">
+                    <!-- Campo para ingresar la contraseña. -->
+
+                        <label for="password">
+
+                            <i class="fa-solid fa-lock"></i>
+                            <!-- Icono de candado. -->
+
+                            Contraseña
+
+                        </label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Mínimo 8 caracteres">
+                        <!-- Campo donde el usuario escribe su contraseña. -->
+
+                    </div>
+
+                    <button type="submit" class="btn-register">
+                    <!-- Botón para enviar el formulario de registro. -->
+
+                        <i class="fa-solid fa-user-plus"></i>
+                        <!-- Icono de agregar usuario. -->
+
+                        REGISTRARSE
+
+                    </button>
+
+                </form>
+
+                <p class="login-link">
+                <!-- Enlace para usuarios que ya tienen una cuenta. -->
+
+                    ¿Ya tienes una cuenta?
+
+                    <a href="login.html">
+                        Inicia sesión
+                    </a>
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ======================
+          JAVASCRIPT
+    ====================== -->
+
+    <script>
+
+        // Obtiene el formulario de registro.
+        const formulario = document.getElementById("formRegistro");
+
+        // Obtiene el contenedor donde se mostrarán los mensajes de error.
+        const mensaje = document.getElementById("mensaje-error");
+
+        // Agrega un evento que se ejecuta cuando el usuario envía el formulario.
+        formulario.addEventListener("submit", function(e){
+
+            // Evita que la página se recargue al enviar el formulario.
+            e.preventDefault();
+
+            // Obtiene el nombre ingresado y elimina espacios innecesarios.
+            const nombre =
+                document.getElementById("nombre")
+                .value.trim();
+
+            // Obtiene el correo ingresado, elimina espacios y lo convierte a minúsculas.
+            const correo =
+                document.getElementById("correo")
+                .value.trim()
+                .toLowerCase();
+
+            // Obtiene la contraseña eliminando espacios al inicio y al final.
+            const password =
+                document.getElementById("password")
+                .value.trim();
+
+            // Lista de dominios permitidos para los correos institucionales.
+            const dominiosPermitidos = [
+                "@alumno.buap.mx",
+                "@alm.buap.mx",
+                "@correo.buap.mx",
+                "@buap.mx"
+            ];
+
+            // Verifica que todos los campos estén completos.
+            if(nombre === "" || correo === "" || password === ""){
+
+                // Muestra el contenedor del mensaje de error.
+                mensaje.style.display = "block";
+
+                // Indica al usuario que debe completar todos los campos.
+                mensaje.textContent =
+                    "Debes completar todos los campos.";
+
+                // Finaliza la ejecución de la función.
+                return;
+            }
+
+            // Comprueba que el correo pertenezca a alguno de los dominios permitidos.
+            const correoValido =
+                dominiosPermitidos.some(dominio =>
+                    correo.endsWith(dominio)
+                );
+
+            // Si el correo no es válido, muestra un mensaje de error.
+            if(!correoValido){
+
+                mensaje.style.display = "block";
+
+                mensaje.textContent =
+                    "Debes ingresar un correo institucional BUAP válido.";
+
+                return;
+            }
+
+            // Verifica que la contraseña tenga al menos ocho caracteres.
+            if(password.length < 8){
+
+                mensaje.style.display = "block";
+
+                mensaje.textContent =
+                    "La contraseña debe tener al menos 8 caracteres.";
+
+                return;
+            }
+
+            // Oculta el mensaje de error cuando todas las validaciones son correctas.
+            mensaje.style.display = "none";
+
+            // Muestra un mensaje indicando que el registro fue exitoso.
+            alert("Registro exitoso");
+
+            // Aquí posteriormente se conectará el formulario con el backend.
+
+        });
+
+    </script>
+
+</body>
+
+</html>

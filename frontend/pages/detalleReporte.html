@@ -1,0 +1,284 @@
+<!DOCTYPE html> <!-- Indica que el documento utiliza HTML5. -->
+
+<html lang="es"> <!-- Elemento raíz del documento y establece que el idioma es español. -->
+
+<head> <!-- Contiene la información de configuración de la página. -->
+
+    <meta charset="UTF-8">
+    <!-- Permite mostrar correctamente caracteres especiales como á, é, í, ó, ú y ñ. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace que la página sea adaptable a dispositivos móviles. -->
+
+    <title>Detalle del Reporte - SRIB</title>
+    <!-- Título que aparece en la pestaña del navegador. -->
+
+    <link rel="stylesheet" href="../css/detalleReporte.css">
+    <!-- Vincula el archivo CSS con los estilos de esta página. -->
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Importa la biblioteca Font Awesome para utilizar iconos. -->
+
+</head>
+
+<body> <!-- Contiene todo el contenido visible de la página. -->
+
+<!-- ======================
+        HEADER
+====================== -->
+
+    <header class="header">
+    <!-- Encabezado principal del sistema. -->
+
+        <h1>
+        <!-- Título principal del sistema. -->
+
+            SISTEMA DE REPORTE DE INCIDENCIAS
+
+            <span>BUAP</span>
+            <!-- Resalta la palabra BUAP con un estilo diferente. -->
+
+        </h1>
+
+    </header>
+
+    <!-- ======================
+        BOTÓN REGRESAR
+    ====================== -->
+
+    <a href="menuAdministrador.html" class="btn-back">
+    <!-- Enlace que regresa al menú del administrador. -->
+
+        <i class="fa-solid fa-arrow-left"></i>
+        <!-- Icono de flecha hacia la izquierda obtenido de Font Awesome. -->
+
+        Regresar al menú
+        <!-- Texto del botón. -->
+
+    </a>
+
+    <!-- ======================
+        CONTENIDO
+    ====================== -->
+
+    <main class="contenedor">
+    <!-- Contenedor principal de la página. -->
+
+        <div class="card">
+        <!-- Tarjeta donde se muestran los datos del reporte. -->
+
+        <h2>
+        <!-- Título de la tarjeta. -->
+
+        Datos del <span>reporte</span>
+        <!-- Resalta la palabra "reporte". -->
+
+        </h2>
+
+        <form>
+        <!-- Formulario para visualizar y modificar la información del reporte. -->
+
+        <!-- ======================
+                PRIMERA FILA
+        ====================== -->
+
+        <div class="fila">
+        <!-- Agrupa dos campos en una misma fila. -->
+
+        <div class="campo">
+        <!-- Campo del número de folio. -->
+
+        <label>No. Folio</label>
+        <!-- Etiqueta del campo. -->
+
+        <input
+        type="text"
+        readonly>
+        <!-- Campo de texto de solo lectura que mostrará el número de folio. -->
+
+        </div>
+
+        <div class="campo pequeño">
+        <!-- Campo con ancho reducido para la fecha de registro. -->
+
+        <label>Fecha de registro</label>
+        <!-- Etiqueta del campo. -->
+
+        <input
+        type="text"
+        readonly>
+        <!-- Campo de solo lectura que mostrará la fecha del reporte. -->
+
+        </div>
+
+        </div>
+
+        <!-- ======================
+            DESCRIPCIÓN
+        ====================== -->
+
+        <div class="campo">
+        <!-- Campo para mostrar la descripción del reporte. -->
+
+        <label>Descripción</label>
+        <!-- Etiqueta del campo. -->
+
+        <textarea readonly></textarea>
+        <!-- Área de texto de solo lectura con la descripción de la incidencia. -->
+
+        </div>
+
+        <!-- ======================
+        CATEGORÍA Y PRIORIDAD
+        ====================== -->
+
+        <div class="fila">
+        <!-- Agrupa la categoría y la prioridad. -->
+
+        <div class="campo">
+        <!-- Campo de categoría. -->
+
+        <label>Categoría</label>
+        <!-- Etiqueta del campo. -->
+
+        <input
+        type="text"
+        readonly>
+        <!-- Campo de solo lectura que mostrará la categoría del reporte. -->
+
+        </div>
+
+        <div class="campo pequeño">
+        <!-- Campo con ancho reducido para la prioridad. -->
+
+        <label>Prioridad</label>
+        <!-- Etiqueta del campo. -->
+
+        <div class="estado prioridad-media">
+        <!-- Indicador visual de la prioridad actual. -->
+
+        Media
+        <!-- Prioridad asignada al reporte. -->
+
+        </div>
+
+        </div>
+
+        </div>
+
+        <!-- ======================
+        UBICACIÓN Y ESTATUS
+        ====================== -->
+
+        <div class="fila">
+        <!-- Agrupa la ubicación y el estatus del reporte. -->
+
+        <div class="campo">
+        <!-- Campo de ubicación. -->
+
+        <label>Ubicación</label>
+        <!-- Etiqueta del campo. -->
+
+        <input
+        type="text"
+        readonly>
+        <!-- Campo de solo lectura que muestra la ubicación de la incidencia. -->
+
+        </div>
+
+        <div class="campo pequeño">
+        <!-- Campo con ancho reducido para el estatus. -->
+
+        <label>Estatus actual</label>
+        <!-- Etiqueta del campo. -->
+
+        <div class="estado pendiente">
+        <!-- Indicador visual del estado actual del reporte. -->
+
+        Pendiente
+        <!-- Estado actual del reporte. -->
+
+        </div>
+
+        </div>
+
+        </div>
+
+        <!-- ======================
+            CAMBIAR ESTADO
+        ====================== -->
+
+        <div class="fila-select">
+        <!-- Contenedor de los menús desplegables. -->
+
+        <div>
+
+        <label>Cambiar estatus</label>
+        <!-- Etiqueta del selector de estado. -->
+
+        <select>
+        <!-- Lista desplegable para seleccionar un nuevo estado. -->
+
+        <option>Pendiente</option>
+        <!-- Estado pendiente. -->
+
+        <option>En proceso</option>
+        <!-- Estado en proceso. -->
+
+        <option>Resuelto</option>
+        <!-- Estado resuelto. -->
+
+        </select>
+
+        </div>
+
+        <div>
+
+            <label>Cambiar prioridad</label>
+            <!-- Etiqueta del selector de prioridad. -->
+
+                <select>
+                <!-- Lista desplegable para seleccionar una nueva prioridad. -->
+
+                <option>Baja</option>
+                <!-- Prioridad baja. -->
+
+                <option>Media</option>
+                <!-- Prioridad media. -->
+
+                <option>Alta</option>
+                <!-- Prioridad alta. -->
+
+                </select>
+
+            </div>
+
+        </div>
+
+        <!-- ======================
+            BOTÓN GUARDAR
+        ====================== -->
+
+                <button
+                type="submit"
+                class="btn-finalizar">
+                <!-- Botón que envía el formulario para guardar los cambios. -->
+
+                <i class="fa-solid fa-check"></i>
+                <!-- Icono de confirmación obtenido de Font Awesome. -->
+
+                Guardar cambios
+                <!-- Texto del botón. -->
+
+                </button>
+
+            </form>
+
+        </div>
+
+     </main>
+
+</body>
+
+</html>
