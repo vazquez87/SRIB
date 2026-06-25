@@ -1,0 +1,203 @@
+/* Selecciona todos los elementos de la página */
+*{
+    margin:0; /* Elimina el margen predeterminado de todos los elementos. */
+    padding:0; /* Elimina el relleno (espacio interno) predeterminado. */
+    box-sizing:border-box; /* Hace que el ancho y alto incluyan el padding y el borde. */
+    font-family:'Segoe UI',sans-serif; /* Establece la fuente principal de toda la página. */
+}
+
+/* Configuración general del cuerpo de la página */
+body{
+    min-height:100vh; /* Hace que el body ocupe como mínimo toda la altura de la ventana del navegador. */
+    background: /* Define el fondo de la página. */
+    radial-gradient( /* Crea un degradado circular. */
+        circle at center, /* El degradado comienza desde el centro. */
+        #eef2f9 0%, /* Color inicial del degradado. */
+        #dfe5ef 100% /* Color final del degradado. */
+    );
+}
+
+
+/*=========================
+        HEADER
+=========================*/
+
+/* Contenedor del encabezado */
+.header{
+    height:75px; /* Altura del encabezado. */
+    background:#00154f; /* Color de fondo azul oscuro. */
+    display:flex; /* Activa Flexbox para organizar los elementos. */
+    align-items:center; /* Centra verticalmente el contenido. */
+    padding:0 50px; /* Agrega espacio interno a los lados. */
+    box-shadow:0 3px 12px rgba(0,0,0,.15); /* Agrega una sombra debajo del encabezado. */
+}
+
+/* Título del encabezado */
+.header h1{
+    color:white; /* Color blanco para el texto. */
+    font-size:1.6rem; /* Tamaño de la fuente. */
+}
+
+/* Palabra resaltada dentro del título */
+.header span{
+    color:#3b82f6; /* Color azul más claro para destacar una parte del texto. */
+}
+
+
+/*=========================
+     BOTÓN REGRESAR
+=========================*/
+/* Estilos del botón para regresar al menú */
+.btn-back{
+    position:absolute; /* Permite colocarlo en una posición específica de la pantalla. */
+    top:95px; /* Distancia desde la parte superior. */
+    left:50px; /* Distancia desde el lado izquierdo. */
+    text-decoration:none; /* Elimina el subrayado del enlace. */
+    background:white; /* Fondo blanco. */
+    color:#003B8E; /* Color azul del texto. */
+    padding:12px 22px; /* Espacio interno del botón. */
+    border-radius:12px; /* Redondea las esquinas. */
+    font-weight:600; /* Hace el texto seminegrita. */
+    box-shadow:0 3px 12px rgba(0,0,0,.12); /* Agrega una sombra suave. */
+    transition:.3s; /* Hace que los cambios al pasar el cursor sean suaves. */
+}
+
+/* Efecto cuando el cursor pasa sobre el botón */
+.btn-back:hover{
+    background:#003B8E; /* Cambia el fondo a azul. */
+    color:white; /* Cambia el texto a blanco. */
+}
+
+
+/*=========================
+      CONTENEDOR
+=========================*/
+
+/* Contenedor principal del contenido */
+.contenedor{
+    width:100%; /* Ocupa todo el ancho disponible. */
+    max-width:1200px; /* Limita el ancho máximo. */
+    margin:120px auto; /* Centra el contenedor horizontalmente y deja espacio arriba y abajo. */
+    padding:0 30px; /* Agrega espacio interno a los lados. */
+}
+
+
+/*=========================
+       BUSCADOR
+=========================*/
+
+/* Contenedor del buscador */
+.busqueda{
+    display:flex; /* Organiza los elementos en una fila. */
+    align-items:center; /* Centra verticalmente los elementos. */
+    justify-content:center; /* Centra horizontalmente el contenido. */
+    gap:20px; /* Espacio entre los elementos. */
+    flex-wrap:wrap; /* Permite que los elementos bajen de línea si no caben. */
+    margin-bottom:80px; /* Espacio debajo del buscador. */
+}
+
+/* Título del buscador */
+.busqueda h2{
+    color:#00154f; /* Color azul oscuro. */
+    font-size:2rem; /* Tamaño del título. */
+}
+
+/* Caja de texto del buscador */
+.busqueda input{
+    width:500px; /* Ancho del campo de texto. */
+    height:55px; /* Altura del campo. */
+    border:2px solid #dbe3f1; /* Borde gris claro. */
+    border-radius:12px; /* Esquinas redondeadas. */
+    padding:0 20px; /* Espacio interno horizontal. */
+    font-size:1rem; /* Tamaño del texto. */
+}
+
+/* Cuando el usuario selecciona el campo */
+.busqueda input:focus{
+    outline:none; /* Elimina el borde azul predeterminado del navegador. */
+    border-color:#0A5BD8; /* Cambia el color del borde a azul. */
+}
+
+/* Botón Consultar */
+.btn-consultar{
+    height:55px; /* Altura del botón. */
+    padding:0 30px; /* Espacio interno horizontal. */
+    border:none; /* Elimina el borde. */
+    border-radius:12px; /* Redondea las esquinas. */
+    background:#0A5BD8; /* Fondo azul. */
+    color:white; /* Texto blanco. */
+    font-weight:600; /* Texto seminegrita. */
+    cursor:pointer; /* Cambia el cursor a una mano al pasar encima. */
+    transition:.3s; /* Hace suave la animación del hover. */
+}
+
+/* Efecto al pasar el cursor */
+.btn-consultar:hover{
+    background:#0052cc; /* Cambia a un azul más oscuro. */
+}
+
+
+/*=========================
+      RESULTADO
+=========================*/
+
+/* Tarjeta donde se mostrará la información encontrada */
+.resultado{
+    display:none; /* Se oculta inicialmente. */
+    background:white; /* Fondo blanco. */
+    padding:40px; /* Espacio interno. */
+    border-radius:25px; /* Bordes redondeados. */
+    box-shadow:0 10px 30px rgba(0,0,0,.10); /* Sombra alrededor de la tarjeta. */
+    max-width:900px; /* Ancho máximo permitido. */
+    margin:auto; /* Centra horizontalmente la tarjeta. */
+}
+
+/* Título del resultado */
+.resultado h2{
+    color:#00154f; /* Color azul oscuro. */
+    font-size:2rem; /* Tamaño del título. */
+    margin-bottom:15px; /* Espacio debajo del título. */
+}
+
+/* Línea decorativa debajo del título */
+.linea{
+    width:120px; /* Ancho de la línea. */
+    height:5px; /* Grosor de la línea. */
+    background:#0A5BD8; /* Color azul. */
+    border-radius:20px; /* Bordes redondeados. */
+    margin-bottom:30px; /* Espacio debajo de la línea. */
+}
+
+/* Contenedor de los datos del resultado */
+.detalle{
+    display:flex; /* Usa Flexbox. */
+    flex-direction:column; /* Coloca los elementos en columna. */
+    gap:18px; /* Espacio entre los párrafos. */
+}
+
+/* Párrafos del resultado */
+.detalle p{
+    color:#374151; /* Color gris oscuro para mejorar la lectura. */
+    font-size:1.05rem; /* Tamaño del texto. */
+    line-height:1.7; /* Espaciado entre líneas para facilitar la lectura. */
+}
+
+/* Texto resaltado dentro de los párrafos */
+.detalle strong{
+    color:#00154f; /* Color azul oscuro para destacar información importante. */
+}
+
+
+/*=========================
+ MENSAJE DE BÚSQUEDA
+=========================*/
+
+/* Mensaje que aparece cuando no se encuentra una incidencia */
+.mensaje-busqueda{
+    width:100%; /* Ocupa todo el ancho disponible. */
+    margin-top:15px; /* Espacio superior. */
+    text-align:center; /* Centra el texto. */
+    color:#ef4444; /* Color rojo para indicar advertencia o error. */
+    font-weight:600; /* Texto seminegrita. */
+    display:none; /* Se mantiene oculto hasta que JavaScript lo muestre. */
+}
