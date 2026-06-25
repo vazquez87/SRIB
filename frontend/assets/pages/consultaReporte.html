@@ -1,0 +1,168 @@
+<!DOCTYPE html> <!-- Indica que el documento utiliza HTML5. -->
+
+<html lang="es"> <!-- Elemento raíz del documento y establece que el idioma es español. -->
+
+<head> <!-- Contiene la información de configuración de la página. -->
+    <meta charset="UTF-8"> <!-- Permite mostrar correctamente caracteres especiales como á, é, í, ó, ú y ñ. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace que la página sea adaptable a dispositivos móviles. -->
+    <title>Consultar Reporte - SRIB</title>
+    <!-- Título que aparece en la pestaña del navegador. -->
+    <link rel="stylesheet" href="../css/consultarReporte.css">
+    <!-- Vincula el archivo CSS que contiene los estilos de la página. -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Importa la biblioteca Font Awesome para utilizar iconos. -->
+</head>
+
+<body> <!-- Contiene todo el contenido visible de la página. -->
+
+    <!--======================
+            HEADER
+    =======================-->
+
+    <header class="header">
+    <!-- Encabezado principal del sitio. -->
+        <h1>
+        <!-- Título principal del sistema. -->
+            SISTEMA DE REPORTE DE INCIDENCIAS
+            <span>BUAP</span>
+            <!-- Resalta la palabra BUAP con un estilo diferente. -->
+        </h1>
+    </header>
+
+    <!--======================
+        BOTÓN REGRESAR
+    =======================-->
+
+    <a href="menuUsuario.html" class="btn-back">
+    <!-- Enlace que regresa al menú principal del usuario. -->
+        <i class="fa-solid fa-arrow-left"></i>
+        <!-- Icono de flecha hacia la izquierda obtenido de Font Awesome. -->
+        Regresar al menú
+        <!-- Texto del botón. -->
+
+    </a>
+
+    <!--======================
+            CONTENIDO
+    =======================-->
+
+    <main class="contenedor">
+    <!-- Contenedor principal de la página. -->
+
+        <!--======================
+              BUSCADOR
+        =======================-->
+
+        <section class="busqueda">
+        <!-- Sección donde el usuario consulta un reporte mediante su folio. -->
+
+            <h2>No. Folio:</h2>
+            <!-- Etiqueta que indica qué dato debe ingresar el usuario. -->
+
+            <input
+                type="text"
+                id="folio"
+                placeholder="Ingresa tu número de folio">
+            <!-- Campo donde el usuario escribe el número de folio. -->
+
+            <button class="btn-consultar">
+            <!-- Botón para iniciar la búsqueda del reporte. -->
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <!-- Icono de lupa. -->
+                Consultar reporte
+                <!-- Texto del botón. -->
+            </button>
+
+            <!-- MENSAJE DE ERROR -->
+            <div id="mensaje-busqueda" class="mensaje-busqueda"></div>
+            <!-- Contenedor donde se puede mostrar un mensaje de error mediante JavaScript. -->
+
+        </section>
+
+        <!--======================
+             RESULTADO
+        =======================-->
+
+        <section class="resultado">
+        <!-- Tarjeta donde se mostrará la información del reporte. -->
+
+            <h2>
+                Seguimiento del reporte
+            </h2>
+            <!-- Título de la tarjeta de resultados. -->
+
+            <div class="linea"></div>
+            <!-- Línea decorativa debajo del título. -->
+
+            <div class="detalle">
+            <!-- Contenedor con la información del reporte. -->
+
+                <p>
+                    <strong>Folio:</strong>
+                    SRIB-2026-001
+                </p>
+                <!-- Muestra el número de folio del reporte. -->
+
+                <p>
+                    <strong>Estado:</strong>
+                    En proceso
+                </p>
+                <!-- Muestra el estado actual de la incidencia. -->
+
+                <p>
+                    <strong>Ubicación:</strong>
+                    FCC - Edificio CC04
+                </p>
+                <!-- Indica el lugar donde ocurrió la incidencia. -->
+
+                <p>
+                    <strong>Fecha de reporte:</strong>
+                    24/06/2026
+                </p>
+                <!-- Muestra la fecha en que se registró el reporte. -->
+                
+                <p>
+                    <strong>Descripción:</strong>
+                    Falla en el proyector del aula.
+                </p>
+                <!-- Describe brevemente la incidencia reportada. -->
+            
+            </div>
+        
+        </section>
+    
+    </main>
+
+</body>
+
+</html>
+
+<!--======================
+        JAVASCRIPT
+=======================-->
+
+<script>
+    // Obtiene el botón "Consultar reporte".
+    const boton = document.querySelector(".btn-consultar");
+    // Obtiene la sección donde se muestran los resultados.
+    const resultado = document.querySelector(".resultado");
+    // Obtiene el campo donde el usuario escribe el número de folio.
+    const folio = document.getElementById("folio");
+
+    // Agrega un evento que se ejecuta cuando el usuario hace clic en el botón.
+    boton.addEventListener("click", function(){
+        // Verifica si el campo está vacío o contiene solo espacios.
+        if(folio.value.trim() === ""){
+            // Muestra un mensaje indicando que debe escribir un folio.
+            alert("Debes ingresar un número de folio.");
+            // Detiene la ejecución del código.
+            return;
+        }
+        // Si el campo tiene información, muestra un mensaje indicando que no existe un reporte con ese folio.
+        alert("No se encontró ningún reporte con ese folio.");
+        // Oculta la tarjeta de resultados.
+        resultado.style.display = "none";
+    });
+</script>
