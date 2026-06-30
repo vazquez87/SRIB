@@ -236,5 +236,31 @@ body{
 .btn-salir{
     margin-top:40px; /* Agrega un margen superior. */
 }
+    .tabla-reportes table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.tabla-reportes th,
+.tabla-reportes td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+}
+
+.tabla-reportes th {
+    background: var(--color-primario);
+    color: white;
+}
+
+.btn-ver {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 6px;
+    background: var(--color-primario);
+    color: white;
+    text-decoration: none;
+}
 
 }
