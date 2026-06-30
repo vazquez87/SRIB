@@ -280,4 +280,13 @@ RESPONSIVE
     .header h1{
         font-size:1.2rem; /* Reduce el tamaño del título para pantallas pequeñas. */
     }
+    .alerta-exito{
+    background:#d1fae5;
+    color:#065f46;
+    padding:12px;
+    border-radius:8px;
+    margin-bottom:15px;
+    text-align:center;
+    font-weight:600;
+}
 }
