@@ -33,11 +33,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bind_param("issss", $id_usuario, $descripcion, $categoria, $ubicacion, $fecha);
 
         if ($stmt->execute()) {
-            $mensaje = 'Reporte enviado correctamente.';
-            $tipo = 'exito';
+            $id_incidencia = $conexion->insert_id;
+            $anio = date("Y");
+            $folio = "SRIB-" . $anio . "-" . str_pad($id_incidencia, 4, "0", STR_PAD_LEFT);
+
+            $stmtFolio = $conexion->prepare("
+                UPDATE incidencias
+                SET folio = ?
+                WHERE id_incidencia = ?
+            ");
+
+            $stmtFolio->bind_param("si", $folio, $id_incidencia);
+            $stmtFolio->execute();
+
+            $mensaje = "Reporte enviado correctamente. Tu folio es: " . $folio;
+            $tipo = "exito";
         } else {
-            $mensaje = 'Error al enviar el reporte.';
-            $tipo = 'error';
+            $mensaje = "Error al enviar el reporte.";
+            $tipo = "error";
         }
     }
 }
