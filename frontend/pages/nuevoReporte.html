@@ -226,102 +226,67 @@
 
     </main>
 
-    <!-- ======================
-          JAVASCRIPT
-    ====================== -->
+<!-- ======================
+        JAVASCRIPT
+====================== -->
 
-    <script>
+<script src="../js/validaciones.js"></script>
 
-        // Obtiene el formulario del reporte.
-        const formulario =
-        document.getElementById("formReporte");
+<script>
 
-        /* ======================
-            FECHA: ÚLTIMOS 15 DÍAS
-        ====================== */
+    // Obtiene el formulario.
+    const formulario = document.getElementById("formReporte");
 
-        // Obtiene el campo de fecha.
-        const fechaInput =
-        document.getElementById("fecha");
+    // Obtiene los campos del formulario.
+    const descripcionInput = document.getElementById("descripcion");
+    const categoriaInput = document.getElementById("categoria");
+    const edificioInput = document.getElementById("edificio");
+    const detalleInput = document.getElementById("detalleUbicacion");
+    const fechaInput = document.getElementById("fecha");
 
-        // Obtiene la fecha actual.
-        const hoy = new Date();
+    // Limita la fecha a los últimos 15 días.
+    limitarFecha(fechaInput, 15);
 
-        // Convierte la fecha actual al formato YYYY-MM-DD.
-        const fechaMax =
-        hoy.toISOString().split("T")[0];
+    // Se ejecuta cuando el usuario envía el formulario.
+    formulario.addEventListener("submit", function(e){
 
-        // Crea una nueva fecha basada en la fecha actual.
-        const fechaMin = new Date();
+        // Evita el envío mientras se valida.
+        e.preventDefault();
 
-        // Resta 15 días para obtener la fecha mínima permitida.
-        fechaMin.setDate(
-            fechaMin.getDate() - 15
-        );
+        // Verifica que la descripción no esté vacía.
+        if(!validarCampo(descripcionInput)){
+            return;
+        }
 
-        // Convierte la fecha mínima al formato YYYY-MM-DD.
-        const fechaMinima =
-        fechaMin.toISOString().split("T")[0];
+        // Verifica que se haya seleccionado una categoría.
+        if(!validarCampo(categoriaInput)){
+            return;
+        }
 
-        // Establece la fecha máxima permitida.
-        fechaInput.max = fechaMax;
+        // Verifica que se haya seleccionado un edificio.
+        if(!validarCampo(edificioInput)){
+            return;
+        }
 
-        // Establece la fecha mínima permitida.
-        fechaInput.min = fechaMinima;
+        // Verifica que se haya escrito la ubicación.
+        if(!validarCampo(detalleInput)){
+            return;
+        }
 
-        /* ======================
-              VALIDACIÓN
-        ====================== */
+        // Verifica que se haya seleccionado una fecha.
+        if(!validarCampo(fechaInput)){
+            return;
+        }
 
-        // Agrega un evento que se ejecuta cuando el usuario envía el formulario.
-        formulario.addEventListener("submit", function(e){
+        // Si todo es correcto.
+        alert("Reporte enviado correctamente.");
 
-            // Evita que el formulario recargue la página.
-            e.preventDefault();
+        // Aquí posteriormente se conectará con el backend.
+        // formulario.submit();
 
-            // Obtiene la descripción eliminando espacios innecesarios.
-            const descripcion =
-            document.getElementById("descripcion")
-            .value.trim();
+    });
 
-            // Obtiene la categoría seleccionada.
-            const categoria =
-            document.getElementById("categoria")
-            .value;
-
-            // Obtiene el edificio seleccionado.
-            const edificio =
-            document.getElementById("edificio")
-            .value;
-
-            // Obtiene el detalle de la ubicación eliminando espacios.
-            const detalleUbicacion =
-            document.getElementById("detalleUbicacion")
-            .value.trim();
-
-            // Obtiene la fecha seleccionada.
-            const fecha =
-            document.getElementById("fecha")
-            .value;
-
-            // Verifica que todos los campos estén completos.
-            if(
-                descripcion === "" ||
-                categoria === "" ||
-                edificio === "" ||
-                detalleUbicacion === "" ||
-                fecha === ""
-            ){
-                formulario.reportValidity();
-                return;
-            }
-
-            // Muestra un mensaje indicando que el reporte fue enviado correctamente.
-            alert("Reporte enviado correctamente.");
-
-        });
-
-    </script>
+</script>
 
 </body>
 

@@ -153,34 +153,31 @@
       JAVASCRIPT
 ====================== -->
 
+<script src="../js/validaciones.js"></script>
+
 <script>
 
     // Obtiene el formulario.
     const formulario = document.getElementById("formBuscar");
 
     // Obtiene el campo del folio.
-    const inputFolio = document.getElementById("folio");
+    const folioInput = document.getElementById("folio");
 
-    // Se ejecuta al enviar el formulario.
+    // Se ejecuta cuando el administrador envía el formulario.
     formulario.addEventListener("submit", function(e){
 
-        // Evita que la página se recargue.
+        // Evita que el formulario se envíe mientras se valida.
         e.preventDefault();
 
-        const folio = inputFolio.value.trim();
-
-        if(folio === ""){
-
-            inputFolio.setCustomValidity("Completa este campo.");
-            inputFolio.reportValidity();
-
+        // Verifica que el folio no esté vacío.
+        if(!validarCampo(folioInput)){
             return;
-
         }
 
-        inputFolio.setCustomValidity("");
-
+        // Si el folio es válido.
         alert("No se encontró ningún reporte con ese folio.");
+
+        // Aquí posteriormente se realizará la búsqueda en la base de datos.
 
     });
 

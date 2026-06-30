@@ -206,79 +206,61 @@
     </main>
 
     <!-- ======================
-          JAVASCRIPT
-    ====================== -->
+      JAVASCRIPT
+====================== -->
 
-    <script>
+<script src="../js/validaciones.js"></script>
 
-        // Obtiene el formulario de registro.
-        const formulario = document.getElementById("formRegistro");
+<script>
 
-        // Agrega un evento que se ejecuta cuando el usuario envía el formulario.
-        formulario.addEventListener("submit", function(e){
+    // Obtiene el formulario.
+    const formulario = document.getElementById("formRegistro");
 
-            // Evita que la página se recargue al enviar el formulario.
-            e.preventDefault();
+    // Obtiene los campos.
+    const nombreInput = document.getElementById("nombre");
+    const correoInput = document.getElementById("correo");
+    const passwordInput = document.getElementById("password");
 
-            // Obtiene el nombre ingresado y elimina espacios innecesarios.
-            const nombre =
-                document.getElementById("nombre")
-                .value.trim();
+    // Se ejecuta cuando el usuario envía el formulario.
+    formulario.addEventListener("submit", function(e){
 
-            // Obtiene el correo ingresado, elimina espacios y lo convierte a minúsculas.
-            const correo =
-                document.getElementById("correo")
-                .value.trim()
-                .toLowerCase();
+        // Evita que el formulario se envíe mientras se valida.
+        e.preventDefault();
 
-            // Obtiene la contraseña eliminando espacios al inicio y al final.
-            const password =
-                document.getElementById("password")
-                .value.trim();
+        // Verifica que el nombre no esté vacío.
+        if(!validarCampo(nombreInput)){
+            return;
+        }
 
-            // Lista de dominios permitidos para los correos institucionales.
-            const dominiosPermitidos = [
-                "@alumno.buap.mx",
-                "@alm.buap.mx",
-                "@correo.buap.mx",
-                "@buap.mx"
-            ];
+        // Verifica que el correo no esté vacío.
+        if(!validarCampo(correoInput)){
+            return;
+        }
 
-            // Comprueba que el correo pertenezca a alguno de los dominios permitidos.
-            const correoValido =
-                dominiosPermitidos.some(dominio =>
-                    correo.endsWith(dominio)
-                );
+        // Verifica que el correo sea institucional.
+        if(!validarCorreoBUAP(correoInput)){
+            return;
+        }
 
-            // Si el correo no es válido, muestra un mensaje de error.
-            if(!correoValido){
+        // Verifica que la contraseña no esté vacía.
+        if(!validarCampo(passwordInput)){
+            return;
+        }
 
-                e.preventDefault();
+        // Verifica que tenga al menos 8 caracteres.
+        if(!validarLongitud(passwordInput,8)){
+            return;
+        }
 
-                const correoInput = document.getElementById("correo");
+        // Si todo es correcto.
+        alert("Registro exitoso.");
 
-                correoInput.setCustomValidity(
-                    "Ingresa un correo institucional BUAP."
-                );
+        // Aquí posteriormente se conectará con el backend.
+        // formulario.submit();
 
-                correoInput.reportValidity();
+    });
 
-                return;
-
-            }
-
-            document
-                .getElementById("correo")
-                .setCustomValidity("");
-
-            // Muestra un mensaje indicando que el registro fue exitoso.
-            alert("Registro exitoso");
-
-            // Aquí posteriormente se conectará el formulario con el backend.
-
-        });
-
-    </script>
+</script>
 
 </body>
 

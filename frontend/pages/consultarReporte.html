@@ -56,25 +56,28 @@
         =======================-->
 
         <section class="busqueda">
-        <!-- Sección donde el usuario consulta un reporte mediante su folio. -->
 
-            <h2>No. Folio:</h2>
-            <!-- Etiqueta que indica qué dato debe ingresar el usuario. -->
+            <form id="formBuscar">
 
-            <input
-                type="text"
-                id="folio"
-                placeholder="Ingresa tu número de folio"
-                required
-                autocomplete="off">
+                <h2>No. Folio:</h2>
 
-            <button class="btn-consultar">
-            <!-- Botón para iniciar la búsqueda del reporte. -->
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <!-- Icono de lupa. -->
-                Consultar reporte
-                <!-- Texto del botón. -->
-            </button>
+                <input
+                    type="text"
+                    id="folio"
+                    placeholder="Ingresa tu número de folio"
+                    required
+                    autocomplete="off">
+
+                <button
+                    type="submit"
+                    class="btn-consultar">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Consultar reporte
+
+                </button>
+
+            </form>
 
         </section>
 
@@ -132,35 +135,44 @@
     
     </main>
 
-</body>
-
-</html>
-
-<!--======================
+    <!--======================
         JAVASCRIPT
 =======================-->
 
+<script src="../js/validaciones.js"></script>
+
 <script>
-    // Obtiene el botón "Consultar reporte".
-    const boton = document.querySelector(".btn-consultar");
-    // Obtiene la sección donde se muestran los resultados.
+
+    // Obtiene el formulario.
+    const formulario = document.getElementById("formBuscar");
+
+    // Obtiene el campo del folio.
+    const folioInput = document.getElementById("folio");
+
+    // Obtiene la tarjeta de resultados.
     const resultado = document.querySelector(".resultado");
-    // Obtiene el campo donde el usuario escribe el número de folio.
-    const folio = document.getElementById("folio");
 
-    // Agrega un evento que se ejecuta cuando el usuario hace clic en el botón.
-    boton.addEventListener("click", function(){
-        // Verifica si el campo está vacío o contiene solo espacios.
-       if(folio.value.trim() === ""){
-            folio.setCustomValidity("Completa este campo.");
-            folio.reportValidity();
-        return;
-}
+    // Se ejecuta cuando el usuario envía el formulario.
+    formulario.addEventListener("submit", function(e){
 
-folio.setCustomValidity("");
-        // Si el campo tiene información, muestra un mensaje indicando que no existe un reporte con ese folio.
+        // Evita que el formulario se envíe mientras se valida.
+        e.preventDefault();
+
+        // Verifica que el folio no esté vacío.
+        if(!validarCampo(folioInput)){
+            return;
+        }
+
+        // Si el folio es válido.
         alert("No se encontró ningún reporte con ese folio.");
+
         // Oculta la tarjeta de resultados.
         resultado.style.display = "none";
+
     });
+
 </script>
+
+</body>
+
+</html>
