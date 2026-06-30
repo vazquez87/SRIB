@@ -1,3 +1,5 @@
+@import url("variables.css");
+
 /* Selecciona todos los elementos de la página. */
 *{
     margin:0; /* Elimina el margen predeterminado de todos los elementos. */
@@ -20,38 +22,38 @@ body{
 
 /* Barra de navegación principal. */
 .navbar{
-    background:
-        linear-gradient( /* Aplica un degradado horizontal. */
-            90deg,
-            #010521,
-            #03154d,
-            #010521
-        );
-    display:flex; /* Activa Flexbox. */
-    justify-content:space-between; /* Coloca los elementos en los extremos de la barra. */
-    align-items:center; /* Centra verticalmente los elementos. */
-    padding:15px 25px; /* Agrega espacio interno. */
-    box-shadow:
-        0 3px 12px rgba(0,0,0,.15); /* Agrega una sombra debajo de la barra. */
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+    height:76px;
+    padding:0 28px;
+    background:var(--color-primario);
+    box-shadow:var(--sombra-header);
 }
 
 /* Título de la barra de navegación. */
 .navbar h1{
-    color:white; /* Color blanco del texto. */
+    color:var(--color-blanco); /* Color blanco del texto. */
     font-size:1.55rem; /* Tamaño del título. */
     font-weight:700; /* Texto en negrita. */
+    flex:1;          /* Ocupa el espacio disponible */
+    min-width:0;     /* Permite que el texto se reduzca */
+    white-space:nowrap; /* Evita que el título se divida en dos líneas */
 }
 
 /* Texto resaltado dentro del título. */
 .navbar span{
-    color:#4da3ff; /* Color azul claro. */
+    color:var(--color-mensaje);
     font-weight:800; /* Texto con mayor grosor. */
 }
 
 /* Contenedor de los botones de navegación. */
 .nav-buttons{
-    display:flex; /* Coloca los botones en una fila. */
-    gap:12px; /* Espacio entre los botones. */
+    display:flex;
+    gap:12px;
+    flex-shrink:0;   /* Evita que los botones se compriman */
+    margin-left:20px;
 }
 
 /* Estilos generales para los botones de iniciar sesión y registrarse. */
@@ -70,7 +72,7 @@ body{
 
 /* Botón de iniciar sesión. */
 .btn-login{
-    background:#0040a0; /* Fondo azul oscuro. */
+    background:var(--color-acento);
 }
 
 /* Botón de registrarse. */
@@ -87,13 +89,14 @@ body{
 
 /* Efecto específico del botón Iniciar sesión. */
 .btn-login:hover{
-    background:#1458e7; /* Cambia el fondo a un azul más claro. */
+    background:var(--color-hover); /* Cambia el fondo a un azul más claro. */
 }
 
 /* Efecto específico del botón Registrarse. */
 .btn-register:hover{
-    background:#1458e7; /* Cambia el fondo a azul. */
-    border-color:#1458e7; /* Cambia el color del borde. */
+    background:var(--color-hover);
+    border-color:var(--color-hover);
+    color:var(--color-blanco);   
 }
 
 /* =========================
@@ -132,7 +135,7 @@ body{
 /* Panel central del Hero. */
 .hero-center{
     width:47%; /* Ancho del panel. */
-    margin-left:30px; /* Espacio izquierdo. */
+    margin-left:35px; /* Espacio izquierdo. */
     display:flex;
     align-items:center; /* Centra verticalmente el contenido. */
     gap:60px; /* Espacio entre los elementos. */
@@ -197,13 +200,13 @@ body{
 .vertical-line{
     width:4px; /* Grosor de la línea. */
     height:130px; /* Altura de la línea. */
-    background:#082882; /* Color azul oscuro. */
+    background:var(--color-primario); /* Color azul oscuro. */
     border-radius:20px; /* Bordes redondeados. */
 }
 
 /* Título principal del Hero. */
 .hero-center h2{
-    color:#0f172a; /* Color del texto. */
+    color:var(--texto-oscuro); /* Color del texto. */
     font-size:2.05rem; /* Tamaño del título. */
     line-height:1.15; /* Espaciado entre líneas. */
     font-weight:900; /* Texto muy grueso. */
@@ -213,7 +216,7 @@ body{
 .hero-btn{
     display:inline-block; /* Permite aplicar dimensiones al enlace. */
     margin-top:17px; /* Espacio superior. */
-    background:#043193; /* Fondo azul. */
+    background:var(--color-acento); /* Fondo azul. */
     color:white; /* Texto blanco. */
     text-decoration:none; /* Elimina el subrayado. */
     padding:8px 16px; /* Espacio interno. */
@@ -232,7 +235,7 @@ body{
 
 /* Texto resaltado en azul. */
 .blue-text{
-    color:#1150d8; /* Cambia el color del texto. */
+    color:var(--color-acento-claro); /* Cambia el color del texto. */
 }
 
 /* =========================
@@ -258,7 +261,7 @@ body{
         ); /* Fondo con degradado. */
     backdrop-filter:blur(10px); /* Aplica efecto de desenfoque. */
     -webkit-backdrop-filter:blur(10px); /* Compatibilidad con WebKit. */
-    border-top:4px solid #002259; /* Borde superior azul. */
+    border-top:4px solid var(--color-acento); /* Borde superior azul. */
     border-radius:20px; /* Bordes redondeados. */
     padding:25px; /* Espacio interno. */
     transition:.25s; /* Suaviza las transiciones. */
@@ -287,7 +290,7 @@ body{
     width:42px;
     height:42px;
     border-radius:50%;
-    background:#1153bd;
+    background:var(--color-acento);
     color:white;
     display:flex;
     justify-content:center;
@@ -308,7 +311,7 @@ body{
 .card-line{
     width:100px;
     height:2px;
-    background:#60a5fa;
+    background:var(--color-acento-claro);
     margin-top:8px;
     border-radius:20px;
 }
@@ -348,7 +351,7 @@ body{
     width:26px;
     height:26px;
     border-radius:50%;
-    background:#1153bd;
+    background:var(--color-acento);
     color:white;
     display:flex;
     justify-content:center;
@@ -415,7 +418,7 @@ body{
     margin:11px auto; /* Lo centra horizontalmente. */
     background:rgba(255,255,255,.20); /* Fondo blanco semitransparente. */
     backdrop-filter:blur(8px); /* Aplica un efecto de desenfoque. */
-    border-left:5px solid #2563eb; /* Agrega un borde azul en el lado izquierdo. */
+    border-left:5px solid var(--color-secundario-hover); /* Agrega un borde azul en el lado izquierdo. */
     border-radius:10px; /* Bordes redondeados. */
     padding:15px 20px; /* Espacio interno. */
 }

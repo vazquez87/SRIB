@@ -1,3 +1,5 @@
+@import url("variables.css");
+
 /* Selecciona todos los elementos de la página. */
 *{
     margin:0; /* Elimina el margen predeterminado. */
@@ -12,8 +14,8 @@ body{
     background: /* Define el fondo de la página. */
     radial-gradient( /* Crea un degradado circular. */
         circle at center, /* El degradado comienza desde el centro. */
-        #eef2f9 0%, /* Color inicial del degradado. */
-        #dfe5ef 100% /* Color final del degradado. */
+        var(--fondo-principal) 0%, /* Color inicial del degradado. */
+        var(--fondo-secundario) 100% /* Color final del degradado. */
     );
 }
 
@@ -24,7 +26,7 @@ body{
 /* Contenedor del encabezado principal. */
 .header{
     height:75px; /* Altura del encabezado. */
-    background:#00154f; /* Color azul oscuro del fondo. */
+    background:var(--color-primario); /* Color azul oscuro del fondo. */
     display:flex; /* Activa Flexbox. */
     align-items:center; /* Centra verticalmente el contenido. */
     padding:0 50px; /* Agrega espacio interno a los lados. */
@@ -40,7 +42,7 @@ body{
 
 /* Texto resaltado dentro del título. */
 .header span{
-    color:#3b82f6; /* Cambia el color del texto a azul claro. */
+    color:var(--color-mensaje); /* Cambia el color del texto a azul claro. */
 }
 
 /* =========================
@@ -49,24 +51,29 @@ body{
 
 /* Botón para volver al menú anterior. */
 .btn-back{
-    position:absolute; /* Permite posicionarlo libremente dentro de la página. */
-    top:95px; /* Distancia desde la parte superior. */
-    left:50px; /* Distancia desde el lado izquierdo. */
-    background:white; /* Fondo blanco. */
-    color:#003B8E; /* Color azul del texto. */
-    text-decoration:none; /* Elimina el subrayado del enlace. */
-    padding:12px 22px; /* Espacio interno del botón. */
-    border-radius:12px; /* Redondea las esquinas. */
-    font-weight:600; /* Texto seminegrita. */
-    font-size:.95rem; /* Tamaño de la fuente. */
-    box-shadow:0 3px 12px rgba(0,0,0,.12); /* Agrega una sombra. */
-    transition:.3s; /* Suaviza las transiciones al cambiar de estado. */
+    position:absolute;
+    top:95px;
+    left:50px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:12px 22px;
+    background:var(--color-blanco);
+    color:var(--color-primario);
+    text-decoration:none;
+    border-radius:12px;
+    font-weight:600;
+    font-size:.95rem;
+    box-shadow:0 4px 14px rgba(0,0,0,.12);
+    transition:.25s;
 }
 
-/* Efecto cuando el cursor pasa sobre el botón. */
 .btn-back:hover{
-    background:#003B8E; /* Cambia el fondo a azul. */
-    color:white; /* Cambia el color del texto a blanco. */
+
+    background:#f5f7fb;
+
+    color:var(--color-primario);
+
 }
 
 /* =========================
@@ -104,7 +111,7 @@ body{
 
 /* Título del panel izquierdo. */
 .left-panel h2{
-    color:#00154f; /* Color azul oscuro. */
+    color:var(--color-primario); /* Color azul oscuro. */
     font-size:2.3rem; /* Tamaño del texto. */
     font-weight:700; /* Texto en negrita. */
     line-height:1.2; /* Espaciado entre líneas. */
@@ -113,7 +120,7 @@ body{
 
 /* Texto descriptivo del sistema. */
 .descripcion{
-    color:#4b5563; /* Color gris oscuro. */
+    color:var(--texto-principal); /* Color gris oscuro. */
     font-size:1rem; /* Tamaño del texto. */
     line-height:1.7; /* Espaciado entre líneas para mejorar la lectura. */
     max-width:400px; /* Limita el ancho máximo del párrafo. */
@@ -124,7 +131,7 @@ body{
 .linea{
     width:140px; /* Ancho de la línea. */
     height:5px; /* Grosor de la línea. */
-    background:#0A5BD8; /* Color azul. */
+    background:var(--color-secundario); /* Color azul. */
     border-radius:50px; /* Bordes redondeados. */
 }
 
@@ -146,7 +153,7 @@ body{
 /* Tarjeta que contiene el formulario de inicio de sesión. */
 .form-card{
     width:480px; /* Ancho de la tarjeta. */
-    background:#13295c; /* Fondo azul oscuro. */
+    background:var(--color-primario);
     border-radius:25px; /* Bordes redondeados. */
     padding:35px; /* Espacio interno. */
     box-shadow:0 15px 40px rgba(0,0,0,.18); /* Agrega una sombra pronunciada. */
@@ -163,25 +170,9 @@ body{
 
 /* Texto resaltado dentro del título. */
 .form-card span{
-    color:#3b82f6; /* Color azul claro. */
+    color:var(--color-acento-claro); /* Color azul claro. */
 }
 
-/* =========================
-   MENSAJE ERROR
-========================= */
-
-/* Mensaje de error oculto inicialmente. */
-.mensaje-error{
-    display:none; /* Permanece oculto hasta que JavaScript lo muestre. */
-    background:#ef4444; /* Fondo rojo. */
-    color:white; /* Texto blanco. */
-    padding:12px; /* Espacio interno. */
-    border-radius:10px; /* Bordes redondeados. */
-    margin-bottom:20px; /* Espacio inferior. */
-    text-align:center; /* Centra el texto. */
-    font-weight:600; /* Texto seminegrita. */
-    font-size:.9rem; /* Tamaño del texto. */
-}
 
 /* =========================
    CAMPOS
@@ -199,6 +190,7 @@ body{
     font-weight:600; /* Texto seminegrita. */
     font-size:.95rem; /* Tamaño del texto. */
     margin-bottom:8px; /* Espacio entre la etiqueta y el campo. */
+    transition:.25s;
 }
 
 /* Iconos dentro de las etiquetas. */
@@ -208,18 +200,21 @@ body{
 
 /* Campos de entrada. */
 .campo input{
-    width:100%; /* Ocupan todo el ancho disponible. */
-    height:50px; /* Altura del campo. */
-    border:none; /* Elimina el borde. */
-    border-radius:12px; /* Bordes redondeados. */
-    padding:0 16px; /* Espacio interno horizontal. */
-    font-size:14px; /* Tamaño del texto. */
-    background:white; /* Fondo blanco. */
+    width:100%;
+    height:50px;
+    border:2px solid transparent;
+    border-radius:12px;
+    padding:0 16px;
+    font-size:14px;
+    background:white;
+    transition:.25s;
 }
 
 /* Efecto cuando un campo recibe el enfoque. */
 .campo input:focus{
-    outline:3px solid #3b82f6; /* Agrega un borde azul alrededor del campo seleccionado. */
+    outline:none;
+    border:2px solid var(--color-acento);
+    box-shadow:0 0 0 3px rgba(10,91,216,.15);
 }
 
 /* =========================
@@ -232,7 +227,7 @@ body{
     height:50px; /* Altura del botón. */
     border:none; /* Elimina el borde. */
     border-radius:12px; /* Bordes redondeados. */
-    background:#0A5BD8; /* Fondo azul. */
+    background:var(--color-secundario); /* Fondo azul. */
     color:white; /* Texto blanco. */
     font-size:15px; /* Tamaño del texto. */
     font-weight:700; /* Texto en negrita. */
@@ -242,7 +237,7 @@ body{
 
 /* Efecto al pasar el cursor sobre el botón. */
 .btn-login:hover{
-    background:#3b82f6; /* Cambia el fondo a un azul más claro. */
+    background:var(--color-acento); /* Cambia el fondo a un azul más claro. */
     transform:translateY(-2px); /* Eleva ligeramente el botón. */
     box-shadow:0 8px 20px rgba(59,130,246,.35); /* Agrega una sombra más intensa. */
 }
@@ -251,9 +246,10 @@ body{
 .correo-ayuda{
     display:block; /* Hace que ocupe toda la línea. */
     margin-top:6px; /* Espacio superior. */
-    color:#cbd5e1; /* Color gris claro. */
+    color:var(--borde-gris); /* Color gris claro. */
     font-size:.8rem; /* Tamaño pequeño del texto. */
 }
+
 
 /* =========================
    LINK REGISTRO
@@ -269,7 +265,7 @@ body{
 
 /* Enlace de registro. */
 .register-link a{
-    color:#60a5fa; /* Color azul claro. */
+    color:var(--color-acento-claro); /* Color azul claro. */
     text-decoration:none; /* Elimina el subrayado. */
     font-weight:600; /* Texto seminegrita. */
 }

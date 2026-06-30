@@ -1,0 +1,84 @@
+/*==================================================
+        VARIABLES GLOBALES DEL PROYECTO SRIB
+==================================================*/
+
+:root{
+
+    /*==============================================
+                    COLORES PRINCIPALES
+    ==============================================*/
+
+    --color-primario:#00154F;
+    --color-secundario:#0A5BD8;
+    --color-acento:#143ee7;
+    --color-acento-claro:#2075fd;
+    --color-hover:#4580ff;
+
+    /*==============================================
+                        FONDOS
+    ==============================================*/
+
+    --fondo-principal:#EEF2F9;
+    --fondo-secundario:#DFE5EF;
+
+    --color-blanco:#FFFFFF;
+
+    --color-tarjeta:#FFFFFF;
+
+    /*==============================================
+                        TEXTOS
+    ==============================================*/
+
+    --texto-principal:#4a525f;
+    --texto-secundario:#97a2ba;
+
+    /*==============================================
+                        BORDES
+    ==============================================*/
+
+    --color-borde:#DBE3F0;
+    --borde-gris:#CBD5E1;
+
+    /*==============================================
+                    SOMBRAS
+    ==============================================*/
+
+    --sombra-header:0 3px 12px rgba(0,0,0,.15);
+
+    --sombra-card:0 10px 25px rgba(0,0,0,.12);
+
+    --sombra-hover:0 8px 20px rgba(10,91,216,.25);
+
+    /*==============================================
+                    VALIDACIONES
+    ==============================================*/
+
+    /* Azul para resaltar el campo y el label */
+
+    --color-validacion:#2563EB;
+
+    /* Color del texto del mensaje */
+
+    --color-mensaje:#316ff6;
+
+    /*==============================================
+            ESTADOS (SOLO TEXTO)
+    ==============================================*/
+
+    --estado-pendiente:#DC2626;
+
+    --estado-proceso:#D97706;
+
+    --estado-resuelto:#15803D;
+
+    /*==============================================
+          PRIORIDADES (SOLO TEXTO)
+    ==============================================*/
+
+    --prioridad-baja:#2563EB;
+
+    --prioridad-media:#D97706;
+
+    --prioridad-alta:#DC2626;
+
+}

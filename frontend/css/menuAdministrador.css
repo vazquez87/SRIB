@@ -1,260 +1,240 @@
+@import url("variables.css"); /* Importa las variables globales de colores. */
+
 /* Selecciona todos los elementos de la página. */
 *{
-    margin:0; /* Elimina el margen predeterminado de todos los elementos. */
-    padding:0; /* Elimina el espacio interno (padding) predeterminado. */
-    box-sizing:border-box; /* Incluye el borde y el padding dentro del ancho y alto del elemento. */
-    font-family:'Segoe UI',sans-serif; /* Establece la fuente principal de la página. */
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
 }
 
 /* Configuración general del cuerpo de la página. */
 body{
-    min-height:100vh; /* Hace que la página ocupe al menos toda la altura de la ventana del navegador. */
-    background: /* Define el fondo de la página. */
-    radial-gradient(circle at center, /* Crea un degradado circular desde el centro. */
-    #eef2f9 0%, /* Color inicial del degradado. */
-    #dfe5ef 100%); /* Color final del degradado. */
+    min-height:100vh;
+    background:
+    radial-gradient(circle at center,
+    var(--color-fondo) 0%,
+    var(--color-fondo-secundario) 100%);
 }
 
 /* =========================
         HEADER
 ========================= */
 
-/* Contenedor del encabezado principal. */
 .header{
-    height:70px; /* Define la altura del encabezado. */
-    background:#00154f; /* Establece un fondo azul oscuro. */
-    display:flex; /* Activa Flexbox para organizar los elementos. */
-    align-items:center; /* Centra verticalmente el contenido. */
-    padding:0 45px; /* Agrega espacio interno a los lados. */
-    box-shadow:0 3px 12px rgba(0,0,0,.15); /* Agrega una sombra debajo del encabezado. */
+    height:70px;
+    background:var(--color-primario);
+    display:flex;
+    align-items:center;
+    padding:0 45px;
+    box-shadow:var(--sombra-header);
 }
 
-/* Título del encabezado. */
 .header h1{
-    color:white; /* Cambia el color del texto a blanco. */
-    font-size:1.7rem; /* Define el tamaño del título. */
+    color:var(--color-blanco);
+    font-size:1.7rem;
 }
 
-/* Texto resaltado dentro del título. */
 .header span{
-    color:#3b82f6; /* Cambia el color del texto a azul claro. */
+    color:var(--color-acento-claro);
 }
 
 /* =========================
     CONTENEDOR PRINCIPAL
 ========================= */
 
-/* Contenedor principal que organiza el contenido de la página. */
 .contenedor{
-    max-width:1250px; /* Define el ancho máximo del contenedor. */
-    margin:auto; /* Centra el contenedor horizontalmente. */
-    padding:40px 30px; /* Agrega espacio interno. */
-    display:flex; /* Activa Flexbox. */
-    gap:45px; /* Agrega espacio entre los paneles. */
-    align-items:flex-start; /* Alinea los elementos desde la parte superior. */
+    max-width:1250px;
+    margin:auto;
+    padding:40px 30px;
+    display:flex;
+    gap:45px;
+    align-items:flex-start;
 }
 
 /* =========================
       PANEL IZQUIERDO
 ========================= */
 
-/* Panel que contiene la consulta y el historial de reportes. */
 .panel-izquierdo{
-    flex:1; /* Hace que ocupe el espacio disponible. */
+    flex:1;
 }
 
 /* =========================
          CONSULTA
 ========================= */
 
-/* Tarjeta donde se realiza la búsqueda de reportes. */
 .consulta{
-    background:white; /* Fondo blanco. */
-    padding:25px; /* Espacio interno. */
-    border-radius:20px; /* Bordes redondeados. */
-    box-shadow:0 10px 25px rgba(0,0,0,.12); /* Agrega una sombra. */
-    margin-bottom:25px; /* Espacio debajo de la tarjeta. */
+    background:var(--color-tarjeta);
+    padding:25px;
+    border-radius:20px;
+    box-shadow:var(--sombra-card);
+    margin-bottom:25px;
 }
 
-/* Etiqueta del campo de búsqueda. */
 .consulta label{
-    font-size:1.2rem; /* Tamaño del texto. */
-    font-weight:600; /* Texto seminegrita. */
-    color:#00154f; /* Color azul oscuro. */
+    font-size:1.2rem;
+    font-weight:600;
+    color:var(--color-primario);
 }
 
-/* Contenedor del campo de búsqueda y botón. */
 .busqueda{
-    margin-top:20px; /* Espacio superior. */
-    display:flex; /* Coloca los elementos en una fila. */
-    gap:15px; /* Espacio entre el campo y el botón. */
+    margin-top:20px;
+    display:flex;
+    gap:15px;
 }
 
-/* Campo de texto para buscar un reporte. */
 .busqueda input{
-    flex:1; /* Ocupa el espacio disponible. */
-    height:50px; /* Altura del campo. */
-    border:2px solid #d9e2f2; /* Borde gris claro. */
-    border-radius:10px; /* Bordes redondeados. */
-    padding:0 15px; /* Espacio interno horizontal. */
-    font-size:15px; /* Tamaño del texto. */
+    flex:1;
+    height:50px;
+    border:2px solid var(--color-borde);
+    border-radius:10px;
+    padding:0 15px;
+    font-size:15px;
+    transition:.25s;
 }
 
-/* Efecto cuando el campo recibe el enfoque. */
 .busqueda input:focus{
-    outline:none; /* Elimina el borde predeterminado del navegador. */
-    border-color:#0A5BD8; /* Cambia el color del borde a azul. */
+    outline:none;
+    border:2px solid var(--color-acento);
+    box-shadow:0 0 0 3px rgba(10,91,216,.18);
 }
 
-/* Botón de búsqueda. */
 .busqueda button{
-    width:220px; /* Ancho del botón. */
-    border:none; /* Elimina el borde. */
-    border-radius:10px; /* Bordes redondeados. */
-    background:#0A5BD8; /* Fondo azul. */
-    color:white; /* Texto blanco. */
-    font-weight:600; /* Texto seminegrita. */
-    cursor:pointer; /* Cambia el cursor a una mano. */
-    transition:.3s; /* Suaviza las transiciones. */
+    width:220px;
+    border:none;
+    border-radius:10px;
+    background:var(--color-acento);
+    color:var(--color-blanco);
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
 }
 
-/* Efecto al pasar el cursor sobre el botón. */
 .busqueda button:hover{
-    background:#2563eb; /* Cambia el fondo a un azul más claro. */
-}
-
-/* =========================
-         MENSAJE
-========================= */
-
-/* Mensaje que se mostrará después de realizar una búsqueda. */
-.mensaje-busqueda{
-    display:none; /* Permanece oculto inicialmente. */
-    margin-top:20px; /* Espacio superior. */
-    padding:12px; /* Espacio interno. */
-    color:white; /* Texto blanco. */
-    border-radius:10px; /* Bordes redondeados. */
-    font-weight:600; /* Texto seminegrita. */
+    background:var(--color-hover);
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(10,91,216,.30);
 }
 
 /* =========================
         HISTORIAL
 ========================= */
 
-/* Tarjeta donde se mostrará el historial de reportes. */
 .historial{
-    background:white; /* Fondo blanco. */
-    border-radius:20px; /* Bordes redondeados. */
-    padding:25px; /* Espacio interno. */
-    box-shadow:0 10px 25px rgba(0,0,0,.12); /* Agrega una sombra. */
+    background:var(--color-tarjeta);
+    border-radius:20px;
+    padding:25px;
+    box-shadow:var(--sombra-card);
 }
 
-/* Título del historial. */
 .historial h2{
-    color:#00154f; /* Color azul oscuro. */
-    margin-bottom:20px; /* Espacio debajo del título. */
+    color:var(--color-primario);
+    margin-bottom:20px;
 }
 
-/* Área donde aparecerá la tabla de reportes. */
 .tabla-reportes{
-    height:240px; /* Altura del contenedor. */
-    border:2px dashed #cbd5e1; /* Borde punteado gris. */
-    border-radius:12px; /* Bordes redondeados. */
-    display:flex; /* Activa Flexbox. */
-    justify-content:center; /* Centra horizontalmente el contenido. */
-    align-items:center; /* Centra verticalmente el contenido. */
-    color:#64748b; /* Color gris del texto. */
-    font-size:17px; /* Tamaño del texto. */
+    height:240px;
+    border:2px dashed var(--color-borde-secundario);
+    border-radius:12px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:var(--color-texto-secundario);
+    font-size:17px;
 }
 
-/* Texto que aparece cuando aún no existen reportes. */
 .tabla-reportes::before{
-    content:"Aquí se mostrarán los reportes."; /* Muestra un mensaje informativo. */
+    content:"Aquí se mostrarán los reportes.";
 }
 
 /* =========================
       PANEL DERECHO
 ========================= */
 
-/* Panel que contiene la fotografía del usuario y el botón para salir. */
 .panel-derecho{
-    width:220px; /* Ancho del panel. */
-    display:flex; /* Activa Flexbox. */
-    flex-direction:column; /* Organiza los elementos en columna. */
-    align-items:center; /* Centra horizontalmente el contenido. */
-    margin-left:40px; /* Espacio hacia la izquierda. */
-    position:relative; /* Permite mover el panel respecto a su posición original. */
-    left:60px; /* Desplaza el panel hacia la derecha. */
-    margin-top:40px; /* Espacio superior. */
+    width:220px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-left:40px;
+    position:relative;
+    left:60px;
+    margin-top:40px;
 }
 
-/* Imagen de perfil del usuario. */
 .foto-perfil{
-    width:200px; /* Ancho de la imagen. */
-    height:200px; /* Altura de la imagen. */
-    object-fit:cover; /* Ajusta la imagen sin deformarla. */
-    border-radius:50%; /* Convierte la imagen en un círculo. */
-    border:none; /* Elimina el borde. */
-    box-shadow:none; /* Elimina cualquier sombra. */
-    display:block; /* Hace que la imagen sea un elemento de bloque. */
+    width:200px;
+    height:200px;
+    object-fit:cover;
+    border-radius:50%;
+    border:none;
+    box-shadow:none;
+    display:block;
 }
 
-/* Nombre o título debajo de la imagen. */
 .panel-derecho h2{
-    margin-top:-10px; /* Reduce el espacio superior. */
-    color:#00154f; /* Color azul oscuro. */
-    font-size:1.6rem; /* Tamaño del texto. */
+    margin-top:-10px;
+    color:var(--color-primario);
+    font-size:1.6rem;
 }
 
-/* Botón para cerrar sesión. */
 .btn-salir{
-    margin-top:40px; /* Espacio superior. */
-    width:180px; /* Ancho del botón. */
-    height:46px; /* Altura del botón. */
-    display:flex; /* Activa Flexbox. */
-    justify-content:center; /* Centra horizontalmente el contenido. */
-    align-items:center; /* Centra verticalmente el contenido. */
-    gap:8px; /* Espacio entre el icono y el texto. */
-    text-decoration:none; /* Elimina el subrayado del enlace. */
-    border-radius:10px; /* Bordes redondeados. */
-    background:#ef4444; /* Fondo rojo. */
-    color:white; /* Texto blanco. */
-    font-size:15px; /* Tamaño del texto. */
-    font-weight:600; /* Texto seminegrita. */
-    transition:.3s; /* Suaviza las transiciones. */
+    margin-top:40px;
+    width:180px;
+    height:46px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    text-decoration:none;
+
+    background:var(--color-acento);
+    color:var(--color-blanco);
+
+    border:none;
+    border-radius:10px;
+
+    font-size:15px;
+    font-weight:600;
+
+    cursor:pointer;
+    transition:.3s;
 }
 
-/* Efecto cuando el cursor pasa sobre el botón. */
 .btn-salir:hover{
-    background:#dc2626; /* Cambia el fondo a un rojo más oscuro. */
-    transform:translateY(-2px); /* Eleva ligeramente el botón. */
+    background:var(--color-hover);
+    color:var(--color-blanco);
+    transform:translateY(-2px);
 }
 
 /* =========================
         RESPONSIVE
 ========================= */
 
-/* Aplica estos estilos cuando la pantalla mide 1000 px o menos. */
 @media(max-width:1000px){
 
 .contenedor{
-    flex-direction:column; /* Coloca los paneles uno debajo del otro. */
+    flex-direction:column;
 }
 
 .panel-derecho{
-    width:100%; /* Hace que el panel derecho ocupe todo el ancho disponible. */
+    width:100%;
+    margin-left:0;
+    left:0;
+    margin-top:20px;
 }
 
 .busqueda{
-    flex-direction:column; /* Coloca el campo de búsqueda y el botón en columna. */
+    flex-direction:column;
 }
 
 .busqueda button{
-    width:100%; /* Hace que el botón ocupe todo el ancho disponible. */
+    width:100%;
 }
 
 .btn-salir{
-    margin-top:40px; /* Mantiene el espacio superior del botón. */
+    margin-top:40px;
 }
 
 }
