@@ -1,4 +1,4 @@
-@import url("variables.css");
+@import url("variables.css"); /* Importa las variables globales de colores. */
 
 /* Selecciona todos los elementos de la página. */
 *{
@@ -51,28 +51,28 @@ body{
 
 /* Botón para volver al menú anterior. */
 .btn-back{
-    position:absolute;
-    top:95px;
-    left:50px;
-    display:flex;
-    align-items:center;
-    gap:8px;
-    padding:12px 22px;
-    background:var(--color-blanco);
-    color:var(--color-primario);
-    text-decoration:none;
-    border-radius:12px;
-    font-weight:600;
-    font-size:.95rem;
-    box-shadow:0 4px 14px rgba(0,0,0,.12);
-    transition:.25s;
+    position:absolute; /* Define el tipo de posicionamiento del elemento. */
+    top:95px; /* Separa el elemento desde la parte superior. */
+    left:50px; /* Separa el elemento desde el lado izquierdo. */
+    display:flex; /* Define cómo se mostrará el elemento. */
+    align-items:center; /* Centra los elementos verticalmente. */
+    gap:8px; /* Define el espacio entre los elementos. */
+    padding:12px 22px; /* Agrega espacio interno al elemento. */
+    background:var(--color-blanco); /* Define el color o fondo del elemento. */
+    color:var(--color-primario); /* Define el color del texto. */
+    text-decoration:none; /* Elimina o modifica el subrayado del texto. */
+    border-radius:12px; /* Redondea las esquinas del elemento. */
+    font-weight:600; /* Define el grosor de la fuente. */
+    font-size:.95rem; /* Define el tamaño del texto. */
+    box-shadow:0 4px 14px rgba(0,0,0,.12); /* Agrega una sombra alrededor del elemento. */
+    transition:.25s; /* Suaviza los cambios de estilo. */
 }
 
 .btn-back:hover{
 
-    background:#f5f7fb;
+    background:#f5f7fb; /* Define el color o fondo del elemento. */
 
-    color:var(--color-primario);
+    color:var(--color-primario); /* Define el color del texto. */
 
 }
 
@@ -153,7 +153,7 @@ body{
 /* Tarjeta que contiene el formulario de inicio de sesión. */
 .form-card{
     width:480px; /* Ancho de la tarjeta. */
-    background:var(--color-primario);
+    background:var(--color-primario); /* Define el color o fondo del elemento. */
     border-radius:25px; /* Bordes redondeados. */
     padding:35px; /* Espacio interno. */
     box-shadow:0 15px 40px rgba(0,0,0,.18); /* Agrega una sombra pronunciada. */
@@ -190,7 +190,7 @@ body{
     font-weight:600; /* Texto seminegrita. */
     font-size:.95rem; /* Tamaño del texto. */
     margin-bottom:8px; /* Espacio entre la etiqueta y el campo. */
-    transition:.25s;
+    transition:.25s; /* Suaviza los cambios de estilo. */
 }
 
 /* Iconos dentro de las etiquetas. */
@@ -200,21 +200,21 @@ body{
 
 /* Campos de entrada. */
 .campo input{
-    width:100%;
-    height:50px;
-    border:2px solid transparent;
-    border-radius:12px;
-    padding:0 16px;
-    font-size:14px;
-    background:white;
-    transition:.25s;
+    width:100%; /* Define el ancho del elemento. */
+    height:50px; /* Define la altura del elemento. */
+    border:2px solid transparent; /* Define el borde del elemento. */
+    border-radius:12px; /* Redondea las esquinas del elemento. */
+    padding:0 16px; /* Agrega espacio interno al elemento. */
+    font-size:14px; /* Define el tamaño del texto. */
+    background:white; /* Define el color o fondo del elemento. */
+    transition:.25s; /* Suaviza los cambios de estilo. */
 }
 
 /* Efecto cuando un campo recibe el enfoque. */
 .campo input:focus{
-    outline:none;
-    border:2px solid var(--color-acento);
-    box-shadow:0 0 0 3px rgba(10,91,216,.15);
+    outline:none; /* Elimina el contorno predeterminado. */
+    border:2px solid var(--color-acento); /* Define el borde del elemento. */
+    box-shadow:0 0 0 3px rgba(10,91,216,.15); /* Agrega una sombra alrededor del elemento. */
 }
 
 /* =========================

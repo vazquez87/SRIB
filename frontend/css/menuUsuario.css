@@ -2,15 +2,15 @@
 
 /* Selecciona todos los elementos de la página. */
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
+    margin:0; /* Agrega un margen exterior al elemento. */
+    padding:0; /* Agrega espacio interno al elemento. */
+    box-sizing:border-box; /* Incluye el borde y el padding dentro del ancho y alto del elemento. */
+    font-family:'Segoe UI',sans-serif; /* Define la fuente principal del texto. */
 }
 
 /* Configuración general del cuerpo de la página. */
 body{
-    min-height:100vh;
+    min-height:100vh; /* Establece la altura mínima del elemento. */
     background:
     radial-gradient(
         circle at center,
@@ -24,22 +24,22 @@ body{
 ========================= */
 
 .header{
-    height:75px;
-    background:var(--color-primario);
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:0 50px;
-    box-shadow:var(--sombra-header);
+    height:75px; /* Define la altura del elemento. */
+    background:var(--color-primario); /* Define el fondo del elemento. */
+    display:flex; /* Define cómo se mostrará el elemento. */
+    justify-content:space-between; /* Centra los elementos horizontalmente. */
+    align-items:center; /* Centra los elementos verticalmente. */
+    padding:0 50px; /* Agrega espacio interno al elemento. */
+    box-shadow:var(--sombra-header); /* Agrega una sombra alrededor del elemento. */
 }
 
 .header h1{
-    color:var(--color-blanco);
-    font-size:1.6rem;
+    color:var(--color-blanco); /* Define el color del texto. */
+    font-size:1.6rem; /* Define el tamaño de la fuente. */
 }
 
 .header span{
-    color:var(--color-acento-claro);
+    color:var(--color-acento-claro); /* Define el color del texto. */
 }
 
 /* =========================
@@ -47,35 +47,35 @@ body{
 ========================= */
 
 .btn-logout{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
+    display:flex; /* Define cómo se mostrará el elemento. */
+    align-items:center; /* Centra los elementos verticalmente. */
+    justify-content:center; /* Centra los elementos horizontalmente. */
+    gap:8px; /* Define la separación entre elementos. */
 
-    text-decoration:none;
+    text-decoration:none; /* Elimina el subrayado del enlace. */
 
-    background:var(--color-acento);
-    color:var(--color-blanco);
+    background:var(--color-acento); /* Define el fondo del elemento. */
+    color:var(--color-blanco); /* Define el color del texto. */
 
-    padding:12px 20px;
+    padding:12px 20px; /* Agrega espacio interno al elemento. */
 
     border:none;
-    border-radius:10px;
+    border-radius:10px; /* Redondea las esquinas del elemento. */
 
-    font-weight:600;
+    font-weight:600; /* Define el grosor del texto. */
 
-    box-shadow:0 3px 12px rgba(0,0,0,.12);
+    box-shadow:0 3px 12px rgba(0,0,0,.12); /* Agrega una sombra alrededor del elemento. */
 
-    transition:.3s;
+    transition:.3s; /* Suaviza los cambios de estilo. */
 }
 
 .btn-logout:hover{
-    background:var(--color-hover);
-    color:var(--color-blanco);
+    background:var(--color-hover); /* Define el fondo del elemento. */
+    color:var(--color-blanco); /* Define el color del texto. */
 
-    transform:translateY(-2px);
+    transform:translateY(-2px); /* Aplica una transformación al elemento. */
 
-    box-shadow:var(--sombra-boton);
+    box-shadow:var(--sombra-boton); /* Agrega una sombra alrededor del elemento. */
 }
 
 /* =========================
@@ -83,13 +83,13 @@ body{
 ========================= */
 
 .dashboard{
-    max-width:1300px;
-    margin:auto;
-    padding:60px 40px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:80px;
+    max-width:1300px; /* Limita el ancho máximo. */
+    margin:auto; /* Agrega un margen exterior al elemento. */
+    padding:60px 40px; /* Agrega espacio interno al elemento. */
+    display:flex; /* Define cómo se mostrará el elemento. */
+    align-items:center; /* Centra los elementos verticalmente. */
+    justify-content:center; /* Centra los elementos horizontalmente. */
+    gap:80px; /* Define la separación entre elementos. */
 }
 
 /* =========================
@@ -97,27 +97,27 @@ body{
 ========================= */
 
 .profile{
-    width:400px;
+    width:400px; /* Define el ancho del elemento. */
     text-align:center;
 }
 
 .profile-img{
-    width:250px;
-    height:250px;
-    object-fit:cover;
-    margin-bottom:-20px;
+    width:250px; /* Define el ancho del elemento. */
+    height:250px; /* Define la altura del elemento. */
+    object-fit:cover; /* Ajusta la imagen dentro de su contenedor. */
+    margin-bottom:-20px; /* Agrega un margen inferior. */
 }
 
 .profile h2{
-    color:var(--color-primario);
-    font-size:1.8rem;
-    margin-bottom:8px;
+    color:var(--color-primario); /* Define el color del texto. */
+    font-size:1.8rem; /* Define el tamaño de la fuente. */
+    margin-bottom:8px; /* Agrega un margen inferior. */
 }
 
 .profile p{
-    color:var(--color-texto-secundario);
-    font-size:1rem;
-    font-weight:500;
+    color:var(--color-texto-secundario); /* Define el color del texto. */
+    font-size:1rem; /* Define el tamaño de la fuente. */
+    font-weight:500; /* Define el grosor del texto. */
 }
 
 /* =========================
@@ -125,20 +125,20 @@ body{
 ========================= */
 
 .menu-panel{
-    width:600px;
-    margin-top:80px;
-    background:var(--color-tarjeta);
-    padding:50px;
-    border-radius:25px;
-    box-shadow:var(--sombra-card);
-    transform:translateX(-30px);
+    width:600px; /* Define el ancho del elemento. */
+    margin-top:80px; /* Agrega un margen superior. */
+    background:var(--color-tarjeta); /* Define el fondo del elemento. */
+    padding:50px; /* Agrega espacio interno al elemento. */
+    border-radius:25px; /* Redondea las esquinas del elemento. */
+    box-shadow:var(--sombra-card); /* Agrega una sombra alrededor del elemento. */
+    transform:translateX(-30px); /* Aplica una transformación al elemento. */
 }
 
 .menu-panel h2{
     text-align:center;
-    color:var(--color-primario);
-    font-size:2rem;
-    margin-bottom:40px;
+    color:var(--color-primario); /* Define el color del texto. */
+    font-size:2rem; /* Define el tamaño de la fuente. */
+    margin-bottom:40px; /* Agrega un margen inferior. */
 }
 
 /* =========================
@@ -146,35 +146,35 @@ body{
 ========================= */
 
 .menu-buttons{
-    display:flex;
-    justify-content:center;
-    gap:30px;
+    display:flex; /* Define cómo se mostrará el elemento. */
+    justify-content:center; /* Centra los elementos horizontalmente. */
+    gap:30px; /* Define la separación entre elementos. */
 }
 
 .btn-option{
-    width:230px;
-    height:120px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    gap:12px;
-    text-decoration:none;
-    background:var(--color-acento);
-    color:var(--color-blanco);
-    border-radius:18px;
-    font-weight:600;
-    transition:.3s;
+    width:230px; /* Define el ancho del elemento. */
+    height:120px; /* Define la altura del elemento. */
+    display:flex; /* Define cómo se mostrará el elemento. */
+    flex-direction:column; /* Organiza los elementos en columna o fila. */
+    justify-content:center; /* Centra los elementos horizontalmente. */
+    align-items:center; /* Centra los elementos verticalmente. */
+    gap:12px; /* Define la separación entre elementos. */
+    text-decoration:none; /* Elimina el subrayado del enlace. */
+    background:var(--color-acento); /* Define el fondo del elemento. */
+    color:var(--color-blanco); /* Define el color del texto. */
+    border-radius:18px; /* Redondea las esquinas del elemento. */
+    font-weight:600; /* Define el grosor del texto. */
+    transition:.3s; /* Suaviza los cambios de estilo. */
 }
 
 .btn-option i{
-    font-size:2rem;
+    font-size:2rem; /* Define el tamaño de la fuente. */
 }
 
 .btn-option:hover{
-    transform:translateY(-5px);
-    background:var(--color-hover);
-    box-shadow:var(--sombra-boton);
+    transform:translateY(-5px); /* Aplica una transformación al elemento. */
+    background:var(--color-hover); /* Define el fondo del elemento. */
+    box-shadow:var(--sombra-boton); /* Agrega una sombra alrededor del elemento. */
 }
 
 /* =========================
@@ -184,16 +184,16 @@ body{
 @media(max-width:1000px){
 
     .dashboard{
-        flex-direction:column;
+        flex-direction:column; /* Organiza los elementos en columna o fila. */
     }
 
     .menu-buttons{
-        flex-direction:column;
-        align-items:center;
+        flex-direction:column; /* Organiza los elementos en columna o fila. */
+        align-items:center; /* Centra los elementos verticalmente. */
     }
 
     .menu-panel{
-        width:100%;
+        width:100%; /* Define el ancho del elemento. */
     }
 
 }

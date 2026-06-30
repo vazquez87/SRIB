@@ -22,14 +22,14 @@ body{
 
 /* Barra de navegación principal. */
 .navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    width:100%;
-    height:76px;
-    padding:0 28px;
-    background:var(--color-primario);
-    box-shadow:var(--sombra-header);
+    display:flex; /* Activa el modelo de visualización del elemento. */
+    justify-content:space-between; /* Alinea los elementos horizontalmente. */
+    align-items:center; /* Alinea los elementos verticalmente. */
+    width:100%; /* Define el ancho del elemento. */
+    height:76px; /* Define la altura del elemento. */
+    padding:0 28px; /* Agrega espacio interno. */
+    background:var(--color-primario); /* Define el fondo del elemento. */
+    box-shadow:var(--sombra-header); /* Agrega una sombra. */
 }
 
 /* Título de la barra de navegación. */
@@ -44,14 +44,14 @@ body{
 
 /* Texto resaltado dentro del título. */
 .navbar span{
-    color:var(--color-mensaje);
+    color:var(--color-mensaje); /* Define el color del texto. */
     font-weight:800; /* Texto con mayor grosor. */
 }
 
 /* Contenedor de los botones de navegación. */
 .nav-buttons{
-    display:flex;
-    gap:12px;
+    display:flex; /* Activa el modelo de visualización del elemento. */
+    gap:12px; /* Define la separación entre elementos. */
     flex-shrink:0;   /* Evita que los botones se compriman */
     margin-left:20px;
 }
@@ -72,7 +72,7 @@ body{
 
 /* Botón de iniciar sesión. */
 .btn-login{
-    background:var(--color-acento);
+    background:var(--color-acento); /* Define el fondo del elemento. */
 }
 
 /* Botón de registrarse. */
@@ -94,9 +94,9 @@ body{
 
 /* Efecto específico del botón Registrarse. */
 .btn-register:hover{
-    background:var(--color-hover);
+    background:var(--color-hover); /* Define el fondo del elemento. */
     border-color:var(--color-hover);
-    color:var(--color-blanco);   
+    color:var(--color-blanco);    /* Define el color del texto. */
 }
 
 /* =========================
@@ -115,7 +115,7 @@ body{
 /* Panel izquierdo del Hero. */
 .hero-left{
     width:22%; /* Ancho del panel. */
-    display:flex;
+    display:flex; /* Activa el modelo de visualización del elemento. */
     justify-content:center; /* Centra horizontalmente el contenido. */
     align-items:center; /* Centra verticalmente el contenido. */
     z-index:2; /* Coloca el contenido por encima de otros elementos. */
@@ -136,7 +136,7 @@ body{
 .hero-center{
     width:47%; /* Ancho del panel. */
     margin-left:35px; /* Espacio izquierdo. */
-    display:flex;
+    display:flex; /* Activa el modelo de visualización del elemento. */
     align-items:center; /* Centra verticalmente el contenido. */
     gap:60px; /* Espacio entre los elementos. */
 }
@@ -148,7 +148,7 @@ body{
     position:absolute; /* Permite colocarlo en una posición específica. */
     right:0; /* Lo ubica al lado derecho. */
     top:0; /* Lo alinea con la parte superior. */
-    display:flex;
+    display:flex; /* Activa el modelo de visualización del elemento. */
     justify-content:flex-end; /* Alinea el contenido hacia la derecha. */
     align-items:center; /* Centra verticalmente el contenido. */
     overflow:hidden; /* Oculta el contenido sobrante. */
@@ -183,7 +183,7 @@ body{
 /* Degradado blanco sobre la parte inferior de la imagen. */
 .hero-right::after{
     content:""; /* Crea un pseudoelemento vacío. */
-    position:absolute;
+    position:absolute; /* Define el tipo de posicionamiento. */
     inset:0; /* Hace que ocupe todo el contenedor. */
     background:
     linear-gradient(
@@ -279,47 +279,47 @@ body{
 
 /* Encabezado de la tarjeta. */
 .card-header{
-    display:flex;
-    align-items:center;
-    gap:10px;
+    display:flex; /* Activa el modelo de visualización del elemento. */
+    align-items:center; /* Alinea los elementos verticalmente. */
+    gap:10px; /* Define la separación entre elementos. */
     margin-bottom:12px;
 }
 
 /* Icono de la tarjeta. */
 .card-icon{
-    width:42px;
-    height:42px;
-    border-radius:50%;
-    background:var(--color-acento);
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:1.3rem;
+    width:42px; /* Define el ancho del elemento. */
+    height:42px; /* Define la altura del elemento. */
+    border-radius:50%; /* Redondea las esquinas. */
+    background:var(--color-acento); /* Define el fondo del elemento. */
+    color:white; /* Define el color del texto. */
+    display:flex; /* Activa el modelo de visualización del elemento. */
+    justify-content:center; /* Alinea los elementos horizontalmente. */
+    align-items:center; /* Alinea los elementos verticalmente. */
+    font-size:1.3rem; /* Define el tamaño del texto. */
     box-shadow:
         0 4px 12px rgba(37,99,235,.25);
 }
 
 /* Título de la tarjeta. */
 .card-header h3{
-    color:white;
-    font-size:1.1rem;
-    font-weight:700;
+    color:white; /* Define el color del texto. */
+    font-size:1.1rem; /* Define el tamaño del texto. */
+    font-weight:700; /* Define el grosor del texto. */
 }
 
 /* Línea decorativa. */
 .card-line{
-    width:100px;
-    height:2px;
-    background:var(--color-acento-claro);
+    width:100px; /* Define el ancho del elemento. */
+    height:2px; /* Define la altura del elemento. */
+    background:var(--color-acento-claro); /* Define el fondo del elemento. */
     margin-top:8px;
-    border-radius:20px;
+    border-radius:20px; /* Redondea las esquinas. */
 }
 
 /* Texto de la tarjeta. */
 .card p{
-    color:rgba(255,255,255,.92);
-    font-size:1rem;
+    color:rgba(255,255,255,.92); /* Define el color del texto. */
+    font-size:1rem; /* Define el tamaño del texto. */
     line-height:1.6;
 }
 
@@ -329,34 +329,34 @@ body{
 
 /* Contenedor de la lista de pasos. */
 .steps{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
+    display:flex; /* Activa el modelo de visualización del elemento. */
+    flex-direction:column; /* Organiza los elementos en fila o columna. */
+    gap:15px; /* Define la separación entre elementos. */
 }
 
 /* Paso individual. */
 .step{
-    display:flex;
-    align-items:flex-start;
-    gap:10px;
+    display:flex; /* Activa el modelo de visualización del elemento. */
+    align-items:flex-start; /* Alinea los elementos verticalmente. */
+    gap:10px; /* Define la separación entre elementos. */
 }
 
 /* Texto del paso. */
 .step p{
-    margin:0;
+    margin:0; /* Agrega espacio externo. */
 }
 
 /* Número del paso. */
 .number{
-    width:26px;
-    height:26px;
-    border-radius:50%;
-    background:var(--color-acento);
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-weight:bold;
+    width:26px; /* Define el ancho del elemento. */
+    height:26px; /* Define la altura del elemento. */
+    border-radius:50%; /* Redondea las esquinas. */
+    background:var(--color-acento); /* Define el fondo del elemento. */
+    color:white; /* Define el color del texto. */
+    display:flex; /* Activa el modelo de visualización del elemento. */
+    justify-content:center; /* Alinea los elementos horizontalmente. */
+    align-items:center; /* Alinea los elementos verticalmente. */
+    font-weight:bold; /* Define el grosor del texto. */
     flex-shrink:0; /* Evita que el círculo cambie de tamaño. */
 }
 
@@ -371,17 +371,17 @@ body{
 
 /* Elemento de la lista de usuarios. */
 .user-item{
-    display:flex;
-    align-items:center;
-    gap:15px;
+    display:flex; /* Activa el modelo de visualización del elemento. */
+    align-items:center; /* Alinea los elementos verticalmente. */
+    gap:15px; /* Define la separación entre elementos. */
     margin-bottom:18px;
-    color:white;
-    font-size:1.05rem;
+    color:white; /* Define el color del texto. */
+    font-size:1.05rem; /* Define el tamaño del texto. */
 }
 
 /* Icono o emoji del usuario. */
 .emoji{
-    font-size:1.3rem;
+    font-size:1.3rem; /* Define el tamaño del texto. */
 }
 
 /* =========================

@@ -2,15 +2,15 @@
 
 /* Selecciona todos los elementos de la página. */
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI', sans-serif;
+    margin:0; /* Elimina o define el margen exterior del elemento. */
+    padding:0; /* Define el espacio interno del elemento. */
+    box-sizing:border-box; /* Incluye el borde y el padding dentro del ancho y alto. */
+    font-family:'Segoe UI', sans-serif; /* Establece la fuente principal. */
 }
 
 /* Configuración general del cuerpo de la página. */
 body{
-    min-height:100vh;
+    min-height:100vh; /* Define la altura mínima del elemento. */
     background:
     radial-gradient(
         circle at center,
@@ -24,22 +24,22 @@ body{
 ========================= */
 
 .header{
-    height:75px;
-    background:var(--color-primario);
-    display:flex;
-    align-items:center;
-    padding:0 50px;
-    box-shadow:var(--sombra-header);
+    height:75px; /* Define la altura del elemento. */
+    background:var(--color-primario); /* Define el fondo del elemento. */
+    display:flex; /* Define cómo se muestra el elemento. */
+    align-items:center; /* Centra los elementos verticalmente. */
+    padding:0 50px; /* Define el espacio interno del elemento. */
+    box-shadow:var(--sombra-header); /* Agrega una sombra. */
 }
 
 .header h1{
-    color:var(--color-blanco);
-    font-size:1.6rem;
-    font-weight:700;
+    color:var(--color-blanco); /* Define el color del texto. */
+    font-size:1.6rem; /* Define el tamaño del texto. */
+    font-weight:700; /* Define el grosor del texto. */
 }
 
 .header span{
-    color:var(--color-acento-claro);
+    color:var(--color-acento-claro); /* Define el color del texto. */
 }
 
 /* =========================
@@ -47,23 +47,23 @@ body{
 ========================= */
 
 .btn-back{
-    position:absolute;
-    top:95px;
-    left:50px;
-    background:var(--color-blanco);
-    color:var(--color-secundario);
-    text-decoration:none;
-    padding:12px 22px;
-    border-radius:12px;
-    font-weight:600;
-    font-size:.95rem;
-    box-shadow:0 3px 12px rgba(0,0,0,.12);
-    transition:.3s;
+    position:absolute; /* Define el tipo de posicionamiento. */
+    top:95px; /* Separa el elemento desde la parte superior. */
+    left:50px; /* Separa el elemento desde la izquierda. */
+    background:var(--color-blanco); /* Define el fondo del elemento. */
+    color:var(--color-secundario); /* Define el color del texto. */
+    text-decoration:none; /* Controla el subrayado del texto. */
+    padding:12px 22px; /* Define el espacio interno del elemento. */
+    border-radius:12px; /* Redondea las esquinas. */
+    font-weight:600; /* Define el grosor del texto. */
+    font-size:.95rem; /* Define el tamaño del texto. */
+    box-shadow:0 3px 12px rgba(0,0,0,.12); /* Agrega una sombra. */
+    transition:.3s; /* Suaviza los cambios de estilo. */
 }
 
 .btn-back:hover{
-    background:#F5F7FB;
-    color:var(--color-primario);
+    background:#F5F7FB; /* Define el fondo del elemento. */
+    color:var(--color-primario); /* Define el color del texto. */
 }
 
 /* =========================
@@ -71,12 +71,12 @@ body{
 ========================= */
 
 .registro-container{
-    min-height:calc(100vh - 75px);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:150px;
-    padding:40px;
+    min-height:calc(100vh - 75px); /* Define la altura mínima del elemento. */
+    display:flex; /* Define cómo se muestra el elemento. */
+    justify-content:center; /* Centra los elementos horizontalmente. */
+    align-items:center; /* Centra los elementos verticalmente. */
+    gap:150px; /* Define la separación entre elementos. */
+    padding:40px; /* Define el espacio interno del elemento. */
 }
 
 /* =========================
@@ -84,40 +84,40 @@ body{
 ========================= */
 
 .left-panel{
-    width:450px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
+    width:450px; /* Define el ancho del elemento. */
+    display:flex; /* Define cómo se muestra el elemento. */
+    flex-direction:column; /* Organiza los elementos en columna. */
+    align-items:center; /* Centra los elementos verticalmente. */
+    text-align:center; /* Alinea el texto. */
 }
 
 .logo-srib{
-    width:280px;
+    width:280px; /* Define el ancho del elemento. */
     margin-bottom:25px;
 }
 
 .left-panel h2{
-    color:var(--color-primario);
-    font-size:2.3rem;
-    font-weight:700;
-    line-height:1.2;
+    color:var(--color-primario); /* Define el color del texto. */
+    font-size:2.3rem; /* Define el tamaño del texto. */
+    font-weight:700; /* Define el grosor del texto. */
+    line-height:1.2; /* Define el espaciado entre líneas. */
     margin-bottom:15px;
 }
 
 .descripcion{
-    color:var(--color-primario);
-    font-size:1rem;
-    line-height:1.7;
-    max-width:400px;
+    color:var(--color-primario); /* Define el color del texto. */
+    font-size:1rem; /* Define el tamaño del texto. */
+    line-height:1.7; /* Define el espaciado entre líneas. */
+    max-width:400px; /* Limita el ancho máximo. */
     margin-bottom:25px;
 }
 
 .left-panel::after{
     content:"";
-    width:140px;
-    height:5px;
-    background:var(--color-acento);
-    border-radius:50px;
+    width:140px; /* Define el ancho del elemento. */
+    height:5px; /* Define la altura del elemento. */
+    background:var(--color-acento); /* Define el fondo del elemento. */
+    border-radius:50px; /* Redondea las esquinas. */
     margin-top:3px;
 }
 
@@ -126,37 +126,37 @@ body{
 ========================= */
 
 .right-panel{
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    display:flex; /* Define cómo se muestra el elemento. */
+    justify-content:center; /* Centra los elementos horizontalmente. */
+    align-items:center; /* Centra los elementos verticalmente. */
 }
 
 .form-card{
-    width:480px;
-    background:var(--color-primario);
-    border-radius:25px;
-    padding:35px;
-    box-shadow:var(--sombra-card);
-    border:1px solid rgba(255,255,255,.05);
+    width:480px; /* Define el ancho del elemento. */
+    background:var(--color-primario); /* Define el fondo del elemento. */
+    border-radius:25px; /* Redondea las esquinas. */
+    padding:35px; /* Define el espacio interno del elemento. */
+    box-shadow:var(--sombra-card); /* Agrega una sombra. */
+    border:1px solid rgba(255,255,255,.05); /* Define el borde del elemento. */
 }
 
 .form-card h2{
-    color:var(--color-blanco);
-    text-align:center;
-    font-size:2.2rem;
+    color:var(--color-blanco); /* Define el color del texto. */
+    text-align:center; /* Alinea el texto. */
+    font-size:2.2rem; /* Define el tamaño del texto. */
     margin-bottom:12px;
 }
 
 .form-card span{
-    color:var(--color-acento-claro);
+    color:var(--color-acento-claro); /* Define el color del texto. */
 }
 
 .subtitle{
-    color:var(--texto-secundario);
-    text-align:center;
+    color:var(--texto-secundario); /* Define el color del texto. */
+    text-align:center; /* Alinea el texto. */
     margin-bottom:22px;
-    font-size:.95rem;
-    line-height:1.5;
+    font-size:.95rem; /* Define el tamaño del texto. */
+    line-height:1.5; /* Define el espaciado entre líneas. */
 }
 
 
@@ -169,10 +169,10 @@ body{
 }
 
 .campo label{
-    display:block;
-    color:var(--color-blanco);
-    font-weight:600;
-    font-size:.95rem;
+    display:block; /* Define cómo se muestra el elemento. */
+    color:var(--color-blanco); /* Define el color del texto. */
+    font-weight:600; /* Define el grosor del texto. */
+    font-size:.95rem; /* Define el tamaño del texto. */
     margin-bottom:8px;
 }
 
@@ -181,85 +181,85 @@ body{
 }
 
 .campo input{
-    width:100%;
-    height:50px;
-    border:2px solid transparent;
-    border-radius:12px;
-    padding:0 16px;
-    font-size:14px;
-    background:var(--color-blanco);
-    transition:.25s;
+    width:100%; /* Define el ancho del elemento. */
+    height:50px; /* Define la altura del elemento. */
+    border:2px solid transparent; /* Define el borde del elemento. */
+    border-radius:12px; /* Redondea las esquinas. */
+    padding:0 16px; /* Define el espacio interno del elemento. */
+    font-size:14px; /* Define el tamaño del texto. */
+    background:var(--color-blanco); /* Define el fondo del elemento. */
+    transition:.25s; /* Suaviza los cambios de estilo. */
 }
 
 .campo input:focus{
-    outline:none;
-    border:2px solid var(--color-acento);
-    box-shadow:0 0 0 3px rgba(10,91,216,.18);
+    outline:none; /* Elimina el contorno predeterminado. */
+    border:2px solid var(--color-acento); /* Define el borde del elemento. */
+    box-shadow:0 0 0 3px rgba(10,91,216,.18); /* Agrega una sombra. */
 }
 
 .correo-ayuda{
-    display:block;
+    display:block; /* Define cómo se muestra el elemento. */
     margin-top:6px;
-    color:var(--texto-secundario);
-    font-size:.8rem;
+    color:var(--texto-secundario); /* Define el color del texto. */
+    font-size:.8rem; /* Define el tamaño del texto. */
 }
 
 .btn-register{
-    width:100%;
-    height:50px;
-    border:none;
-    border-radius:12px;
-    background:var(--color-acento);
-    color:var(--color-blanco);
-    font-size:15px;
-    font-weight:700;
-    cursor:pointer;
-    transition:.3s;
+    width:100%; /* Define el ancho del elemento. */
+    height:50px; /* Define la altura del elemento. */
+    border:none; /* Define el borde del elemento. */
+    border-radius:12px; /* Redondea las esquinas. */
+    background:var(--color-acento); /* Define el fondo del elemento. */
+    color:var(--color-blanco); /* Define el color del texto. */
+    font-size:15px; /* Define el tamaño del texto. */
+    font-weight:700; /* Define el grosor del texto. */
+    cursor:pointer; /* Cambia el cursor al pasar sobre el elemento. */
+    transition:.3s; /* Suaviza los cambios de estilo. */
 }
 
 .btn-register:hover{
-    background:var(--color-hover);
-    transform:translateY(-2px);
-    box-shadow:0 8px 20px rgba(10,91,216,.25);
+    background:var(--color-hover); /* Define el fondo del elemento. */
+    transform:translateY(-2px); /* Aplica una transformación visual. */
+    box-shadow:0 8px 20px rgba(10,91,216,.25); /* Agrega una sombra. */
 }
 
 .login-link{
     margin-top:20px;
-    text-align:center;
-    color:var(--color-blanco);
-    font-size:.9rem;
+    text-align:center; /* Alinea el texto. */
+    color:var(--color-blanco); /* Define el color del texto. */
+    font-size:.9rem; /* Define el tamaño del texto. */
 }
 
 .login-link a{
-    color:var(--color-acento-claro);
-    text-decoration:none;
-    font-weight:600;
+    color:var(--color-acento-claro); /* Define el color del texto. */
+    text-decoration:none; /* Controla el subrayado del texto. */
+    font-weight:600; /* Define el grosor del texto. */
 }
 
 .login-link a:hover{
-    text-decoration:underline;
+    text-decoration:underline; /* Controla el subrayado del texto. */
 }
 
 @media(max-width:1100px){
 
     .registro-container{
-        flex-direction:column;
-        gap:50px;
+        flex-direction:column; /* Organiza los elementos en columna. */
+        gap:50px; /* Define la separación entre elementos. */
     }
 
     .left-panel{
-        width:100%;
+        width:100%; /* Define el ancho del elemento. */
     }
 
     .form-card{
-        width:100%;
-        max-width:480px;
+        width:100%; /* Define el ancho del elemento. */
+        max-width:480px; /* Limita el ancho máximo. */
     }
 
     .btn-back{
-        position:static;
-        display:inline-block;
-        margin:20px;
+        position:static; /* Define el tipo de posicionamiento. */
+        display:inline-block; /* Define cómo se muestra el elemento. */
+        margin:20px; /* Elimina o define el margen exterior del elemento. */
     }
 
 }

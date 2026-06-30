@@ -2,15 +2,15 @@
 
 /* Selecciona todos los elementos de la página. */
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
+    margin:0; /* Agrega un margen exterior al elemento. */
+    padding:0; /* Agrega espacio interno al elemento. */
+    box-sizing:border-box; /* Incluye el borde y el padding dentro del ancho y alto del elemento. */
+    font-family:'Segoe UI',sans-serif; /* Define la fuente principal del texto. */
 }
 
 /* Configuración general del cuerpo de la página. */
 body{
-    min-height:100vh;
+    min-height:100vh; /* Establece la altura mínima del elemento. */
     background:
     radial-gradient(
         circle at center,
@@ -24,22 +24,22 @@ body{
 ========================= */
 
 .header{
-    height:65px;
-    background:var(--color-primario);
-    display:flex;
-    align-items:center;
-    padding:0 45px;
-    box-shadow:var(--sombra-header);
+    height:65px; /* Define la altura del elemento. */
+    background:var(--color-primario); /* Define el fondo del elemento. */
+    display:flex; /* Define cómo se mostrará el elemento. */
+    align-items:center; /* Centra los elementos verticalmente. */
+    padding:0 45px; /* Agrega espacio interno al elemento. */
+    box-shadow:var(--sombra-header); /* Agrega una sombra alrededor del elemento. */
 }
 
 .header h1{
-    color:var(--color-blanco);
-    font-size:1.5rem;
-    font-weight:700;
+    color:var(--color-blanco); /* Define el color del texto. */
+    font-size:1.5rem; /* Define el tamaño del texto. */
+    font-weight:700; /* Define el grosor del texto. */
 }
 
 .header span{
-    color:var(--color-acento-claro);
+    color:var(--color-acento-claro); /* Define el color del texto. */
 }
 
 /* =========================
@@ -47,22 +47,22 @@ body{
 ========================= */
 
 .btn-back{
-    position:absolute;
-    top:105px;
-    left:40px;
-    background:var(--color-blanco);
-    color:var(--color-secundario);
-    text-decoration:none;
-    padding:12px 22px;
-    border-radius:10px;
-    font-weight:600;
-    box-shadow:0 3px 12px rgba(0,0,0,.12);
-    transition:.3s;
+    position:absolute; /* Define el tipo de posicionamiento. */
+    top:105px; /* Separa el elemento desde la parte superior. */
+    left:40px; /* Separa el elemento desde la izquierda. */
+    background:var(--color-blanco); /* Define el fondo del elemento. */
+    color:var(--color-secundario); /* Define el color del texto. */
+    text-decoration:none; /* Elimina el subrayado del enlace. */
+    padding:12px 22px; /* Agrega espacio interno al elemento. */
+    border-radius:10px; /* Redondea las esquinas. */
+    font-weight:600; /* Define el grosor del texto. */
+    box-shadow:0 3px 12px rgba(0,0,0,.12); /* Agrega una sombra alrededor del elemento. */
+    transition:.3s; /* Suaviza los cambios de estilo. */
 }
 
 .btn-back:hover{
-    background:#F5F7FB;
-    color:var(--color-primario);
+    background:#F5F7FB; /* Define el fondo del elemento. */
+    color:var(--color-primario); /* Define el color del texto. */
 }
 
 /* =========================
@@ -70,11 +70,11 @@ body{
 ========================= */
 
 .reporte-container{
-    min-height:calc(100vh - 65px);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:20px;
+    min-height:calc(100vh - 65px); /* Establece la altura mínima del elemento. */
+    display:flex; /* Define cómo se mostrará el elemento. */
+    justify-content:center; /* Centra los elementos horizontalmente. */
+    align-items:center; /* Centra los elementos verticalmente. */
+    padding:20px; /* Agrega espacio interno al elemento. */
 }
 
 /* =========================
@@ -82,22 +82,22 @@ body{
 ========================= */
 
 .form-card{
-    width:500px;
-    background:var(--color-tarjeta);
-    border-radius:25px;
-    padding:25px;
-    box-shadow:var(--sombra-card);
+    width:500px; /* Define el ancho del elemento. */
+    background:var(--color-tarjeta); /* Define el fondo del elemento. */
+    border-radius:25px; /* Redondea las esquinas. */
+    padding:25px; /* Agrega espacio interno al elemento. */
+    box-shadow:var(--sombra-card); /* Agrega una sombra alrededor del elemento. */
 }
 
 .form-card h2{
     text-align:center;
-    color:var(--color-primario);
-    font-size:1.9rem;
+    color:var(--color-primario); /* Define el color del texto. */
+    font-size:1.9rem; /* Define el tamaño del texto. */
     margin-bottom:30px;
 }
 
 .form-card span{
-    color:var(--color-acento-claro);
+    color:var(--color-acento-claro); /* Define el color del texto. */
 }
 
 /* =========================
@@ -109,11 +109,11 @@ body{
 }
 
 .campo label{
-    display:block;
+    display:block; /* Define cómo se mostrará el elemento. */
     margin-bottom:8px;
-    color:var(--color-primario);
-    font-weight:600;
-    font-size:.92rem;
+    color:var(--color-primario); /* Define el color del texto. */
+    font-weight:600; /* Define el grosor del texto. */
+    font-size:.92rem; /* Define el tamaño del texto. */
 }
 
 .campo label i{
@@ -123,110 +123,94 @@ body{
 .campo input,
 .campo select,
 .campo textarea{
-    width:100%;
-    border:2px solid var(--color-borde);
-    border-radius:12px;
-    padding:12px 14px;
-    font-size:13px;
-    transition:.3s;
+    width:100%; /* Define el ancho del elemento. */
+    border:2px solid var(--color-borde); /* Define el borde del elemento. */
+    border-radius:12px; /* Redondea las esquinas. */
+    padding:12px 14px; /* Agrega espacio interno al elemento. */
+    font-size:13px; /* Define el tamaño del texto. */
+    transition:.3s; /* Suaviza los cambios de estilo. */
 }
 
 /* Cursor para indicar que es un menú desplegable */
 .campo select{
-    cursor:pointer;
+    cursor:pointer; /* Cambia el cursor. */
 }
 
 .campo textarea{
-    height:100px;
-    resize:none;
+    height:100px; /* Define la altura del elemento. */
+    resize:none; /* Impide cambiar el tamaño del área de texto. */
 }
 
 .campo input:focus,
 .campo select:focus,
 .campo textarea:focus{
-    outline:none;
-    border-color:var(--color-acento);
-    box-shadow:0 0 0 3px rgba(10,91,216,.15);
+    outline:none; /* Elimina el contorno predeterminado. */
+    border-color:var(--color-acento); /* Cambia el color del borde. */
+    box-shadow:0 0 0 3px rgba(10,91,216,.15); /* Agrega una sombra alrededor del elemento. */
 }
 
-/* =========================
-        UBICACIÓN
-========================= */
-
 .ubicacion-container{
-    display:flex;
-    gap:10px;
+    display:flex; /* Define cómo se mostrará el elemento. */
+    gap:10px; /* Define la separación entre elementos. */
 }
 
 .ubicacion-container select{
-    width:170px;
+    width:170px; /* Define el ancho del elemento. */
 }
 
 .ubicacion-container input{
-    flex:1;
+    flex:1; /* Permite ocupar el espacio disponible. */
 }
-
-/* =========================
-       FECHA INFO
-========================= */
 
 .fecha-info{
-    display:block;
+    display:block; /* Define cómo se mostrará el elemento. */
     margin-top:6px;
-    color:var(--color-texto-secundario);
-    font-size:.8rem;
+    color:var(--color-texto-secundario); /* Define el color del texto. */
+    font-size:.8rem; /* Define el tamaño del texto. */
 }
 
-/* =========================
-      BOTÓN ENVIAR
-========================= */
-
 .btn-enviar{
-    width:100%;
-    height:48px;
-    border:none;
-    border-radius:12px;
-    background:var(--color-acento);
-    color:var(--color-blanco);
-    font-size:15px;
-    font-weight:700;
-    cursor:pointer;
-    transition:.3s;
+    width:100%; /* Define el ancho del elemento. */
+    height:48px; /* Define la altura del elemento. */
+    border:none; /* Define el borde del elemento. */
+    border-radius:12px; /* Redondea las esquinas. */
+    background:var(--color-acento); /* Define el fondo del elemento. */
+    color:var(--color-blanco); /* Define el color del texto. */
+    font-size:15px; /* Define el tamaño del texto. */
+    font-weight:700; /* Define el grosor del texto. */
+    cursor:pointer; /* Cambia el cursor. */
+    transition:.3s; /* Suaviza los cambios de estilo. */
 }
 
 .btn-enviar:hover{
-    background:var(--color-hover);
-    transform:translateY(-2px);
-    box-shadow:var(--sombra-boton);
+    background:var(--color-hover); /* Define el fondo del elemento. */
+    transform:translateY(-2px); /* Aplica una transformación visual. */
+    box-shadow:var(--sombra-boton); /* Agrega una sombra alrededor del elemento. */
 }
-
-/* =========================
-        RESPONSIVE
-========================= */
 
 @media(max-width:768px){
 
     .reporte-container{
-        padding:20px;
+        padding:20px; /* Agrega espacio interno al elemento. */
     }
 
     .form-card{
-        width:100%;
-        max-width:550px;
+        width:100%; /* Define el ancho del elemento. */
+        max-width:550px; /* Limita el ancho máximo. */
     }
 
     .ubicacion-container{
-        flex-direction:column;
+        flex-direction:column; /* Organiza los elementos en columna. */
     }
 
     .ubicacion-container select{
-        width:100%;
+        width:100%; /* Define el ancho del elemento. */
     }
 
     .btn-back{
-        position:static;
-        display:inline-block;
-        margin:20px;
+        position:static; /* Define el tipo de posicionamiento. */
+        display:inline-block; /* Define cómo se mostrará el elemento. */
+        margin:20px; /* Agrega un margen exterior al elemento. */
     }
 
 }

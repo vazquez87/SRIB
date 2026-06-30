@@ -2,83 +2,82 @@
         VARIABLES GLOBALES DEL PROYECTO SRIB
 ==================================================*/
 
+/* El selector :root permite definir variables CSS
+   que podrán utilizarse en todo el proyecto. */
 :root{
 
     /*==============================================
-                    COLORES PRINCIPALES
+                COLORES PRINCIPALES
     ==============================================*/
 
-    --color-primario:#00154F;
-    --color-secundario:#0A5BD8;
-    --color-acento:#143ee7;
-    --color-acento-claro:#2075fd;
-    --color-hover:#4580ff;
+    --color-primario:#00154F;       /* Azul oscuro principal. */
+    --color-secundario:#0A5BD8;     /* Azul secundario. */
+    --color-acento:#143ee7;         /* Azul utilizado en botones y elementos destacados. */
+    --color-acento-claro:#2075fd;   /* Azul claro para resaltar texto. */
+    --color-hover:#4580ff;          /* Color al pasar el cursor sobre botones. */
 
     /*==============================================
-                        FONDOS
+                    FONDOS
     ==============================================*/
 
-    --fondo-principal:#EEF2F9;
-    --fondo-secundario:#DFE5EF;
+    --fondo-principal:#EEF2F9;      /* Fondo principal de la aplicación. */
+    --fondo-secundario:#DFE5EF;     /* Color secundario del degradado del fondo. */
 
-    --color-blanco:#FFFFFF;
+    --color-blanco:#FFFFFF;         /* Color blanco. */
 
-    --color-tarjeta:#FFFFFF;
+    --color-tarjeta:#FFFFFF;        /* Fondo de tarjetas y formularios. */
 
     /*==============================================
-                        TEXTOS
+                    TEXTOS
     ==============================================*/
 
-    --texto-principal:#4a525f;
-    --texto-secundario:#97a2ba;
+    --texto-principal:#4A525F;      /* Color principal para párrafos. */
+    --texto-secundario:#97A2BA;     /* Color para textos secundarios o de ayuda. */
 
     /*==============================================
-                        BORDES
+                    BORDES
     ==============================================*/
 
-    --color-borde:#DBE3F0;
-    --borde-gris:#CBD5E1;
+    --color-borde:#DBE3F0;          /* Color principal de los bordes. */
+    --borde-gris:#CBD5E1;           /* Color gris para bordes secundarios. */
 
     /*==============================================
                     SOMBRAS
     ==============================================*/
 
     --sombra-header:0 3px 12px rgba(0,0,0,.15);
+    /* Sombra utilizada en el encabezado. */
 
     --sombra-card:0 10px 25px rgba(0,0,0,.12);
+    /* Sombra utilizada en tarjetas y formularios. */
 
     --sombra-hover:0 8px 20px rgba(10,91,216,.25);
+    /* Sombra aplicada cuando el cursor pasa sobre botones. */
 
     /*==============================================
-                    VALIDACIONES
+                VALIDACIONES
     ==============================================*/
-
-    /* Azul para resaltar el campo y el label */
 
     --color-validacion:#2563EB;
+    /* Color utilizado para resaltar campos válidos o seleccionados. */
 
-    /* Color del texto del mensaje */
-
-    --color-mensaje:#316ff6;
-
-    /*==============================================
-            ESTADOS (SOLO TEXTO)
-    ==============================================*/
-
-    --estado-pendiente:#DC2626;
-
-    --estado-proceso:#D97706;
-
-    --estado-resuelto:#15803D;
+    --color-mensaje:#316FF6;
+    /* Color del texto de mensajes informativos. */
 
     /*==============================================
-          PRIORIDADES (SOLO TEXTO)
+                ESTADOS (SOLO TEXTO)
     ==============================================*/
 
-    --prioridad-baja:#2563EB;
+    --estado-pendiente:#DC2626;     /* Estado: Pendiente. */
+    --estado-proceso:#D97706;       /* Estado: En proceso. */
+    --estado-resuelto:#15803D;      /* Estado: Resuelto. */
 
-    --prioridad-media:#D97706;
+    /*==============================================
+            PRIORIDADES (SOLO TEXTO)
+    ==============================================*/
 
-    --prioridad-alta:#DC2626;
+    --prioridad-baja:#2563EB;       /* Prioridad baja. */
+    --prioridad-media:#D97706;      /* Prioridad media. */
+    --prioridad-alta:#DC2626;       /* Prioridad alta. */
 
 }

@@ -2,15 +2,15 @@
 
 /* Selecciona todos los elementos de la página. */
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
+    margin:0; /* Agrega un margen exterior al elemento. */
+    padding:0; /* Agrega espacio interno al elemento. */
+    box-sizing:border-box; /* Incluye el borde y el padding dentro del ancho y alto del elemento. */
+    font-family:'Segoe UI',sans-serif; /* Define la fuente principal del texto. */
 }
 
 /* Configuración general del cuerpo de la página. */
 body{
-    min-height:100vh;
+    min-height:100vh; /* Establece la altura mínima del elemento. */
     background:
     radial-gradient(circle at center,
     var(--color-fondo) 0%,
@@ -22,21 +22,21 @@ body{
 ========================= */
 
 .header{
-    height:70px;
-    background:var(--color-primario);
-    display:flex;
-    align-items:center;
-    padding:0 45px;
-    box-shadow:var(--sombra-header);
+    height:70px; /* Define la altura del elemento. */
+    background:var(--color-primario); /* Define el fondo del elemento. */
+    display:flex; /* Define cómo se mostrará el elemento. */
+    align-items:center; /* Centra los elementos verticalmente. */
+    padding:0 45px; /* Agrega espacio interno al elemento. */
+    box-shadow:var(--sombra-header); /* Agrega una sombra alrededor del elemento. */
 }
 
 .header h1{
-    color:var(--color-blanco);
-    font-size:1.7rem;
+    color:var(--color-blanco); /* Define el color del texto. */
+    font-size:1.7rem; /* Define el tamaño de la fuente. */
 }
 
 .header span{
-    color:var(--color-acento-claro);
+    color:var(--color-acento-claro); /* Define el color del texto. */
 }
 
 /* =========================
@@ -44,12 +44,12 @@ body{
 ========================= */
 
 .contenedor{
-    max-width:1250px;
-    margin:auto;
-    padding:40px 30px;
-    display:flex;
-    gap:45px;
-    align-items:flex-start;
+    max-width:1250px; /* Limita el ancho máximo. */
+    margin:auto; /* Agrega un margen exterior al elemento. */
+    padding:40px 30px; /* Agrega espacio interno al elemento. */
+    display:flex; /* Define cómo se mostrará el elemento. */
+    gap:45px; /* Define la separación entre elementos. */
+    align-items:flex-start; /* Centra los elementos verticalmente. */
 }
 
 /* =========================
@@ -57,7 +57,7 @@ body{
 ========================= */
 
 .panel-izquierdo{
-    flex:1;
+    flex:1; /* Permite que el elemento ocupe el espacio disponible. */
 }
 
 /* =========================
@@ -65,56 +65,56 @@ body{
 ========================= */
 
 .consulta{
-    background:var(--color-tarjeta);
-    padding:25px;
-    border-radius:20px;
-    box-shadow:var(--sombra-card);
-    margin-bottom:25px;
+    background:var(--color-tarjeta); /* Define el fondo del elemento. */
+    padding:25px; /* Agrega espacio interno al elemento. */
+    border-radius:20px; /* Redondea las esquinas del elemento. */
+    box-shadow:var(--sombra-card); /* Agrega una sombra alrededor del elemento. */
+    margin-bottom:25px; /* Agrega un margen inferior. */
 }
 
 .consulta label{
-    font-size:1.2rem;
-    font-weight:600;
-    color:var(--color-primario);
+    font-size:1.2rem; /* Define el tamaño de la fuente. */
+    font-weight:600; /* Define el grosor del texto. */
+    color:var(--color-primario); /* Define el color del texto. */
 }
 
 .busqueda{
-    margin-top:20px;
-    display:flex;
-    gap:15px;
+    margin-top:20px; /* Agrega un margen superior. */
+    display:flex; /* Define cómo se mostrará el elemento. */
+    gap:15px; /* Define la separación entre elementos. */
 }
 
 .busqueda input{
-    flex:1;
-    height:50px;
-    border:2px solid var(--color-borde);
-    border-radius:10px;
-    padding:0 15px;
-    font-size:15px;
-    transition:.25s;
+    flex:1; /* Permite que el elemento ocupe el espacio disponible. */
+    height:50px; /* Define la altura del elemento. */
+    border:2px solid var(--color-borde); /* Define el borde del elemento. */
+    border-radius:10px; /* Redondea las esquinas del elemento. */
+    padding:0 15px; /* Agrega espacio interno al elemento. */
+    font-size:15px; /* Define el tamaño de la fuente. */
+    transition:.25s; /* Suaviza los cambios de estilo. */
 }
 
 .busqueda input:focus{
-    outline:none;
-    border:2px solid var(--color-acento);
-    box-shadow:0 0 0 3px rgba(10,91,216,.18);
+    outline:none; /* Elimina el contorno predeterminado. */
+    border:2px solid var(--color-acento); /* Define el borde del elemento. */
+    box-shadow:0 0 0 3px rgba(10,91,216,.18); /* Agrega una sombra alrededor del elemento. */
 }
 
 .busqueda button{
-    width:220px;
-    border:none;
-    border-radius:10px;
-    background:var(--color-acento);
-    color:var(--color-blanco);
-    font-weight:600;
-    cursor:pointer;
-    transition:.3s;
+    width:220px; /* Define el ancho del elemento. */
+    border:none; /* Define el borde del elemento. */
+    border-radius:10px; /* Redondea las esquinas del elemento. */
+    background:var(--color-acento); /* Define el fondo del elemento. */
+    color:var(--color-blanco); /* Define el color del texto. */
+    font-weight:600; /* Define el grosor del texto. */
+    cursor:pointer; /* Cambia el cursor al pasar sobre el elemento. */
+    transition:.3s; /* Suaviza los cambios de estilo. */
 }
 
 .busqueda button:hover{
-    background:var(--color-hover);
-    transform:translateY(-2px);
-    box-shadow:0 8px 20px rgba(10,91,216,.30);
+    background:var(--color-hover); /* Define el fondo del elemento. */
+    transform:translateY(-2px); /* Aplica una transformación al elemento. */
+    box-shadow:0 8px 20px rgba(10,91,216,.30); /* Agrega una sombra alrededor del elemento. */
 }
 
 /* =========================
@@ -122,26 +122,26 @@ body{
 ========================= */
 
 .historial{
-    background:var(--color-tarjeta);
-    border-radius:20px;
-    padding:25px;
-    box-shadow:var(--sombra-card);
+    background:var(--color-tarjeta); /* Define el fondo del elemento. */
+    border-radius:20px; /* Redondea las esquinas del elemento. */
+    padding:25px; /* Agrega espacio interno al elemento. */
+    box-shadow:var(--sombra-card); /* Agrega una sombra alrededor del elemento. */
 }
 
 .historial h2{
-    color:var(--color-primario);
-    margin-bottom:20px;
+    color:var(--color-primario); /* Define el color del texto. */
+    margin-bottom:20px; /* Agrega un margen inferior. */
 }
 
 .tabla-reportes{
-    height:240px;
-    border:2px dashed var(--color-borde-secundario);
-    border-radius:12px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:var(--color-texto-secundario);
-    font-size:17px;
+    height:240px; /* Define la altura del elemento. */
+    border:2px dashed var(--color-borde-secundario); /* Define el borde del elemento. */
+    border-radius:12px; /* Redondea las esquinas del elemento. */
+    display:flex; /* Define cómo se mostrará el elemento. */
+    justify-content:center; /* Centra los elementos horizontalmente. */
+    align-items:center; /* Centra los elementos verticalmente. */
+    color:var(--color-texto-secundario); /* Define el color del texto. */
+    font-size:17px; /* Define el tamaño de la fuente. */
 }
 
 .tabla-reportes::before{
@@ -153,59 +153,59 @@ body{
 ========================= */
 
 .panel-derecho{
-    width:220px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+    width:220px; /* Define el ancho del elemento. */
+    display:flex; /* Define cómo se mostrará el elemento. */
+    flex-direction:column; /* Organiza los elementos en columna o fila. */
+    align-items:center; /* Centra los elementos verticalmente. */
     margin-left:40px;
-    position:relative;
-    left:60px;
-    margin-top:40px;
+    position:relative; /* Define el tipo de posicionamiento. */
+    left:60px; /* Desplaza el elemento hacia la izquierda o derecha. */
+    margin-top:40px; /* Agrega un margen superior. */
 }
 
 .foto-perfil{
-    width:200px;
-    height:200px;
-    object-fit:cover;
-    border-radius:50%;
-    border:none;
-    box-shadow:none;
-    display:block;
+    width:200px; /* Define el ancho del elemento. */
+    height:200px; /* Define la altura del elemento. */
+    object-fit:cover; /* Ajusta la imagen dentro de su contenedor. */
+    border-radius:50%; /* Redondea las esquinas del elemento. */
+    border:none; /* Define el borde del elemento. */
+    box-shadow:none; /* Agrega una sombra alrededor del elemento. */
+    display:block; /* Define cómo se mostrará el elemento. */
 }
 
 .panel-derecho h2{
-    margin-top:-10px;
-    color:var(--color-primario);
-    font-size:1.6rem;
+    margin-top:-10px; /* Agrega un margen superior. */
+    color:var(--color-primario); /* Define el color del texto. */
+    font-size:1.6rem; /* Define el tamaño de la fuente. */
 }
 
 .btn-salir{
-    margin-top:40px;
-    width:180px;
-    height:46px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:8px;
-    text-decoration:none;
+    margin-top:40px; /* Agrega un margen superior. */
+    width:180px; /* Define el ancho del elemento. */
+    height:46px; /* Define la altura del elemento. */
+    display:flex; /* Define cómo se mostrará el elemento. */
+    justify-content:center; /* Centra los elementos horizontalmente. */
+    align-items:center; /* Centra los elementos verticalmente. */
+    gap:8px; /* Define la separación entre elementos. */
+    text-decoration:none; /* Elimina el subrayado del enlace. */
 
-    background:var(--color-acento);
-    color:var(--color-blanco);
+    background:var(--color-acento); /* Define el fondo del elemento. */
+    color:var(--color-blanco); /* Define el color del texto. */
 
-    border:none;
-    border-radius:10px;
+    border:none; /* Define el borde del elemento. */
+    border-radius:10px; /* Redondea las esquinas del elemento. */
 
-    font-size:15px;
-    font-weight:600;
+    font-size:15px; /* Define el tamaño de la fuente. */
+    font-weight:600; /* Define el grosor del texto. */
 
-    cursor:pointer;
-    transition:.3s;
+    cursor:pointer; /* Cambia el cursor al pasar sobre el elemento. */
+    transition:.3s; /* Suaviza los cambios de estilo. */
 }
 
 .btn-salir:hover{
-    background:var(--color-hover);
-    color:var(--color-blanco);
-    transform:translateY(-2px);
+    background:var(--color-hover); /* Define el fondo del elemento. */
+    color:var(--color-blanco); /* Define el color del texto. */
+    transform:translateY(-2px); /* Aplica una transformación al elemento. */
 }
 
 /* =========================
@@ -215,26 +215,26 @@ body{
 @media(max-width:1000px){
 
 .contenedor{
-    flex-direction:column;
+    flex-direction:column; /* Organiza los elementos en columna o fila. */
 }
 
 .panel-derecho{
-    width:100%;
+    width:100%; /* Define el ancho del elemento. */
     margin-left:0;
-    left:0;
-    margin-top:20px;
+    left:0; /* Desplaza el elemento hacia la izquierda o derecha. */
+    margin-top:20px; /* Agrega un margen superior. */
 }
 
 .busqueda{
-    flex-direction:column;
+    flex-direction:column; /* Organiza los elementos en columna o fila. */
 }
 
 .busqueda button{
-    width:100%;
+    width:100%; /* Define el ancho del elemento. */
 }
 
 .btn-salir{
-    margin-top:40px;
+    margin-top:40px; /* Agrega un margen superior. */
 }
 
 }
