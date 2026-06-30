@@ -262,4 +262,22 @@ body{
         margin:20px; /* Elimina o define el margen exterior del elemento. */
     }
 
+    .alerta{
+    padding:12px;
+    border-radius:8px;
+    margin-bottom:15px;
+    text-align:center;
+    font-weight:600;
+}
+
+.alerta-exito{
+    background:#d1fae5;
+    color:#065f46;
+}
+
+.alerta-error{
+    background:#fee2e2;
+    color:#991b1b;
+}
+
 }
