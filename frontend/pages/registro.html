@@ -106,9 +106,6 @@
                 </p>
                 <!-- Texto informativo para el usuario. -->
 
-                <div id="mensaje-error" class="mensaje-error"></div>
-                <!-- Contenedor donde se mostrarán los mensajes de error mediante JavaScript. -->
-
                 <form id="formRegistro">
                 <!-- Formulario de registro. -->
 
@@ -127,9 +124,9 @@
                         <input
                             type="text"
                             id="nombre"
-                            placeholder="Ingresa tu nombre completo">
-                        <!-- Campo donde el usuario escribe su nombre completo. -->
-
+                            placeholder="Ingresa tu nombre completo"
+                            required
+                            autocomplete="name">
                     </div>
 
                     <div class="campo">
@@ -144,12 +141,13 @@
 
                         </label>
 
-                        <input
-                            type="text"
-                            id="correo"
-                            placeholder="ejemplo@alumno.buap.mx">
-                        <!-- Campo donde el usuario escribe su correo institucional. -->
-
+                     <input
+                        type="email"
+                        id="correo"
+                        placeholder="ejemplo@alumno.buap.mx"
+                        required
+                        autocomplete="email">
+                        
                         <small class="correo-ayuda">
                             Utiliza un correo institucional BUAP.
                         </small>
@@ -172,9 +170,10 @@
                         <input
                             type="password"
                             id="password"
-                            placeholder="Mínimo 8 caracteres">
-                        <!-- Campo donde el usuario escribe su contraseña. -->
-
+                            placeholder="Mínimo 8 caracteres"
+                            minlength="8"
+                            required
+                            autocomplete="new-password">
                     </div>
 
                     <button type="submit" class="btn-register">
@@ -215,9 +214,6 @@
         // Obtiene el formulario de registro.
         const formulario = document.getElementById("formRegistro");
 
-        // Obtiene el contenedor donde se mostrarán los mensajes de error.
-        const mensaje = document.getElementById("mensaje-error");
-
         // Agrega un evento que se ejecuta cuando el usuario envía el formulario.
         formulario.addEventListener("submit", function(e){
 
@@ -248,20 +244,6 @@
                 "@buap.mx"
             ];
 
-            // Verifica que todos los campos estén completos.
-            if(nombre === "" || correo === "" || password === ""){
-
-                // Muestra el contenedor del mensaje de error.
-                mensaje.style.display = "block";
-
-                // Indica al usuario que debe completar todos los campos.
-                mensaje.textContent =
-                    "Debes completar todos los campos.";
-
-                // Finaliza la ejecución de la función.
-                return;
-            }
-
             // Comprueba que el correo pertenezca a alguno de los dominios permitidos.
             const correoValido =
                 dominiosPermitidos.some(dominio =>
@@ -271,27 +253,23 @@
             // Si el correo no es válido, muestra un mensaje de error.
             if(!correoValido){
 
-                mensaje.style.display = "block";
+                e.preventDefault();
 
-                mensaje.textContent =
-                    "Debes ingresar un correo institucional BUAP válido.";
+                const correoInput = document.getElementById("correo");
 
-                return;
-            }
+                correoInput.setCustomValidity(
+                    "Ingresa un correo institucional BUAP."
+                );
 
-            // Verifica que la contraseña tenga al menos ocho caracteres.
-            if(password.length < 8){
-
-                mensaje.style.display = "block";
-
-                mensaje.textContent =
-                    "La contraseña debe tener al menos 8 caracteres.";
+                correoInput.reportValidity();
 
                 return;
+
             }
 
-            // Oculta el mensaje de error cuando todas las validaciones son correctas.
-            mensaje.style.display = "none";
+            document
+                .getElementById("correo")
+                .setCustomValidity("");
 
             // Muestra un mensaje indicando que el registro fue exitoso.
             alert("Registro exitoso");

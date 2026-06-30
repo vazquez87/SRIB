@@ -214,42 +214,28 @@
 
         <div>
 
-        <label>Cambiar estatus</label>
+        <label for="estatus">Cambiar estatus</label>
         <!-- Etiqueta del selector de estado. -->
 
-        <select>
-        <!-- Lista desplegable para seleccionar un nuevo estado. -->
-
-        <option>Pendiente</option>
-        <!-- Estado pendiente. -->
-
-        <option>En proceso</option>
-        <!-- Estado en proceso. -->
-
-        <option>Resuelto</option>
-        <!-- Estado resuelto. -->
-
+        <select id="estatus" required>
+            <option value="">Selecciona un estatus</option>
+            <option>Pendiente</option>
+            <option>En proceso</option>
+            <option>Resuelto</option>
         </select>
 
         </div>
 
         <div>
 
-            <label>Cambiar prioridad</label>
+            <label for="prioridad">Cambiar prioridad</label>
             <!-- Etiqueta del selector de prioridad. -->
 
-                <select>
-                <!-- Lista desplegable para seleccionar una nueva prioridad. -->
-
-                <option>Baja</option>
-                <!-- Prioridad baja. -->
-
-                <option>Media</option>
-                <!-- Prioridad media. -->
-
-                <option>Alta</option>
-                <!-- Prioridad alta. -->
-
+                <select id="prioridad" required>
+                    <option value="">Selecciona una prioridad</option>
+                    <option>Baja</option>
+                    <option>Media</option>
+                    <option>Alta</option>
                 </select>
 
             </div>

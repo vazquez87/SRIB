@@ -105,16 +105,13 @@
                 </h2>
                 <!-- Título del formulario. -->
 
-                <div id="mensaje-error" class="mensaje-error"></div>
-                <!-- Contenedor donde se mostrarán mensajes de error mediante JavaScript. -->
-
                 <form id="formLogin">
                 <!-- Formulario de inicio de sesión. -->
 
                     <div class="campo">
                     <!-- Campo del correo institucional. -->
 
-                        <label for="correo">
+                        <label id="lblCorreo" for="correo">
                         <!-- Etiqueta asociada al campo de correo. -->
 
                             <i class="fa-solid fa-envelope"></i>
@@ -125,11 +122,11 @@
                         </label>
 
                         <input
-                            type="text"
+                            type="email"
                             id="correo"
-                            placeholder="ejemplo@alumno.buap.mx">
-                        <!-- Campo donde el usuario escribe su correo institucional. -->
-
+                            placeholder="ejemplo@alumno.buap.mx"
+                            required
+                            autocomplete="username">
                         <small class="correo-ayuda">
                             Utiliza tu correo institucional BUAP.
                         </small>
@@ -140,7 +137,7 @@
                     <div class="campo">
                     <!-- Campo de contraseña. -->
 
-                        <label for="password">
+                        <label id="lblPassword" for="password">
 
                             <i class="fa-solid fa-lock"></i>
                             <!-- Icono de candado. -->
@@ -148,13 +145,12 @@
                             Contraseña
 
                         </label>
-
                         <input
                             type="password"
                             id="password"
-                            placeholder="Ingresa tu contraseña">
-                        <!-- Campo donde el usuario escribe su contraseña. -->
-
+                            placeholder="Ingresa tu contraseña"
+                            required
+                            autocomplete="current-password">
                     </div>
 
                     <button type="submit" class="btn-login">
@@ -195,14 +191,15 @@
         // Obtiene el formulario de inicio de sesión.
         const formulario = document.getElementById("formLogin");
 
-        // Obtiene el contenedor donde se mostrarán los mensajes de error.
-        const mensaje = document.getElementById("mensaje-error");
+        const correoInput = document.getElementById("correo");
+        const passwordInput = document.getElementById("password");
 
+        const lblCorreo = document.getElementById("lblCorreo");
+        const lblPassword = document.getElementById("lblPassword");
+
+        
         // Agrega un evento que se ejecuta cuando el usuario envía el formulario.
         formulario.addEventListener("submit", function(e){
-
-            // Evita que la página se recargue al enviar el formulario.
-            e.preventDefault();
 
             // Obtiene el correo ingresado, elimina espacios y lo convierte a minúsculas.
             const correo =
@@ -223,39 +220,27 @@
                 "@buap.mx"
             ];
 
-            // Verifica que ambos campos estén completos.
-            if(correo === "" || password === ""){
-
-                // Muestra el contenedor del mensaje de error.
-                mensaje.style.display = "block";
-
-                // Indica al usuario que debe llenar todos los campos.
-                mensaje.textContent =
-                    "Debes completar todos los campos.";
-
-                // Finaliza la ejecución de la función.
-                return;
-            }
-
             // Comprueba que el correo pertenezca a alguno de los dominios permitidos.
             const correoValido =
                 dominiosPermitidos.some(dominio =>
                     correo.endsWith(dominio)
                 );
 
-            // Si el correo no es válido, muestra un mensaje de error.
             if(!correoValido){
 
-                mensaje.style.display = "block";
+                e.preventDefault();
 
-                mensaje.textContent =
-                    "Debes ingresar un correo institucional BUAP válido.";
+                correoInput.setCustomValidity(
+                    "Ingresa un correo institucional BUAP."
+                );
+
+                correoInput.reportValidity();
 
                 return;
+
             }
 
-            // Oculta el mensaje de error si todas las validaciones son correctas.
-            mensaje.style.display = "none";
+            correoInput.setCustomValidity("");
 
             // Muestra un mensaje indicando que el inicio de sesión fue exitoso.
             alert("Inicio de sesión exitoso");

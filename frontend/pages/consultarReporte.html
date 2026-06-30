@@ -64,8 +64,9 @@
             <input
                 type="text"
                 id="folio"
-                placeholder="Ingresa tu número de folio">
-            <!-- Campo donde el usuario escribe el número de folio. -->
+                placeholder="Ingresa tu número de folio"
+                required
+                autocomplete="off">
 
             <button class="btn-consultar">
             <!-- Botón para iniciar la búsqueda del reporte. -->
@@ -74,10 +75,6 @@
                 Consultar reporte
                 <!-- Texto del botón. -->
             </button>
-
-            <!-- MENSAJE DE ERROR -->
-            <div id="mensaje-busqueda" class="mensaje-busqueda"></div>
-            <!-- Contenedor donde se puede mostrar un mensaje de error mediante JavaScript. -->
 
         </section>
 
@@ -154,12 +151,13 @@
     // Agrega un evento que se ejecuta cuando el usuario hace clic en el botón.
     boton.addEventListener("click", function(){
         // Verifica si el campo está vacío o contiene solo espacios.
-        if(folio.value.trim() === ""){
-            // Muestra un mensaje indicando que debe escribir un folio.
-            alert("Debes ingresar un número de folio.");
-            // Detiene la ejecución del código.
-            return;
-        }
+       if(folio.value.trim() === ""){
+            folio.setCustomValidity("Completa este campo.");
+            folio.reportValidity();
+        return;
+}
+
+folio.setCustomValidity("");
         // Si el campo tiene información, muestra un mensaje indicando que no existe un reporte con ese folio.
         alert("No se encontró ningún reporte con ese folio.");
         // Oculta la tarjeta de resultados.

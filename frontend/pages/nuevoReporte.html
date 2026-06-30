@@ -73,11 +73,6 @@
             </h2>
             <!-- Título del formulario. -->
 
-            <div id="mensaje-error" class="mensaje-error">
-                Debes completar todos los campos.
-            </div>
-            <!-- Contenedor donde se mostrarán los mensajes de error. -->
-
             <form id="formReporte">
             <!-- Formulario para registrar una nueva incidencia. -->
 
@@ -99,9 +94,8 @@
 
                     <textarea
                         id="descripcion"
-                        placeholder="Describe la incidencia encontrada..."></textarea>
-                    <!-- Área donde el usuario describe la incidencia. -->
-
+                        placeholder="Describe la incidencia encontrada..."
+                        required></textarea>
                 </div>
 
                 <!-- ======================
@@ -120,7 +114,7 @@
 
                     </label>
 
-                    <select id="categoria">
+                    <select id="categoria" required>
                     <!-- Lista desplegable de categorías. -->
 
                         <option value="">
@@ -157,7 +151,7 @@
                     <div class="ubicacion-container">
                     <!-- Contenedor del edificio y el detalle de la ubicación. -->
 
-                        <select id="edificio">
+                        <select id="edificio" required>
                         <!-- Lista de edificios disponibles. -->
 
                             <option value="">
@@ -175,9 +169,8 @@
                         <input
                             type="text"
                             id="detalleUbicacion"
-                            placeholder="No. de salón, laboratorio, cubículo, etc.">
-                        <!-- Campo para escribir el salón, laboratorio o cubículo. -->
-
+                            placeholder="No. de salón, laboratorio, cubículo, etc."
+                            required>
                     </div>
 
                 </div>
@@ -242,10 +235,6 @@
         // Obtiene el formulario del reporte.
         const formulario =
         document.getElementById("formReporte");
-
-        // Obtiene el contenedor donde se mostrarán los mensajes de error.
-        const mensaje =
-        document.getElementById("mensaje-error");
 
         /* ======================
             FECHA: ÚLTIMOS 15 DÍAS
@@ -323,20 +312,9 @@
                 detalleUbicacion === "" ||
                 fecha === ""
             ){
-
-                // Muestra el mensaje de error.
-                mensaje.style.display = "block";
-
-                // Cambia el texto del mensaje.
-                mensaje.textContent =
-                "Debes completar todos los campos.";
-
-                // Finaliza la ejecución de la función.
+                formulario.reportValidity();
                 return;
             }
-
-            // Oculta el mensaje de error cuando todo es válido.
-            mensaje.style.display = "none";
 
             // Muestra un mensaje indicando que el reporte fue enviado correctamente.
             alert("Reporte enviado correctamente.");

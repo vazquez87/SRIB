@@ -72,16 +72,19 @@
 
             </label>
 
-            <div class="busqueda">
+            <form class="busqueda" id="formBuscar">
             <!-- Contenedor del campo de búsqueda y el botón. -->
 
                 <input
                     type="text"
                     id="folio"
-                    placeholder="Ingresa el número de folio">
-                <!-- Campo donde el administrador escribe el número de folio. -->
+                    placeholder="Ingresa el número de folio"
+                    required
+                    autocomplete="off">
 
-                <button id="btnConsultar">
+                <button
+                    type="submit"
+                    id="btnConsultar">
                 <!-- Botón para consultar el reporte. -->
 
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -91,10 +94,7 @@
 
                 </button>
 
-            </div>
-
-            <div id="mensaje-busqueda" class="mensaje-busqueda"></div>
-            <!-- Contenedor donde se mostrarán mensajes mediante JavaScript. -->
+            </form>
 
         </div>
 
@@ -135,7 +135,7 @@
         <h2>Administrador</h2>
         <!-- Nombre o rol del usuario. -->
 
-        <a href="../pages/index.html" class="btn-salir">
+        <a href="index.html" class="btn-salir">
         <!-- Enlace para cerrar sesión y regresar al inicio. -->
 
             <i class="fa-solid fa-right-from-bracket"></i>
@@ -155,46 +155,32 @@
 
 <script>
 
-    // Obtiene el botón "Consultar reporte".
-    const boton =
-    document.getElementById("btnConsultar");
+    // Obtiene el formulario.
+    const formulario = document.getElementById("formBuscar");
 
-    // Obtiene el contenedor donde se mostrarán los mensajes.
-    const mensaje =
-    document.getElementById("mensaje-busqueda");
+    // Obtiene el campo del folio.
+    const inputFolio = document.getElementById("folio");
 
-    // Agrega un evento que se ejecuta cuando el usuario hace clic en el botón.
-    boton.addEventListener("click",function(){
+    // Se ejecuta al enviar el formulario.
+    formulario.addEventListener("submit", function(e){
 
-        // Obtiene el número de folio ingresado y elimina espacios al inicio y al final.
-        const folio =
-        document.getElementById("folio").value.trim();
+        // Evita que la página se recargue.
+        e.preventDefault();
 
-        // Verifica si el campo está vacío.
-        if(folio===""){
+        const folio = inputFolio.value.trim();
 
-            // Muestra el contenedor del mensaje.
-            mensaje.style.display="block";
+        if(folio === ""){
 
-            // Cambia el fondo del mensaje a color rojo.
-            mensaje.style.background="#ef4444";
+            inputFolio.setCustomValidity("Completa este campo.");
+            inputFolio.reportValidity();
 
-            // Muestra un mensaje indicando que debe ingresar un folio.
-            mensaje.innerHTML="Debes ingresar un número de folio.";
-
-            // Finaliza la ejecución de la función.
             return;
 
         }
 
-        // Muestra el contenedor del mensaje.
-        mensaje.style.display="block";
+        inputFolio.setCustomValidity("");
 
-        // Cambia el fondo del mensaje a color amarillo.
-        mensaje.style.background="#f59e0b";
-
-        // Indica que no se encontró un reporte con el folio ingresado.
-        mensaje.innerHTML="No se encontró ningún reporte con ese folio.";
+        alert("No se encontró ningún reporte con ese folio.");
 
     });
 
