@@ -1,292 +1,367 @@
-@import url("variables.css"); /* Importa el archivo que contiene las variables globales de colores. */
+@import url("variables.css");
 
-/* Selecciona todos los elementos de la página. */
 *{
-    margin:0; /* Elimina el margen predeterminado de todos los elementos. */
-    padding:0; /* Elimina el espacio interno predeterminado. */
-    box-sizing:border-box; /* Incluye el borde y el padding dentro del ancho y alto del elemento. */
-    font-family:'Segoe UI',sans-serif; /* Establece la fuente principal de la página. */
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
 }
 
-/* Configuración general del cuerpo de la página. */
 body{
-    min-height:100vh; /* Hace que la página ocupe al menos toda la altura de la ventana del navegador. */
-    background: /* Define el fondo de la página. */
-    radial-gradient( /* Crea un degradado circular. */
-        circle at center, /* El degradado comienza desde el centro. */
-        var(--color-fondo) 0%, /* Color inicial del degradado. */
-        var(--color-fondo-secundario) 100% /* Color final del degradado. */
+    min-height:100vh;
+    background:radial-gradient(
+        circle at center,
+        var(--color-fondo) 0%,
+        var(--color-fondo-secundario) 100%
     );
 }
 
-/*======================
-HEADER
-=======================*/
-
-/* Contenedor del encabezado principal. */
 .header{
-    height:65px; /* Define la altura del encabezado. */
-    background:var(--color-primario); /* Aplica el color principal de fondo. */
-    display:flex; /* Activa Flexbox. */
-    align-items:center; /* Centra verticalmente el contenido. */
-    padding:0 40px; /* Agrega espacio interno a los lados. */
-    box-shadow:var(--sombra-header); /* Agrega una sombra debajo del encabezado. */
+    height:55px;
+    background:var(--color-primario);
+    display:flex;
+    align-items:center;
+    padding:0 35px;
+    box-shadow:var(--sombra-header);
 }
 
-/* Título del encabezado. */
 .header h1{
-    color:var(--color-blanco); /* Establece el color blanco para el texto. */
-    font-size:1.45rem; /* Define el tamaño del texto. */
-    font-weight:700; /* Aplica negrita al título. */
+    color:var(--color-blanco);
+    font-size:1.3rem;
+    font-weight:700;
 }
 
-/* Texto resaltado del encabezado. */
 .header span{
-    color:var(--color-acento-claro); /* Cambia el color de la palabra BUAP. */
+    color:var(--color-acento-claro);
 }
 
-/*======================
-BOTÓN REGRESAR
-=======================*/
-
-/* Botón para regresar al menú anterior. */
 .btn-back{
-    position:absolute; /* Posiciona el botón de forma absoluta. */
-    top:82px; /* Separa el botón de la parte superior. */
-    left:30px; /* Separa el botón del lado izquierdo. */
-    text-decoration:none; /* Elimina el subrayado del enlace. */
-    background:var(--color-blanco); /* Fondo blanco. */
-    color:var(--color-secundario); /* Color azul del texto. */
-    padding:10px 18px; /* Agrega espacio interno. */
-    border-radius:10px; /* Redondea las esquinas. */
-    font-size:14px; /* Define el tamaño del texto. */
-    font-weight:600; /* Aplica seminegrita al texto. */
-    box-shadow:0 3px 12px rgba(0,0,0,.12); /* Agrega una sombra suave. */
-    transition:.3s; /* Suaviza la transición de los efectos. */
+    position:absolute;
+    top:68px;
+    left:25px;
+    text-decoration:none;
+    background:var(--color-blanco);
+    color:var(--color-secundario);
+    padding:8px 15px;
+    border-radius:9px;
+    font-size:13px;
+    font-weight:600;
+    box-shadow:0 3px 12px rgba(0,0,0,.12);
+    transition:.25s;
 }
 
-/* Efecto cuando el cursor pasa sobre el botón. */
 .btn-back:hover{
-    background:#F5F7FB; /* Cambia ligeramente el color del fondo. */
-    color:var(--color-primario); /* Mantiene el texto en azul oscuro. */
+    background:#f8fafc;
+    color:var(--color-primario);
 }
 
-/*======================
-CONTENEDOR
-=======================*/
-
-/* Contenedor principal de la página. */
 .contenedor{
-    display:flex; /* Activa Flexbox. */
-    justify-content:center; /* Centra horizontalmente el contenido. */
-    padding:35px 20px; /* Agrega espacio interno. */
+    display:flex;
+    justify-content:center;
+    padding:18px 20px;
 }
 
-/*======================
-TARJETA
-=======================*/
-
-/* Tarjeta principal que contiene la información del reporte. */
 .card{
-    width:680px; /* Define el ancho de la tarjeta. */
-    background:var(--color-tarjeta); /* Aplica el color de fondo de la tarjeta. */
-    border-radius:22px; /* Redondea las esquinas. */
-    padding:24px; /* Agrega espacio interno. */
-    box-shadow:var(--sombra-card); /* Agrega una sombra alrededor de la tarjeta. */
+    width:920px;
+    max-width:95%;
+    background:var(--color-tarjeta);
+    border-radius:20px;
+    padding:18px 24px;
+    box-shadow:var(--sombra-card);
 }
 
-/* Título principal de la tarjeta. */
-.card h2{
-    text-align:center; /* Centra el texto. */
-    color:var(--color-primario); /* Aplica el color azul principal. */
-    font-size:1.6rem; /* Define el tamaño del texto. */
-    margin-bottom:22px; /* Agrega espacio inferior. */
+/*==============================
+    ENCABEZADO
+==============================*/
+
+.encabezado-reporte{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:18px;
+    padding-bottom:10px;
+    border-bottom:1px solid #e5e7eb;
+    margin-bottom:15px;
 }
 
-/* Texto resaltado dentro del título. */
-.card span{
-    color:var(--color-acento-claro); /* Cambia el color de la palabra resaltada. */
+.label-folio{
+    display:block;
+    color:var(--color-texto-secundario);
+    font-size:.78rem;
+    font-weight:700;
+    margin-bottom:2px;
 }
 
-/*======================
-FILAS
-=======================*/
+.encabezado-reporte h2{
+    color:var(--color-primario);
+    font-size:1.55rem;
+}
 
-/* Contenedor de cada fila del formulario. */
+.badges-superiores{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+}
+
+/*==============================
+    ETIQUETAS INFORMATIVAS
+==============================*/
+
+.info-badge{
+    min-width:150px;
+    padding:10px 14px;
+    border-radius:12px;
+    border:2px solid;
+    background:transparent;
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+}
+
+.info-badge small{
+    font-size:.72rem;
+    font-weight:700;
+    opacity:.75;
+    text-transform:uppercase;
+    letter-spacing:.4px;
+}
+
+.info-badge strong{
+    font-size:.95rem;
+    font-weight:800;
+}
+
+.estado-pendiente,
+.prioridad-alta{
+    border-color:#dc2626;
+    color:#dc2626;
+}
+
+.estado-en-proceso,
+.prioridad-media{
+    border-color:#d97706;
+    color:#d97706;
+}
+
+.estado-resuelta,
+.prioridad-baja{
+    border-color:#16a34a;
+    color:#16a34a;
+}
+
+/*==============================
+      SECCIONES
+==============================*/
+
+.seccion{
+    margin-bottom:10px;
+}
+
+.seccion h3{
+    color:var(--color-primario);
+    font-size:1rem;
+    margin-bottom:8px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
 .fila{
-    display:flex; /* Activa Flexbox. */
-    gap:15px; /* Agrega espacio entre los elementos. */
-    margin-bottom:14px; /* Agrega espacio debajo de la fila. */
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-bottom:8px;
 }
 
-/* Contenedor de cada campo del formulario. */
 .campo{
-    flex:1; /* Permite que el campo ocupe el espacio disponible. */
-    display:flex; /* Activa Flexbox. */
-    flex-direction:column; /* Organiza los elementos en columna. */
+    display:flex;
+    flex-direction:column;
+    margin-bottom:8px;
 }
 
-/* Campo con ancho reducido. */
-.pequeño{
-    max-width:190px; /* Limita el ancho máximo del campo. */
-}
-
-/*======================
-LABELS
-=======================*/
-
-/* Etiquetas de los campos. */
 label{
-    color:var(--color-primario); /* Aplica el color azul principal. */
-    font-weight:600; /* Texto seminegrita. */
-    font-size:14px; /* Tamaño del texto. */
-    margin-bottom:5px; /* Agrega espacio debajo de la etiqueta. */
+    color:var(--color-primario);
+    font-weight:700;
+    font-size:13px;
+    margin-bottom:4px;
 }
 
-/*======================
-INPUTS
-=======================*/
-
-/* Campos de entrada, áreas de texto y listas desplegables. */
 input,
 textarea,
 select{
-    width:100%; /* Ocupan todo el ancho disponible. */
-    border:2px solid var(--color-borde); /* Agrega un borde gris. */
-    border-radius:10px; /* Redondea las esquinas. */
-    padding:10px 12px; /* Agrega espacio interno. */
-    font-size:14px; /* Define el tamaño del texto. */
-    transition:.25s; /* Suaviza las transiciones. */
+    width:100%;
+    border:2px solid var(--color-borde);
+    border-radius:9px;
+    padding:7px 10px;
+    font-size:13px;
+    transition:.2s;
 }
 
-/* Lista desplegable. */
-select{
-    cursor:pointer; /* Cambia el cursor a una mano. */
-}
-
-/* Área de texto. */
 textarea{
-    resize:none; /* Impide cambiar el tamaño del área de texto. */
-    height:75px; /* Define la altura del área de texto. */
+    resize:none;
+    height:55px;
 }
 
-/* Campos de solo lectura. */
+select{
+    cursor:pointer;
+    background:#fff;
+}
+
 input[readonly],
 textarea[readonly]{
-    background:var(--color-fondo); /* Cambia el color de fondo para indicar que son de solo lectura. */
+    background:#f8fafc;
+    color:var(--color-texto);
 }
 
-/* Efecto cuando un campo recibe el enfoque. */
 input:focus,
 textarea:focus,
 select:focus{
-    outline:none; /* Elimina el borde predeterminado del navegador. */
-    border:2px solid var(--color-acento); /* Cambia el borde a color azul. */
-    box-shadow:0 0 0 3px rgba(10,91,216,.18); /* Agrega un halo azul alrededor del campo. */
+    outline:none;
+    border-color:var(--color-acento);
+    box-shadow:0 0 0 3px rgba(10,91,216,.15);
 }
 
-/*======================
-ESTADOS
-=======================*/
+/*==============================
+      ACTUALIZAR
+==============================*/
 
-/* Contenedor de los indicadores de estado y prioridad. */
-.estado{
-    width:100%; /* Ocupa todo el ancho disponible. */
-    padding:10px; /* Agrega espacio interno. */
-    border-radius:10px; /* Redondea las esquinas. */
-    text-align:center; /* Centra el texto. */
-    font-size:14px; /* Tamaño del texto. */
-    font-weight:700; /* Aplica negrita. */
+.actualizar{
+    background:#f8fafc;
+    padding:12px 14px;
+    border-radius:14px;
+    border:1px solid #e5e7eb;
 }
 
-/* Colores de los diferentes estados y prioridades. */
-.pendiente{color:var(--estado-pendiente);} /* Color del estado pendiente. */
-.proceso{color:var(--estado-proceso);} /* Color del estado en proceso. */
-.resuelto{color:var(--estado-resuelto);} /* Color del estado resuelto. */
-.prioridad-baja{color:var(--prioridad-baja);} /* Color de prioridad baja. */
-.prioridad-media{color:var(--prioridad-media);} /* Color de prioridad media. */
-.prioridad-alta{color:var(--prioridad-alta);} /* Color de prioridad alta. */
+.texto-ayuda{
+    color:var(--color-texto-secundario);
+    font-size:.82rem;
+    margin-bottom:10px;
+}
 
-/*======================
-SELECTS
-=======================*/
-
-/* Contenedor de los selectores. */
 .fila-select{
-    display:flex; /* Activa Flexbox. */
-    gap:15px; /* Agrega espacio entre los selectores. */
-    margin-top:12px; /* Agrega espacio superior. */
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-top:8px;
 }
 
-/* Cada bloque del selector. */
-.fila-select div{
-    flex:1; /* Hace que ambos selectores ocupen el mismo espacio. */
-}
-
-/*======================
-BOTÓN
-=======================*/
-
-/* Botón para guardar los cambios. */
 .btn-finalizar{
-    width:200px; /* Define el ancho del botón. */
-    height:42px; /* Define la altura del botón. */
-    margin:22px auto 0; /* Centra el botón y agrega margen superior. */
-    display:block; /* Permite centrar el botón con margin auto. */
-    border:none; /* Elimina el borde. */
-    border-radius:10px; /* Redondea las esquinas. */
-    background:var(--color-acento); /* Aplica el color azul. */
-    color:var(--color-blanco); /* Texto blanco. */
-    font-size:15px; /* Tamaño del texto. */
-    font-weight:700; /* Aplica negrita. */
-    cursor:pointer; /* Cambia el cursor a una mano. */
-    transition:.3s; /* Suaviza las transiciones. */
+    width:230px;
+    height:38px;
+    margin:12px auto 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    border:none;
+    border-radius:10px;
+    background:var(--color-acento);
+    color:var(--color-blanco);
+    font-size:14px;
+    font-weight:800;
+    cursor:pointer;
+    transition:.25s;
 }
 
-/* Efecto cuando el cursor pasa sobre el botón. */
 .btn-finalizar:hover{
-    background:var(--color-hover); /* Cambia el color del botón. */
-    transform:translateY(-2px); /* Eleva ligeramente el botón. */
-    box-shadow:0 8px 20px rgba(10,91,216,.30); /* Agrega una sombra más pronunciada. */
+    background:var(--color-hover);
 }
 
-/*======================
-RESPONSIVE
-=======================*/
+/*==============================
+      MODAL
+==============================*/
 
-/* Aplica estos estilos cuando la pantalla tiene un ancho máximo de 768 px. */
+.modal-exito{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.modal-card{
+    width:420px;
+    max-width:90%;
+    background:var(--color-tarjeta);
+    border-radius:22px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
+    border-top:8px solid var(--color-primario);
+}
+
+.icono-ok{
+    font-size:60px;
+    color:#22c55e;
+    margin-bottom:15px;
+}
+
+.modal-card h2{
+    color:var(--color-primario);
+    margin-bottom:12px;
+}
+
+.modal-card p{
+    color:var(--color-texto);
+    margin-bottom:25px;
+}
+
+.modal-card button{
+    width:100%;
+    height:48px;
+    border:none;
+    border-radius:10px;
+    background:var(--color-acento);
+    color:var(--color-blanco);
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.modal-card button:hover{
+    background:var(--color-hover);
+}
+
+/*==============================
+      RESPONSIVE
+==============================*/
+
 @media(max-width:768px){
 
-    .card{
-        width:100%; /* Hace que la tarjeta ocupe todo el ancho disponible. */
-        padding:20px; /* Reduce el espacio interno. */
+    .contenedor{
+        padding:18px;
     }
 
+    .card{
+        width:100%;
+        padding:18px;
+    }
+
+    .encabezado-reporte,
     .fila,
     .fila-select{
-        flex-direction:column; /* Coloca los elementos uno debajo del otro. */
+        display:flex;
+        flex-direction:column;
     }
 
-    .pequeño{
-        max-width:100%; /* Elimina la restricción de ancho. */
+    .badges-superiores{
+        justify-content:flex-start;
+    }
+
+    .info-badge{
+        width:100%;
     }
 
     .btn-back{
-        position:static; /* Regresa el botón al flujo normal del documento. */
-        display:inline-block; /* Permite aplicar márgenes correctamente. */
-        margin:20px; /* Agrega espacio alrededor del botón. */
+        position:static;
+        display:inline-block;
+        margin:15px;
     }
 
-    .header h1{
-        font-size:1.2rem; /* Reduce el tamaño del título para pantallas pequeñas. */
+    .btn-finalizar{
+        width:100%;
     }
-    .alerta-exito{
-    background:#d1fae5;
-    color:#065f46;
-    padding:12px;
-    border-radius:8px;
-    margin-bottom:15px;
-    text-align:center;
-    font-weight:600;
-}
 }
