@@ -1,270 +1,144 @@
-@import url("variables.css"); /* Importa las variables globales de colores. */
+@import url("variables.css");
 
-/* Selecciona todos los elementos de la página. */
 *{
-    margin:0; /* Elimina o define el margen exterior del elemento. */
-    padding:0; /* Define el espacio interno del elemento. */
-    box-sizing:border-box; /* Incluye el borde y el padding dentro del ancho y alto. */
-    font-family:'Segoe UI', sans-serif; /* Establece la fuente principal. */
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
 }
 
-/* Configuración general del cuerpo de la página. */
 body{
-    min-height:100vh; /* Define la altura mínima del elemento. */
-    background:
-    radial-gradient(
+    min-height:100vh;
+    background:radial-gradient(
         circle at center,
         var(--color-fondo) 0%,
         var(--color-fondo-secundario) 100%
     );
 }
 
-/* =========================
-        HEADER
-========================= */
-
 .header{
-    height:75px; /* Define la altura del elemento. */
-    background:var(--color-primario); /* Define el fondo del elemento. */
-    display:flex; /* Define cómo se muestra el elemento. */
-    align-items:center; /* Centra los elementos verticalmente. */
-    padding:0 50px; /* Define el espacio interno del elemento. */
-    box-shadow:var(--sombra-header); /* Agrega una sombra. */
+    height:75px;
+    background:var(--color-primario);
+    display:flex;
+    align-items:center;
+    padding:0 50px;
+    box-shadow:var(--sombra-header);
 }
 
 .header h1{
-    color:var(--color-blanco); /* Define el color del texto. */
-    font-size:1.6rem; /* Define el tamaño del texto. */
-    font-weight:700; /* Define el grosor del texto. */
+    color:var(--color-blanco);
+    font-size:1.6rem;
+    font-weight:700;
 }
 
 .header span{
-    color:var(--color-acento-claro); /* Define el color del texto. */
+    color:var(--color-acento-claro);
 }
 
-/* =========================
-     BOTÓN REGRESAR
-========================= */
-
 .btn-back{
-    position:absolute; /* Define el tipo de posicionamiento. */
-    top:95px; /* Separa el elemento desde la parte superior. */
-    left:50px; /* Separa el elemento desde la izquierda. */
-    background:var(--color-blanco); /* Define el fondo del elemento. */
-    color:var(--color-secundario); /* Define el color del texto. */
-    text-decoration:none; /* Controla el subrayado del texto. */
-    padding:12px 22px; /* Define el espacio interno del elemento. */
-    border-radius:12px; /* Redondea las esquinas. */
-    font-weight:600; /* Define el grosor del texto. */
-    font-size:.95rem; /* Define el tamaño del texto. */
-    box-shadow:0 3px 12px rgba(0,0,0,.12); /* Agrega una sombra. */
-    transition:.3s; /* Suaviza los cambios de estilo. */
+    position:absolute;
+    top:95px;
+    left:50px;
+    background:var(--color-blanco);
+    color:var(--color-secundario);
+    text-decoration:none;
+    padding:12px 22px;
+    border-radius:12px;
+    font-weight:600;
+    font-size:.95rem;
+    box-shadow:0 3px 12px rgba(0,0,0,.12);
+    transition:.3s;
 }
 
 .btn-back:hover{
-    background:#F5F7FB; /* Define el fondo del elemento. */
-    color:var(--color-primario); /* Define el color del texto. */
+    background:#F5F7FB;
+    color:var(--color-primario);
 }
-
-/* =========================
-   CONTENEDOR PRINCIPAL
-========================= */
 
 .registro-container{
-    min-height:calc(100vh - 75px); /* Define la altura mínima del elemento. */
-    display:flex; /* Define cómo se muestra el elemento. */
-    justify-content:center; /* Centra los elementos horizontalmente. */
-    align-items:center; /* Centra los elementos verticalmente. */
-    gap:150px; /* Define la separación entre elementos. */
-    padding:40px; /* Define el espacio interno del elemento. */
+    min-height:calc(100vh - 75px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:150px;
+    padding:40px;
 }
 
-/* =========================
-      PANEL IZQUIERDO
-========================= */
-
 .left-panel{
-    width:450px; /* Define el ancho del elemento. */
-    display:flex; /* Define cómo se muestra el elemento. */
-    flex-direction:column; /* Organiza los elementos en columna. */
-    align-items:center; /* Centra los elementos verticalmente. */
-    text-align:center; /* Alinea el texto. */
+    width:450px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
 }
 
 .logo-srib{
-    width:280px; /* Define el ancho del elemento. */
+    width:280px;
     margin-bottom:25px;
 }
 
 .left-panel h2{
-    color:var(--color-primario); /* Define el color del texto. */
-    font-size:2.3rem; /* Define el tamaño del texto. */
-    font-weight:700; /* Define el grosor del texto. */
-    line-height:1.2; /* Define el espaciado entre líneas. */
+    color:var(--color-primario);
+    font-size:2.3rem;
+    font-weight:700;
+    line-height:1.2;
     margin-bottom:15px;
 }
 
 .descripcion{
-    color:var(--color-primario); /* Define el color del texto. */
-    font-size:1rem; /* Define el tamaño del texto. */
-    line-height:1.7; /* Define el espaciado entre líneas. */
-    max-width:400px; /* Limita el ancho máximo. */
+    color:var(--color-primario);
+    font-size:1rem;
+    line-height:1.7;
+    max-width:400px;
     margin-bottom:25px;
 }
 
 .left-panel::after{
     content:"";
-    width:140px; /* Define el ancho del elemento. */
-    height:5px; /* Define la altura del elemento. */
-    background:var(--color-acento); /* Define el fondo del elemento. */
-    border-radius:50px; /* Redondea las esquinas. */
+    width:140px;
+    height:5px;
+    background:var(--color-acento);
+    border-radius:50px;
     margin-top:3px;
 }
 
-/* =========================
-      PANEL DERECHO
-========================= */
-
 .right-panel{
-    display:flex; /* Define cómo se muestra el elemento. */
-    justify-content:center; /* Centra los elementos horizontalmente. */
-    align-items:center; /* Centra los elementos verticalmente. */
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .form-card{
-    width:480px; /* Define el ancho del elemento. */
-    background:var(--color-primario); /* Define el fondo del elemento. */
-    border-radius:25px; /* Redondea las esquinas. */
-    padding:35px; /* Define el espacio interno del elemento. */
-    box-shadow:var(--sombra-card); /* Agrega una sombra. */
-    border:1px solid rgba(255,255,255,.05); /* Define el borde del elemento. */
+    width:480px;
+    background:var(--color-primario);
+    border-radius:25px;
+    padding:35px;
+    box-shadow:var(--sombra-card);
+    border:1px solid rgba(255,255,255,.05);
 }
 
 .form-card h2{
-    color:var(--color-blanco); /* Define el color del texto. */
-    text-align:center; /* Alinea el texto. */
-    font-size:2.2rem; /* Define el tamaño del texto. */
+    color:var(--color-blanco);
+    text-align:center;
+    font-size:2.2rem;
     margin-bottom:12px;
 }
 
-.form-card span{
-    color:var(--color-acento-claro); /* Define el color del texto. */
+.form-card h2 span{
+    color:var(--color-acento-claro);
 }
 
 .subtitle{
-    color:var(--texto-secundario); /* Define el color del texto. */
-    text-align:center; /* Alinea el texto. */
+    color:#dbeafe;
+    text-align:center;
     margin-bottom:22px;
-    font-size:.95rem; /* Define el tamaño del texto. */
-    line-height:1.5; /* Define el espaciado entre líneas. */
+    font-size:.95rem;
+    line-height:1.5;
 }
 
-
-/* =========================
-          CAMPOS
-========================= */
-
-.campo{
-    margin-bottom:18px;
-}
-
-.campo label{
-    display:block; /* Define cómo se muestra el elemento. */
-    color:var(--color-blanco); /* Define el color del texto. */
-    font-weight:600; /* Define el grosor del texto. */
-    font-size:.95rem; /* Define el tamaño del texto. */
-    margin-bottom:8px;
-}
-
-.campo label i{
-    margin-right:6px;
-}
-
-.campo input{
-    width:100%; /* Define el ancho del elemento. */
-    height:50px; /* Define la altura del elemento. */
-    border:2px solid transparent; /* Define el borde del elemento. */
-    border-radius:12px; /* Redondea las esquinas. */
-    padding:0 16px; /* Define el espacio interno del elemento. */
-    font-size:14px; /* Define el tamaño del texto. */
-    background:var(--color-blanco); /* Define el fondo del elemento. */
-    transition:.25s; /* Suaviza los cambios de estilo. */
-}
-
-.campo input:focus{
-    outline:none; /* Elimina el contorno predeterminado. */
-    border:2px solid var(--color-acento); /* Define el borde del elemento. */
-    box-shadow:0 0 0 3px rgba(10,91,216,.18); /* Agrega una sombra. */
-}
-
-.correo-ayuda{
-    display:block; /* Define cómo se muestra el elemento. */
-    margin-top:6px;
-    color:var(--texto-secundario); /* Define el color del texto. */
-    font-size:.8rem; /* Define el tamaño del texto. */
-}
-
-.btn-register{
-    width:100%; /* Define el ancho del elemento. */
-    height:50px; /* Define la altura del elemento. */
-    border:none; /* Define el borde del elemento. */
-    border-radius:12px; /* Redondea las esquinas. */
-    background:var(--color-acento); /* Define el fondo del elemento. */
-    color:var(--color-blanco); /* Define el color del texto. */
-    font-size:15px; /* Define el tamaño del texto. */
-    font-weight:700; /* Define el grosor del texto. */
-    cursor:pointer; /* Cambia el cursor al pasar sobre el elemento. */
-    transition:.3s; /* Suaviza los cambios de estilo. */
-}
-
-.btn-register:hover{
-    background:var(--color-hover); /* Define el fondo del elemento. */
-    transform:translateY(-2px); /* Aplica una transformación visual. */
-    box-shadow:0 8px 20px rgba(10,91,216,.25); /* Agrega una sombra. */
-}
-
-.login-link{
-    margin-top:20px;
-    text-align:center; /* Alinea el texto. */
-    color:var(--color-blanco); /* Define el color del texto. */
-    font-size:.9rem; /* Define el tamaño del texto. */
-}
-
-.login-link a{
-    color:var(--color-acento-claro); /* Define el color del texto. */
-    text-decoration:none; /* Controla el subrayado del texto. */
-    font-weight:600; /* Define el grosor del texto. */
-}
-
-.login-link a:hover{
-    text-decoration:underline; /* Controla el subrayado del texto. */
-}
-
-@media(max-width:1100px){
-
-    .registro-container{
-        flex-direction:column; /* Organiza los elementos en columna. */
-        gap:50px; /* Define la separación entre elementos. */
-    }
-
-    .left-panel{
-        width:100%; /* Define el ancho del elemento. */
-    }
-
-    .form-card{
-        width:100%; /* Define el ancho del elemento. */
-        max-width:480px; /* Limita el ancho máximo. */
-    }
-
-    .btn-back{
-        position:static; /* Define el tipo de posicionamiento. */
-        display:inline-block; /* Define cómo se muestra el elemento. */
-        margin:20px; /* Elimina o define el margen exterior del elemento. */
-    }
-
-    .alerta{
-    padding:12px;
-    border-radius:8px;
+.alerta{
+    padding:12px 14px;
+    border-radius:10px;
     margin-bottom:15px;
     text-align:center;
     font-weight:600;
@@ -280,4 +154,187 @@ body{
     color:#991b1b;
 }
 
+.campo{
+    margin-bottom:18px;
+}
+
+.campo label{
+    display:block;
+    color:var(--color-blanco);
+    font-weight:600;
+    font-size:.95rem;
+    margin-bottom:8px;
+}
+
+.campo label i{
+    margin-right:6px;
+}
+
+.campo input{
+    width:100%;
+    height:50px;
+    border:2px solid transparent;
+    border-radius:12px;
+    padding:0 16px;
+    font-size:14px;
+    background:var(--color-blanco);
+    transition:.25s;
+}
+
+.campo input:focus{
+    outline:none;
+    border:2px solid var(--color-acento);
+    box-shadow:0 0 0 3px rgba(10,91,216,.18);
+}
+
+.correo-ayuda{
+    display:block;
+    margin-top:6px;
+    color:#dbeafe;
+    font-size:.8rem;
+}
+
+.btn-register{
+    width:100%;
+    height:50px;
+    border:none;
+    border-radius:12px;
+    background:var(--color-acento);
+    color:var(--color-blanco);
+    font-size:15px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn-register:hover{
+    background:var(--color-hover);
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(10,91,216,.25);
+}
+
+.login-link{
+    margin-top:20px;
+    text-align:center;
+    color:var(--color-blanco);
+    font-size:.9rem;
+}
+
+.login-link a{
+    color:var(--color-acento-claro);
+    text-decoration:none;
+    font-weight:600;
+}
+
+.login-link a:hover{
+    text-decoration:underline;
+}
+
+/* MODAL DE REGISTRO EXITOSO */
+
+.modal-exito{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.modal-card{
+    width:420px;
+    max-width:90%;
+    background:var(--color-tarjeta);
+    border-radius:22px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 20px 45px rgba(0,0,0,.28);
+    border-top:8px solid var(--color-primario);
+    animation:modalAparecer .25s ease;
+}
+
+.icono-ok{
+    font-size:60px;
+    color:#22c55e;
+    margin-bottom:18px;
+}
+
+.modal-card h2{
+    color:var(--color-primario);
+    margin-bottom:10px;
+}
+
+.modal-card p{
+    color:var(--color-texto);
+    margin-bottom:25px;
+    line-height:1.5;
+}
+
+.modal-card strong{
+    color:var(--color-primario);
+}
+
+.btn-modal,
+.btn-cerrar-modal{
+    width:100%;
+    height:48px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    border:none;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:700;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+.btn-modal{
+    background:var(--color-acento);
+    color:var(--color-blanco);
+}
+
+.btn-modal:hover{
+    background:var(--color-hover);
+}
+
+.btn-cerrar-modal{
+    background:var(--color-fondo-secundario);
+    color:var(--color-primario);
+}
+
+@keyframes modalAparecer{
+    from{
+        opacity:0;
+        transform:translateY(15px) scale(.96);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+@media(max-width:1100px){
+    .registro-container{
+        flex-direction:column;
+        gap:50px;
+    }
+
+    .left-panel{
+        width:100%;
+    }
+
+    .form-card{
+        width:100%;
+        max-width:480px;
+    }
+
+    .btn-back{
+        position:static;
+        display:inline-block;
+        margin:20px;
+    }
 }
