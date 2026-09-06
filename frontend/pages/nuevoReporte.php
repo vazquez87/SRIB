@@ -2,6 +2,8 @@
 session_start();
 require_once __DIR__ . '/../../backend/conexion.php';
 
+date_default_timezone_set('America/Mexico_City');
+
 if (!isset($_SESSION['id_usuario'])) {
     header("Location: login.php");
     exit();
@@ -9,6 +11,10 @@ if (!isset($_SESSION['id_usuario'])) {
 
 $mensaje = '';
 $tipo = '';
+$folioGenerado = '';
+
+$hoy = date('Y-m-d');
+$fechaMinima = date('Y-m-d', strtotime('-15 days'));
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id_usuario = $_SESSION['id_usuario'];
@@ -22,6 +28,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($descripcion === '' || $categoria === '' || $edificio === '' || $detalleUbicacion === '' || $fecha === '') {
         $mensaje = 'Debes completar todos los campos.';
+        $tipo = 'error';
+    } elseif ($fecha < $fechaMinima || $fecha > $hoy) {
+        $mensaje = 'La fecha debe estar dentro de los últimos 15 días y no puede ser posterior a hoy.';
         $tipo = 'error';
     } else {
         $stmt = $conexion->prepare("
@@ -46,8 +55,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmtFolio->bind_param("si", $folio, $id_incidencia);
             $stmtFolio->execute();
 
-            $mensaje = "Reporte enviado correctamente. Tu folio es: " . $folio;
+            $mensaje = "Reporte enviado correctamente.";
             $tipo = "exito";
+            $folioGenerado = $folio;
         } else {
             $mensaje = "Error al enviar el reporte.";
             $tipo = "error";
@@ -58,7 +68,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -82,8 +91,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="form-card">
         <h2>Nuevo <span>reporte</span></h2>
 
-        <?php if ($mensaje): ?>
-            <div class="alerta alerta-<?php echo $tipo; ?>">
+        <?php if ($mensaje && $tipo === 'error'): ?>
+            <div class="alerta alerta-error">
                 <?php echo htmlspecialchars($mensaje); ?>
             </div>
         <?php endif; ?>
@@ -91,24 +100,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <form id="formReporte" method="POST" action="nuevoReporte.php">
 
             <div class="campo">
-                <label>
-                    <i class="fa-solid fa-file-lines"></i>
-                    Descripción
-                </label>
-
-                <textarea
-                    name="descripcion"
-                    id="descripcion"
-                    placeholder="Describe la incidencia encontrada..."
-                    required></textarea>
+                <label><i class="fa-solid fa-file-lines"></i> Descripción</label>
+                <textarea name="descripcion" id="descripcion" placeholder="Describe la incidencia encontrada..." required></textarea>
             </div>
 
             <div class="campo">
-                <label>
-                    <i class="fa-solid fa-tags"></i>
-                    Categoría
-                </label>
-
+                <label><i class="fa-solid fa-tags"></i> Categoría</label>
                 <select name="categoria" id="categoria" required>
                     <option value="">Selecciona una categoría</option>
                     <option>Equipos de cómputo</option>
@@ -121,10 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
 
             <div class="campo">
-                <label>
-                    <i class="fa-solid fa-location-dot"></i>
-                    Ubicación
-                </label>
+                <label><i class="fa-solid fa-location-dot"></i> Ubicación</label>
 
                 <div class="ubicacion-container">
                     <select name="edificio" id="edificio" required>
@@ -146,19 +140,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
 
             <div class="campo">
-                <label>
-                    <i class="fa-solid fa-calendar"></i>
-                    Fecha de registro
-                </label>
+                <label><i class="fa-solid fa-calendar"></i> Fecha de registro</label>
 
                 <input
                     type="date"
                     name="fecha"
                     id="fecha"
+                    min="<?php echo $fechaMinima; ?>"
+                    max="<?php echo $hoy; ?>"
                     required>
 
                 <small class="fecha-info">
-                    Solo se permiten incidencias ocurridas en los últimos 15 días.
+                    Solo se permiten incidencias ocurridas entre el
+                    <?php echo date('d/m/Y', strtotime($fechaMinima)); ?>
+                    y el
+                    <?php echo date('d/m/Y', strtotime($hoy)); ?>.
                 </small>
             </div>
 
@@ -170,6 +166,50 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
     </div>
 </main>
+
+<?php if ($tipo === 'exito' && $folioGenerado !== ''): ?>
+<div class="modal-folio" id="modalFolio">
+    <div class="modal-contenido">
+        <i class="fa-solid fa-circle-check icono-exito"></i>
+
+        <h2>Reporte enviado correctamente</h2>
+
+        <p>Tu número de folio es:</p>
+
+        <div class="folio-box" id="folioTexto">
+            <?php echo htmlspecialchars($folioGenerado); ?>
+        </div>
+
+        <button type="button" onclick="copiarFolio()" class="btn-copiar">
+            <i class="fa-solid fa-copy"></i>
+            Copiar folio
+        </button>
+
+        <a href="consultarReporte.php" class="btn-consultar-modal">
+            Consultar reporte
+        </a>
+
+        <button type="button" onclick="cerrarModal()" class="btn-cerrar-modal">
+            Cerrar
+        </button>
+    </div>
+</div>
+
+<script>
+function copiarFolio() {
+    const folio = document.getElementById("folioTexto").innerText.trim();
+
+    navigator.clipboard.writeText(folio).then(() => {
+        const boton = document.querySelector(".btn-copiar");
+        boton.innerHTML = '<i class="fa-solid fa-check"></i> Folio copiado';
+    });
+}
+
+function cerrarModal() {
+    document.getElementById("modalFolio").style.display = "none";
+}
+</script>
+<?php endif; ?>
 
 <script src="../js/validaciones.js"></script>
 
