@@ -9,9 +9,10 @@ if (!isset($_SESSION['id_usuario'])) {
 
 $reporte = null;
 $mensaje = '';
+$folio = '';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $folio = trim($_POST['folio'] ?? '');
+if ($_SERVER['REQUEST_METHOD'] === 'POST' || isset($_GET['folio'])) {
+    $folio = trim($_POST['folio'] ?? $_GET['folio'] ?? '');
     $id_usuario = $_SESSION['id_usuario'];
 
     if ($folio === '') {
@@ -69,6 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 name="folio"
                 id="folio"
                 placeholder="Ejemplo: SRIB-2026-0001"
+                value="<?php echo htmlspecialchars($folio); ?>"
                 required
                 autocomplete="off">
 
@@ -100,7 +102,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <p><strong>Prioridad:</strong> <?php echo htmlspecialchars($reporte['prioridad']); ?></p>
                 <p><strong>Estado:</strong> <?php echo htmlspecialchars($reporte['estado']); ?></p>
                 <p><strong>Ubicación:</strong> <?php echo htmlspecialchars($reporte['ubicacion']); ?></p>
-                <p><strong>Fecha de reporte:</strong> <?php echo htmlspecialchars($reporte['fecha_reporte']); ?></p>
+                <p>
+    <strong>Fecha de reporte:</strong>
+    <?php echo date('d/m/Y', strtotime($reporte['fecha_reporte'])); ?>
+</p>
                 <p><strong>Descripción:</strong> <?php echo htmlspecialchars($reporte['descripcion']); ?></p>
             </div>
         </section>
