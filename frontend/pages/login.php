@@ -3,6 +3,7 @@ session_start();
 require_once __DIR__ . '/../../backend/conexion.php';
 
 $mensaje = '';
+$correo = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $correo = trim(strtolower($_POST['correo'] ?? ''));
@@ -53,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <a href="index.php" class="btn-back">
     <i class="fa-solid fa-arrow-left"></i>
-    Regresar al menú
+    Regresar
 </a>
 
 <main class="login-container">
@@ -76,7 +77,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <?php if ($mensaje): ?>
                 <div class="alerta alerta-error">
-                    <?= htmlspecialchars($mensaje) ?>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <span><?php echo htmlspecialchars($mensaje); ?></span>
                 </div>
             <?php endif; ?>
 
@@ -92,8 +94,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         name="correo"
                         id="correo"
                         placeholder="ejemplo@alumno.buap.mx"
+                        value="<?php echo htmlspecialchars($correo); ?>"
                         required
-                        autocomplete="username">
+                        autocomplete="username"
+                        oninvalid="this.setCustomValidity('Ingresa tu correo institucional.')"
+                        oninput="this.setCustomValidity('')">
 
                     <small class="correo-ayuda">
                         Utiliza tu correo institucional BUAP.
@@ -112,7 +117,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         id="password"
                         placeholder="Ingresa tu contraseña"
                         required
-                        autocomplete="current-password">
+                        autocomplete="current-password"
+                        oninvalid="this.setCustomValidity('Ingresa tu contraseña.')"
+                        oninput="this.setCustomValidity('')">
                 </div>
 
                 <button type="submit" class="btn-login">
