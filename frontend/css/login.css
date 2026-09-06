@@ -1,305 +1,256 @@
-@import url("variables.css"); /* Importa las variables globales de colores. */
+@import url("variables.css");
 
-/* Selecciona todos los elementos de la página. */
 *{
-    margin:0; /* Elimina el margen predeterminado. */
-    padding:0; /* Elimina el espacio interno predeterminado. */
-    box-sizing:border-box; /* Incluye el borde y el padding dentro del ancho y alto del elemento. */
-    font-family:'Segoe UI', sans-serif; /* Establece la fuente principal de la página. */
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
 }
 
-/* Configuración general del cuerpo de la página. */
 body{
-    min-height:100vh; /* Hace que la página ocupe al menos toda la altura de la ventana del navegador. */
-    background: /* Define el fondo de la página. */
-    radial-gradient( /* Crea un degradado circular. */
-        circle at center, /* El degradado comienza desde el centro. */
-        var(--fondo-principal) 0%, /* Color inicial del degradado. */
-        var(--fondo-secundario) 100% /* Color final del degradado. */
+    min-height:100vh;
+    background:radial-gradient(
+        circle at center,
+        var(--fondo-principal) 0%,
+        var(--fondo-secundario) 100%
     );
 }
 
-/* =========================
-   HEADER
-========================= */
-
-/* Contenedor del encabezado principal. */
 .header{
-    height:75px; /* Altura del encabezado. */
-    background:var(--color-primario); /* Color azul oscuro del fondo. */
-    display:flex; /* Activa Flexbox. */
-    align-items:center; /* Centra verticalmente el contenido. */
-    padding:0 50px; /* Agrega espacio interno a los lados. */
-    box-shadow:0 3px 12px rgba(0,0,0,.12); /* Agrega una sombra debajo del encabezado. */
+    height:75px;
+    background:var(--color-primario);
+    display:flex;
+    align-items:center;
+    padding:0 50px;
+    box-shadow:0 3px 12px rgba(0,0,0,.12);
 }
 
-/* Título del encabezado. */
 .header h1{
-    color:white; /* Color blanco del texto. */
-    font-size:1.6rem; /* Tamaño del título. */
-    font-weight:700; /* Aplica negrita. */
+    color:white;
+    font-size:1.6rem;
+    font-weight:700;
 }
 
-/* Texto resaltado dentro del título. */
 .header span{
-    color:var(--color-mensaje); /* Cambia el color del texto a azul claro. */
+    color:var(--color-mensaje);
 }
 
-/* =========================
-   BOTÓN REGRESAR
-========================= */
-
-/* Botón para volver al menú anterior. */
 .btn-back{
-    position:absolute; /* Define el tipo de posicionamiento del elemento. */
-    top:95px; /* Separa el elemento desde la parte superior. */
-    left:50px; /* Separa el elemento desde el lado izquierdo. */
-    display:flex; /* Define cómo se mostrará el elemento. */
-    align-items:center; /* Centra los elementos verticalmente. */
-    gap:8px; /* Define el espacio entre los elementos. */
-    padding:12px 22px; /* Agrega espacio interno al elemento. */
-    background:var(--color-blanco); /* Define el color o fondo del elemento. */
-    color:var(--color-primario); /* Define el color del texto. */
-    text-decoration:none; /* Elimina o modifica el subrayado del texto. */
-    border-radius:12px; /* Redondea las esquinas del elemento. */
-    font-weight:600; /* Define el grosor de la fuente. */
-    font-size:.95rem; /* Define el tamaño del texto. */
-    box-shadow:0 4px 14px rgba(0,0,0,.12); /* Agrega una sombra alrededor del elemento. */
-    transition:.25s; /* Suaviza los cambios de estilo. */
+    position:absolute;
+    top:95px;
+    left:50px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:12px 22px;
+    background:var(--color-blanco);
+    color:var(--color-primario);
+    text-decoration:none;
+    border-radius:12px;
+    font-weight:600;
+    font-size:.95rem;
+    box-shadow:0 4px 14px rgba(0,0,0,.12);
+    transition:.25s;
 }
 
 .btn-back:hover{
-
-    background:#f5f7fb; /* Define el color o fondo del elemento. */
-
-    color:var(--color-primario); /* Define el color del texto. */
-
+    background:#f5f7fb;
+    color:var(--color-primario);
 }
 
-/* =========================
-   CONTENEDOR PRINCIPAL
-========================= */
-
-/* Contenedor principal de la página. */
 .login-container{
-    min-height:calc(100vh - 75px); /* Ocupa toda la altura restante después del encabezado. */
-    display:flex; /* Activa Flexbox. */
-    justify-content:center; /* Centra horizontalmente el contenido. */
-    align-items:center; /* Centra verticalmente el contenido. */
-    gap:150px; /* Espacio entre los paneles izquierdo y derecho. */
-    padding:40px; /* Espacio interno alrededor del contenido. */
+    min-height:calc(100vh - 75px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:150px;
+    padding:40px;
 }
 
-/* =========================
-   PANEL IZQUIERDO
-========================= */
-
-/* Panel donde se muestra el logotipo y la información del sistema. */
 .left-panel{
-    width:450px; /* Ancho del panel. */
-    display:flex; /* Activa Flexbox. */
-    flex-direction:column; /* Organiza los elementos en columna. */
-    align-items:center; /* Centra horizontalmente los elementos. */
-    text-align:center; /* Centra el texto. */
+    width:450px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
 }
 
-/* Imagen del logotipo. */
 .logo-srib{
-    width:280px; /* Ancho de la imagen. */
-    margin-bottom:25px; /* Espacio debajo del logotipo. */
+    width:280px;
+    margin-bottom:25px;
 }
 
-/* Título del panel izquierdo. */
 .left-panel h2{
-    color:var(--color-primario); /* Color azul oscuro. */
-    font-size:2.3rem; /* Tamaño del texto. */
-    font-weight:700; /* Texto en negrita. */
-    line-height:1.2; /* Espaciado entre líneas. */
-    margin-bottom:15px; /* Espacio debajo del título. */
+    color:var(--color-primario);
+    font-size:2.3rem;
+    font-weight:700;
+    line-height:1.2;
+    margin-bottom:15px;
 }
 
-/* Texto descriptivo del sistema. */
 .descripcion{
-    color:var(--texto-principal); /* Color gris oscuro. */
-    font-size:1rem; /* Tamaño del texto. */
-    line-height:1.7; /* Espaciado entre líneas para mejorar la lectura. */
-    max-width:400px; /* Limita el ancho máximo del párrafo. */
-    margin-bottom:25px; /* Espacio inferior. */
+    color:var(--texto-principal);
+    font-size:1rem;
+    line-height:1.7;
+    max-width:400px;
+    margin-bottom:25px;
 }
 
-/* Línea decorativa. */
 .linea{
-    width:140px; /* Ancho de la línea. */
-    height:5px; /* Grosor de la línea. */
-    background:var(--color-secundario); /* Color azul. */
-    border-radius:50px; /* Bordes redondeados. */
+    width:140px;
+    height:5px;
+    background:var(--color-secundario);
+    border-radius:50px;
 }
 
-/* =========================
-   PANEL DERECHO
-========================= */
-
-/* Contenedor de la tarjeta de inicio de sesión. */
 .right-panel{
-    display:flex; /* Activa Flexbox. */
-    justify-content:center; /* Centra horizontalmente el contenido. */
-    align-items:center; /* Centra verticalmente el contenido. */
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-/* =========================
-   TARJETA LOGIN
-========================= */
-
-/* Tarjeta que contiene el formulario de inicio de sesión. */
 .form-card{
-    width:480px; /* Ancho de la tarjeta. */
-    background:var(--color-primario); /* Define el color o fondo del elemento. */
-    border-radius:25px; /* Bordes redondeados. */
-    padding:35px; /* Espacio interno. */
-    box-shadow:0 15px 40px rgba(0,0,0,.18); /* Agrega una sombra pronunciada. */
-    border:1px solid rgba(255,255,255,.05); /* Borde blanco muy tenue. */
+    width:480px;
+    background:var(--color-primario);
+    border-radius:25px;
+    padding:35px;
+    box-shadow:0 15px 40px rgba(0,0,0,.18);
+    border:1px solid rgba(255,255,255,.05);
 }
 
-/* Título del formulario. */
 .form-card h2{
-    color:white; /* Color blanco. */
-    text-align:center; /* Centra el texto. */
-    font-size:2.2rem; /* Tamaño del título. */
-    margin-bottom:20px; /* Espacio debajo del título. */
+    color:white;
+    text-align:center;
+    font-size:2.2rem;
+    margin-bottom:20px;
 }
 
-/* Texto resaltado dentro del título. */
-.form-card span{
-    color:var(--color-acento-claro); /* Color azul claro. */
+.form-card h2 span{
+    color:var(--color-acento-claro);
 }
 
+/* MENSAJE DE ERROR */
 
-/* =========================
-   CAMPOS
-========================= */
+.alerta{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:14px 16px;
+    margin-bottom:18px;
+    border-radius:12px;
+    font-size:.95rem;
+    font-weight:600;
+    text-align:center;
+}
 
-/* Contenedor de cada campo del formulario. */
+.alerta-error{
+    background:#fee2e2;
+    border:1px solid #fecaca;
+    color:#991b1b;
+}
+
+.alerta-error i,
+.alerta-error span{
+    color:#991b1b !important;
+}
+
 .campo{
-    margin-bottom:18px; /* Espacio entre los campos. */
+    margin-bottom:18px;
 }
 
-/* Etiquetas del formulario. */
 .campo label{
-    display:block; /* Hace que la etiqueta ocupe toda la línea. */
-    color:white; /* Color blanco. */
-    font-weight:600; /* Texto seminegrita. */
-    font-size:.95rem; /* Tamaño del texto. */
-    margin-bottom:8px; /* Espacio entre la etiqueta y el campo. */
-    transition:.25s; /* Suaviza los cambios de estilo. */
+    display:block;
+    color:white;
+    font-weight:600;
+    font-size:.95rem;
+    margin-bottom:8px;
+    transition:.25s;
 }
 
-/* Iconos dentro de las etiquetas. */
 .campo label i{
-    margin-right:6px; /* Espacio entre el icono y el texto. */
+    margin-right:6px;
 }
 
-/* Campos de entrada. */
 .campo input{
-    width:100%; /* Define el ancho del elemento. */
-    height:50px; /* Define la altura del elemento. */
-    border:2px solid transparent; /* Define el borde del elemento. */
-    border-radius:12px; /* Redondea las esquinas del elemento. */
-    padding:0 16px; /* Agrega espacio interno al elemento. */
-    font-size:14px; /* Define el tamaño del texto. */
-    background:white; /* Define el color o fondo del elemento. */
-    transition:.25s; /* Suaviza los cambios de estilo. */
+    width:100%;
+    height:50px;
+    border:2px solid transparent;
+    border-radius:12px;
+    padding:0 16px;
+    font-size:14px;
+    background:white;
+    transition:.25s;
 }
 
-/* Efecto cuando un campo recibe el enfoque. */
 .campo input:focus{
-    outline:none; /* Elimina el contorno predeterminado. */
-    border:2px solid var(--color-acento); /* Define el borde del elemento. */
-    box-shadow:0 0 0 3px rgba(10,91,216,.15); /* Agrega una sombra alrededor del elemento. */
+    outline:none;
+    border:2px solid var(--color-acento);
+    box-shadow:0 0 0 3px rgba(10,91,216,.15);
 }
 
-/* =========================
-   BOTÓN LOGIN
-========================= */
-
-/* Botón para iniciar sesión. */
 .btn-login{
-    width:100%; /* Ocupa todo el ancho del formulario. */
-    height:50px; /* Altura del botón. */
-    border:none; /* Elimina el borde. */
-    border-radius:12px; /* Bordes redondeados. */
-    background:var(--color-secundario); /* Fondo azul. */
-    color:white; /* Texto blanco. */
-    font-size:15px; /* Tamaño del texto. */
-    font-weight:700; /* Texto en negrita. */
-    cursor:pointer; /* Cambia el cursor a una mano. */
-    transition:.3s; /* Suaviza las transiciones. */
+    width:100%;
+    height:50px;
+    border:none;
+    border-radius:12px;
+    background:var(--color-secundario);
+    color:white;
+    font-size:15px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
 }
 
-/* Efecto al pasar el cursor sobre el botón. */
 .btn-login:hover{
-    background:var(--color-acento); /* Cambia el fondo a un azul más claro. */
-    transform:translateY(-2px); /* Eleva ligeramente el botón. */
-    box-shadow:0 8px 20px rgba(59,130,246,.35); /* Agrega una sombra más intensa. */
+    background:var(--color-acento);
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(59,130,246,.35);
 }
 
-/* Texto de ayuda debajo del campo de correo. */
 .correo-ayuda{
-    display:block; /* Hace que ocupe toda la línea. */
-    margin-top:6px; /* Espacio superior. */
-    color:var(--borde-gris); /* Color gris claro. */
-    font-size:.8rem; /* Tamaño pequeño del texto. */
+    display:block;
+    margin-top:6px;
+    color:var(--borde-gris);
+    font-size:.8rem;
 }
 
-
-/* =========================
-   LINK REGISTRO
-========================= */
-
-/* Contenedor del enlace para registrarse. */
 .register-link{
-    margin-top:20px; /* Espacio superior. */
-    text-align:center; /* Centra el texto. */
-    color:white; /* Color blanco. */
-    font-size:.9rem; /* Tamaño del texto. */
+    margin-top:20px;
+    text-align:center;
+    color:white;
+    font-size:.9rem;
 }
 
-/* Enlace de registro. */
 .register-link a{
-    color:var(--color-acento-claro); /* Color azul claro. */
-    text-decoration:none; /* Elimina el subrayado. */
-    font-weight:600; /* Texto seminegrita. */
+    color:var(--color-acento-claro);
+    text-decoration:none;
+    font-weight:600;
 }
 
-/* Efecto al pasar el cursor sobre el enlace. */
 .register-link a:hover{
-    text-decoration:underline; /* Agrega un subrayado. */
+    text-decoration:underline;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-
-/* Aplica estos estilos cuando la pantalla mide 1100 px o menos. */
 @media(max-width:1100px){
-
     .login-container{
-        flex-direction:column; /* Coloca los paneles uno debajo del otro. */
-        gap:50px; /* Reduce el espacio entre los paneles. */
+        flex-direction:column;
+        gap:50px;
     }
 
     .left-panel{
-        width:100%; /* Hace que el panel izquierdo ocupe todo el ancho disponible. */
+        width:100%;
     }
 
     .form-card{
-        width:100%; /* La tarjeta ocupa todo el ancho disponible. */
-        max-width:480px; /* Limita el ancho máximo de la tarjeta. */
+        width:100%;
+        max-width:480px;
     }
 
     .btn-back{
-        position:static; /* Regresa el botón a la posición normal del documento. */
-        display:inline-block; /* Permite aplicar márgenes correctamente. */
-        margin:20px; /* Agrega espacio alrededor del botón. */
+        position:static;
+        display:inline-block;
+        margin:20px;
     }
-
 }
